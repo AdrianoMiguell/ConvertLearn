@@ -1,0 +1,133 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
+@import url(media.css);
+
+:root {
+    /* https://coolors.co/ef2d56-3b3561-ead94c */
+    /* Color Main, Secondary, Tertiary */
+    --cm: 59, 53, 97;
+    --cs: 239, 45, 86;
+    --ct: 234, 217, 76;
+    --cq: 245, 222, 179;
+    --cb: 37, 37, 34;
+
+    /* color: rgb(59, 53, 97);
+    color: rgb(239, 45, 86);
+    color: rgb(234, 217, 76);
+    color: rgb(245, 222, 179); */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    user-select: none !important;
+    background-color: rgb(var(--cb));
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 1em;
+    font-family: sans-serif;
+}
+
+.navOps {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: .5em;
+    padding: 0 10px;
+}
+
+.navOps>a {
+    text-decoration: none;
+}
+
+.navOps-item {
+    display: block;
+    padding: .5em;
+    transition-duration: 500ms;
+}
+
+.navOps-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-duration: 500ms;
+}
+
+main {
+    margin: 0;
+    padding: 5em;
+    min-height: 60vh;
+}
+
+section {
+    font-family: Arial, sans-serif;
+    display: grid;
+    gap: .5em;
+    text-align: justify;
+}
+
+#sesConvert {
+    display: grid;
+    gap: 1em;
+}
+
+.sesConvert-unid, .sesConvert-opts {
+    display: flex;
+    line-height: 1.5em;
+    gap: 1em;
+}
+.sesConvert-opts>div {
+    display: grid;
+    margin: 0 1em;
+    gap: 1em;
+}
+
+.sesInfo {
+    display: grid;
+    gap: .5em;
+    margin: .5em;
+}
+
+.sesInfo-list {
+    line-height: 1.5em;
+    margin: 0 1.5em;
+}
+
+input,
+select {
+    background-color: rgb(var(--cq));
+    border-radius: 5px;
+    padding: 4px 8px;
+}
+
+select {
+    text-align: center;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: rgb(var(--cb));
+}
+
+footer {
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    text-align: center;
+    padding: 1em 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
+    font-weight: 550;
+}
+
+footer>div{
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+}
