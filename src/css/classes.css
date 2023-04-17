@@ -71,3 +71,21 @@
 .text-dec-none{
     text-decoration: none;
 }
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gap-1{
+    gap: 1em;
+}
+.m1{
+    margin: 1em;
+}
+.p1{
+    padding: 1em;
+}
+.rounded{
+    border-radius: 10px;
+}

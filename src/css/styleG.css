@@ -114,6 +114,13 @@ select {
     -moz-appearance: none;
     color: rgb(var(--cb));
 }
+.optCard{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1em;
+    width: 15em;
+}
 
 footer {
     width: 100vw;

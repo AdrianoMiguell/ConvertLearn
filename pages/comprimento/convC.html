@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ConverterLearn - Comprimento </title>
+    <link rel="stylesheet" href="../../src/css/styleG.css">
+    <link rel="stylesheet" href="../../src/css/classes.css">
+    <link rel="stylesheet" href="../../src/css/media.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="gradient-simple">
+            <a href="../index.html" class="text-dec-none text-grad-light">
+                <h1 id="logo"> ConverterLearn </h1>
+            </a>
+            <ul class="navOps">
+                <a href="">
+                    <li class="navOps-item text-light"> Distâncias </li>
+                </a>
+                <a href="">
+                    <li class="navOps-item text-light"> Medidas </li>
+                </a>
+                <a href="./convT.html">
+                    <li class="navOps-item text-light"> Temperaturas </li>
+                </a>
+                <a href="../others.html">
+                    <li class="navOps-item text-light"> Outros </li>
+                </a>
+                <a href="">
+                    <li class="navOps-item text-light"> Sobre nós </li>
+                </a>
+                <a href="">
+                    <li class="navOps-item text-light"> Contato </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-light">
+            <div class="sesInfo">
+                <h1 style="font-size: 15pt;"> Convertendo unidades de comprimento </h1>
+                <p> "As unidades de medidas de comprimento surgem para suprir a necessidade do ser humano de medir
+                    vários tipos de distâncias. Existem várias unidades de medidas de comprimento, a utilizada no
+                    sistema internacional de unidades é o metro, e seus múltiplos (quilômetro, hectômetro e decâmetro) e
+                    submúltiplos (decímetro, centímetro milímetro)."
+                    <br><br> Veja mais sobre "Medidas de comprimento" em: <a
+                        href="https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm" class="text-light">https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm</a>
+                </p>
+            </div>
+            <br>
+            <h2>
+                Converter
+            </h2>
+            <div id="sesConvert">
+                <div class="sesConvert-unid" style="align-items: center;">
+                    <label for="valorC"> Medida </label>
+                    <input type="number" placeholder="Digite aqui" id="valorC" onchange="convert()">
+                </div>
+                <div class="sesConvert-opts">
+                    <div>
+                        <label for="unidC"> Unidade de medida </label>
+                        <select name="unidC" id="unidC" onchange="convert()">
+                            <option value="1000"> quilômetro(s) </option>
+                            <option value="100"> hectômetro(s) </option>
+                            <option value="10"> decâmetro(s) </option>
+                            <option value="1" selected> metro(s) </option>
+                            <option value="0.1"> decimetro(s) </option>
+                            <option value="0.01"> centimetro(s) </option>
+                            <option value="0.001"> milimetro(s) </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="convC"> Converter para</label>
+                        <select name="convC" id="convC" onchange="convert()">
+                            <option value="1000"> quilômetro(s) </option>
+                            <option value="100"> hectômetro(s) </option>
+                            <option value="10"> decâmetro(s) </option>
+                            <option value="1"> metro(s) </option>
+                            <option value="0.1"> decimetro(s) </option>
+                            <option value="0.01" selected> centimetro(s) </option>
+                            <option value="0.001"> milimetro(s) </option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="sesConvert-unid flex-col-around gap-1">
+                    <span id="respC"> </span>
+                    <span id="calcC" class=""> </span>
+                </div>
+                <br>
+            </div>
+        </section>
+    </main>
+
+    <footer class="gradient-simple">
+        <span class="text-grad-light">Converter &amp; Learn</span>
+        <br>
+        <span class="text-grad-light">Converter &amp; Aprender</span>
+        <div>
+            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
+                    <span> @adrianomiguell26 </span>
+                </div>
+            </a>
+            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+                <div class="flex-col-around text-grad-light">
+                    <i class="bi bi-github" style="font-size: 20pt;"></i>
+                    <span> @AdrianoMiguell </span>
+                </div>
+            </a>
+        </div>
+
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+    </footer>
+
+    <script src="./convC.js"></script>
+</body>
+
+</html>
