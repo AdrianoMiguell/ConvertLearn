@@ -1,3 +1,8 @@
+@media screen and (max-width: 500px) {
+    .navOps-item{
+        font-size: 8pt;
+    }
+}
 @media screen and (max-width: 768px) {
     .sesConvert-opts{
         justify-content: space-around;

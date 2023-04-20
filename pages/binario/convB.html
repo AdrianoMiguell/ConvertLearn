@@ -8,7 +8,6 @@
     <title> ConverterLearn - Temperatura </title>
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
-    <link rel="stylesheet" href="../../src/css/media.css">
 </head>
 
 <body>
@@ -39,64 +38,71 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo massas </h1>
-                <p>
-                    A unidade padrão de massa no Sistema Internacional de unidades (SI) é o quilograma (kg). As unidades
-                    do sistema métrico decimal de massa são:
-                </p>
+                <h1> Convertendo binarios </h1>
+                <p> Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
+                    facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
+                    chamada de sistema binário.</p>
+                <p> Ao baixar um arquivo ou contratar um plano de acesso à internet, você vai encontrar expressões como megabits, gigabytes, terabytes e tantas outras. Essas são medidas que indicam o tamanho de um conjunto de dados.</p>
+                <br>
                 <ol class="sesInfo-list flex-around">
                     <div>
-                        <li> quilograma (kg) </li>
-                        <li> hectograma (hg) </li>
-                        <li> decagrama (dag) </li>
-                        <li> grama (g) </li>
+                        <li> bit  </li>
+                        <li> byte </li>
+                        <li> kilobyte </li>
+                        <li> megabyte </li>
+                        <li> gigabyte </li>
                     </div>
                     <div>
-                        <li> decigrama (dg) </li>
-                        <li> centigrama (cg) </li>
-                        <li> miligrama (mg) </li>
+                        <li> terabyte </li>
+                        <li> petabyte </li>
+                        <li> exabyte </li>
+                        <li> zettabyte </li>
+                        <li> yottabyte </li>
                     </div>
                 </ol>
             </div>
+            
             <br>
+
             <h2>
-                Converter
+                Convertendo
             </h2>
+
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorM"> Massa </label>
-                    <input type="number" placeholder="Digite aqui" id="valorM" onchange="convert()">
+                    <label for="valorB"> Unidade </label>
+                    <input type="number" placeholder="Digite aqui" id="valorB" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">
                     <div>
-                        <label for="unidM"> Unidade de massa </label>
-                        <select name="unidM" id="unidM" onchange="convert()">
-                            <option value="1000"> quilograma(s) </option>
-                            <option value="100"> hectograma(s) </option>
-                            <option value="10"> decagrama(s) </option>
-                            <option value="1" selected> grama(s) </option>
-                            <option value="0.1"> decigrama(s) </option>
-                            <option value="0.01"> centigrama(s) </option>
-                            <option value="0.001"> miligrama(s) </option>
+                        <label for="unidB"> Medida do valor </label>
+                        <select name="unidB" id="unidB" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
+                            <option value="0" selected>bit</option>
+                            <option value="1">byte</option>
+                            <option value="2">kilobyte</option>
+                            <option value="3">megabyte</option>
+                            <option value="4">gigabyte</option>
+                            <option value="5">terabyte</option>
                         </select>
                     </div>
                     <div>
-                        <label for="convM"> Converter para</label>
-                        <select name="convM" id="convM" onchange="convert()">
-                            <option value="1000"> quilograma(s) </option>
-                            <option value="100"> hectograma(s) </option>
-                            <option value="10"> decagrama(s) </option>
-                            <option value="1"> grama(s) </option>
-                            <option value="0.1"> decigrama(s) </option>
-                            <option value="0.01" selected> centigrama(s) </option>
-                            <option value="0.001"> miligrama(s) </option>
+                        <label for="convB"> Converter para </label>
+                        <select name="convB" id="convB" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
+                            <option value="1">bit</option>
+                            <option value="2" selected>byte</option>
+                            <option value="3">kilobyte</option>
+                            <option value="3">megabyte</option>
+                            <option value="4">gigabyte</option>
+                            <option value="5">terabyte</option>
                         </select>
                     </div>
                 </div>
                 <br>
                 <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respM"> </span>
-                    <span id="calcM" class=""> </span>
+                    <span id="respB"> </span>
+                    <span id="calcB" class=""> </span>
                 </div>
                 <br>
             </div>
@@ -125,7 +131,7 @@
         <span class="text-grad-light"> Muito &#10084; obrigado! </span>
     </footer>
 
-    <script src="./convM.js"></script>
+    <script src="./convB.js"></script>
 </body>
 
 </html>
