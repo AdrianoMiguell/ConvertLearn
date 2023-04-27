@@ -8,89 +8,141 @@ let valor;
 let conv;
 let resp;
 let unid;
-
-{
-  /* <option value="" selected> --- escolha --- </option>
-<option value="b">bit</option>
-<option value="B">byte</option>
-<option value="kB">kilobyte</option>
-<option value="mB">megabyte</option>
-<option value="gB">gigabyte</option>
-<option value="tB">terabyte</option> */
-}
+let op;
+let unidText;
+let convText;
 
 function convert() {
   valor = valorB.value;
 
   unid = unidB.options[unidB.selectedIndex].value;
   conv = convB.options[convB.selectedIndex].value;
+  unidText = unidB.options[unidB.selectedIndex].textContent;
+  convText = convB.options[convB.selectedIndex].textContent;
 
-  if (valor != "") {
-    switch (unid) {
-      case "0":
-        convertBit();
-        respB.innerHTML = resp;
-        break;
-      case "1":
-        convertBit();
-        respB.innerHTML = resp;
-        break;
-      case "2":
-        convertBit();
-        respB.innerHTML = resp;
-        break;
-      // case "B":
-      //   convertK();
-      //   break;
-      default:
-        respB.innerHTML = "Escala de temperatura invalida ou não informada";
-        calcB.innerHTML = "";
-        break;
+  respB.innerHTML = "isso: " + convText.slice(-3);
+
+  if (unidText == convText) {
+    respB.innerHTML = "Valor: " + valor;
+  } else if (unidText.slice(-3) == "bit" || convText.slice(-3) == "bit") {
+    respB.innerHTML = "é bit;";
+
+    if (unid < conv) {
+      resp = (valor * 10 ** unid) / (8 * 10 ** conv);
+      respB.innerHTML = " unidade menor de bit " + resp.toLocaleString("pt-BR");
+    } else {
+      resp = valor * 10 ** unid * (8 * 10 ** conv);
+      respB.innerHTML = " unidade Maior de bit " + resp.toLocaleString("pt-BR");
+    }
+    
+  } else if (unidText.slice(-4) == "byte" || convText.slice(-4) == "byte") {
+    if (unid < conv) {
+      resp = (valor * 10 ** unid) / 10 ** conv;
+      respB.innerHTML = " unidade menor " + resp.toLocaleString("pt-BR");
+    } else {
+      resp = valor * 10 ** unid * 10 ** conv;
+      respB.innerHTML = " unidade Maior " + resp.toLocaleString("pt-BR");
     }
   } else {
-    respB.innerHTML = "Insina um valor";
+    respB.innerHTML = "Deu ruim";
   }
+  // else{
+
+  //   if(unid < conv) {
+  //     resp = (valor * (10 ** unid)) / (10 ** conv)
+  //     respB.innerHTML = " unidade menor " + resp.toLocaleString("pt-BR");
+  //   }
+  //   else{
+  //     resp = (valor * (10 ** unid)) * (10 ** conv)
+  //     respB.innerHTML = " unidade Maior " + resp.toLocaleString("pt-BR");
+  //   }
 }
 
-function convertBit() {
-  if(unid > conv) {
-    resp = valor * (conv * (2^10))
-  }
-  else{
-    resp = (valor / conv) * (2^10)
-    // resp = (valor * (unid * 2^10))  / (conv * 2^10)
-  }
-}
+// respB.innerHTML = " 1 byte = 8bits ; 2 ^ 3 = "+ 2**3;
+// respB.innerHTML += "<br> 1 KB = 2 ^ 10 Bytes; 1 Byte = 8 bits; entt é 8 * 2 ^ 10 =  "+ 8 * 2**10;
+// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
+// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
+// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
 
-function CforK(c) {
-  tempK = Number(c) + 273.15;
-  tempK = tempK.toFixed(2);
-  return tempK;
-}
-function CforF(c) {
-  tempF = (Number(c) * 9) / 5 + 32;
-  tempF = tempF.toFixed(2);
-  return tempF;
-}
+// if (valor == 0) {
+//   respB.innerHTML = "Informe um valor";
+//   calcB.innerHTML = "";
+// } else if (unid == "b" || conv == "b") {
+//   convBit();
+// } else {
+//   respB.innerHTML = "";
+//   calcB.innerHTML = "";
+// }
+// }
 
-function FforK(f) {
-  tempK = ((Number(f) - 32) * 5) / 9 + 273.15;
-  tempK = tempK.toFixed(3);
-  return tempK;
-}
-function FforC(c) {
-  tempC = ((Number(c) - 32) * 5) / 9;
-  tempC = tempC.toFixed(2);
-  return tempC;
-}
+// function convBit() {
+//   if (unid == "B" || conv == "B") {
+//     if (unid == "b") {
+//       op = "/";
+//       resp = valor / 8;
+//     } else {
+//       op = "*";
+//       resp = valor * 8;
+//     }
+//     numMaior(resp);
+//     calcB.innerHTML = "Calculo: " + valor + " " + op + " 8";
+//   } else if (unid == "kB" || conv == "kB") {
+//     if (unid == "b") {
+//       op = "/";
+//       resp = valor / (8 * 10 ** 3);
+//     } else {
+//       op = "*";
+//       resp = valor * (8 * 10 ** 3);
+//     }
+//     numMaior(resp);
+//     calcB.innerHTML =
+//       "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 3) = " + resp;
+//   } else if (unid == "mB" || conv == "mB") {
+//     if (unid == "b") {
+//       op = "/";
+//       resp = valor / (8 * 10 ** 6);
+//     } else {
+//       op = "*";
+//       resp = valor * (8 * 10 ** 6);
+//     }
+//     numMaior(resp);
+//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
+//     calcB.innerHTML +=
+//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
+//   } else if (unid == "mB" || conv == "mB") {
+//     if (unid == "b") {
+//       op = "/";
+//       resp = valor / (8 * 10 ** 6);
+//     } else {
+//       op = "*";
+//       resp = valor * (8 * 10 ** 6);
+//     }
+//     numMaior(resp);
+//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
+//     calcB.innerHTML +=
+//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
+//   } else if (unid == "mB" || conv == "mB") {
+//     if (unid == "b") {
+//       op = "/";
+//       resp = valor / (8 * 10 ** 6);
+//     } else {
+//       op = "*";
+//       resp = valor * (8 * 10 ** 6);
+//     }
+//     numMaior(resp);
+//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
+//     calcB.innerHTML +=
+//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
+//   } else {
+//     respB.innerHTML = valor;
+//     calcB.innerHTML = "";
+//   }
+// }
 
-function KforF(k) {
-  tempF = ((Number(k) - 273.15) * 5) / 9 + 32;
-  tempF = tempF.toFixed(3);
-  return tempF;
-}
-function KforC(c) {
-  tempC = Number(c) - 273.15;
-  tempC = tempC.toFixed(2);
-  return tempC;
-}
+// function numMaior(resp) {
+//   if (parseInt(resp) == parseFloat(resp)) {
+//     respB.innerHTML = "Inteiro: " + resp.toLocaleString("pt-BR");
+//   } else {
+//     respB.innerHTML = "Decimal: " + resp;
+//   }
+// }

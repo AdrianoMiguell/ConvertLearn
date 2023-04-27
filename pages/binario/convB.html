@@ -42,11 +42,13 @@
                 <p> Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
                     facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
                     chamada de sistema binário.</p>
-                <p> Ao baixar um arquivo ou contratar um plano de acesso à internet, você vai encontrar expressões como megabits, gigabytes, terabytes e tantas outras. Essas são medidas que indicam o tamanho de um conjunto de dados.</p>
+                <p> Ao baixar um arquivo ou contratar um plano de acesso à internet, você vai encontrar expressões como
+                    megabits, gigabytes, terabytes e tantas outras. Essas são medidas que indicam o tamanho de um
+                    conjunto de dados.</p>
                 <br>
                 <ol class="sesInfo-list flex-around">
                     <div>
-                        <li> bit  </li>
+                        <li> bit </li>
                         <li> byte </li>
                         <li> kilobyte </li>
                         <li> megabyte </li>
@@ -61,7 +63,7 @@
                     </div>
                 </ol>
             </div>
-            
+
             <br>
 
             <h2>
@@ -78,24 +80,25 @@
                         <label for="unidB"> Medida do valor </label>
                         <select name="unidB" id="unidB" onchange="convert()">
                             <option value=""> --- escolha --- </option>
-                            <option value="0" selected>bit</option>
-                            <option value="1">byte</option>
-                            <option value="2">kilobyte</option>
-                            <option value="3">megabyte</option>
-                            <option value="4">gigabyte</option>
-                            <option value="5">terabyte</option>
+                            <option value="0" >bit</option>
+                            <option value="0" selected>byte</option>
+                            <option value="3">kilobit</option>
+                            <option value="3">kilobyte</option>
+                            <option value="6">megabyte</option>
+                            <option value="9">gigabyte</option>
+                            <option value="12">terabyte</option>
                         </select>
                     </div>
                     <div>
                         <label for="convB"> Converter para </label>
                         <select name="convB" id="convB" onchange="convert()">
                             <option value=""> --- escolha --- </option>
-                            <option value="1">bit</option>
-                            <option value="2" selected>byte</option>
-                            <option value="3">kilobyte</option>
-                            <option value="3">megabyte</option>
-                            <option value="4">gigabyte</option>
-                            <option value="5">terabyte</option>
+                            <option value="0">bit</option>
+                            <option value="0">byte</option>
+                            <option value="3" selected>kilobyte</option>
+                            <option value="6">megabyte</option>
+                            <option value="9">gigabyte</option>
+                            <option value="12">terabyte</option>
                         </select>
                     </div>
                 </div>
@@ -135,3 +138,39 @@
 </body>
 
 </html>
+
+
+
+
+<!-- 
+
+
+<div class="sesConvert-opts">
+<div>
+<label for="unidB"> Medida do valor </label>
+<select name="unidB" id="unidB" onchange="convert()">
+<option value=""> --- escolha --- </option>
+<option value="b" selected>bit</option>
+<option value="B">byte</option>
+<option value="kB">kilobyte</option>
+<option value="mB">megabyte</option>
+<option value="gB">gigabyte</option>
+<option value="tB">terabyte</option>
+</select>
+</div>
+<div>
+<label for="convB"> Converter para </label>
+<select name="convB" id="convB" onchange="convert()">
+<option value=""> --- escolha --- </option>
+<option value="b">bit</option>
+<option value="B">byte</option>
+<option value="kB" >kilobyte</option>
+<option value="mB" selected>megabyte</option>
+<option value="gB">gigabyte</option>
+<option value="tB">terabyte</option>
+</select>
+</div>
+</div>
+
+                
+ -->
