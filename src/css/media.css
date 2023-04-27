@@ -1,10 +1,46 @@
+/* maximo de 500px | 0 - 500*/
 @media screen and (max-width: 500px) {
-    .navOps-item{
+    .navOps-item {
         font-size: 8pt;
     }
+
+    .icon-circle {
+        width: 3em;
+        height: 3em;
+    }
+    .icon-circle img {
+        height: auto;
+        width: 25px;
+    }
 }
-@media screen and (max-width: 768px) {
-    .sesConvert-opts{
+
+/* maximo de 980px | 500 - 980*/
+@media screen and (max-width: 980px) {
+    .sesConvert-opts {
         justify-content: space-around;
+    }
+    .icon-circle{
+        height: 4em;
+        width: 4em;
+    }
+    .icon-circle img{
+        height: auto;
+        width: 35px;
+    }
+}
+
+/* minino de 980px | 980 - inf. */
+@media screen and (min-width: 980px) {
+    .sesConvert-opts {
+        justify-content: space-around;
+    }
+
+    .icon-circle {
+        width: 5em;
+        height: 5em;
+    }
+
+    .icon-circle img {
+        width: 50px;
     }
 }

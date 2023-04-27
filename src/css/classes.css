@@ -56,16 +56,18 @@
     font-size: var(--ts);
 }
 
+.link-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 5px;
+}
 .icon-circle{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 3em;
-    height: 3em;
     border-radius: 100%;
-}
-.icon-circle span{
-    text-decoration: none;
 }
 
 .text-dec-none{
