@@ -19,17 +19,18 @@ function convert() {
   if (valor > 0) {
     console.log("Peguei a unidade de medida " + unid + " O valor é : " + valor);
     convertC(valor, unid, conv);
-    respM.innerHTML = "Comprimento: " + comp + " " + convText;
+    respM.innerHTML = "Massa: " + comp + " " + convText;
   } else if (valor < 0) {
     respM.innerHTML =
       "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respM.innerHTML = 'Qual é o comprimento mesmo? "0" não vale...';
+    respM.innerHTML = 'Qual é o Massa mesmo? "0" não vale...';
   }
 }
 
 // revisar logica
 function convertC(v, u, c) {
-  comp = (Number(v) * u) / Number(c);
+  comp = (Number(v) * 10 ** u) / 10 ** Number(c);
+  console.log(comp);
   return comp;
 }

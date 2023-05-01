@@ -8,27 +8,30 @@
     <title> ConverterLearn - Temperatura </title>
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
+    <link rel="stylesheet" href="../../src/css/media.css">
 </head>
 
 <body>
 
     <header>
         <nav class="gradient-simple">
-            <h1 id="logo" class="text-grad-light"> HtC converter </h1>
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
             <ul class="navOps">
                 <a href="../comprimento/convC.html">
                     <li class="navOps-item text-light"> Comprimentos </li>
                 </a>
-                <a href="../massa/convM.html#sesConvert">
+                <a href="../massa/convV.html#sesConvert">
                     <li class="navOps-item text-light"> Massas </li>
                 </a>
                 <a href="../temperatura/convT.html#sesConvert">
                     <li class="navOps-item text-light"> Temperaturas </li>
                 </a>
-                <a href="../others.html">
+                <a href="../index.html#others">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
-                <a href="./sobre-nos.html">
+                <a href="./sobreNos.html">
                     <li class="navOps-item text-light"> Sobre nós </li>
                 </a>
             </ul>
@@ -38,16 +41,23 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo temperaturas </h1>
-                <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F)</p>
-                <br>
-                <ol class="sesInfo-list">
-                    <li>Fahrenheit: escala termométrica de símbolo F, no qual 32° F é o ponto de congelamento da água e
-                        212° F é o ponto de ebulição da água.</li>
-                    <li>Celsius: escala de temperatura, símbolo C, no qual 0° C é o ponto de congelamento da água e 100°
-                        C é o ponto de ebulição da água.</li>
-                    <li>Kelvin: escala de temperatura absoluta ou escala termodinâmica, cujo símbolo é K, no qual o
-                        ponto triplo da água tem o valor de 273,16 K.</li>
+                <h1> Convertendo massas </h1>
+                <p>
+                    A unidade padrão de massa no Sistema Internacional de unidades (SI) é o quilograma (kg). As unidades
+                    do sistema métrico decimal de massa são:
+                </p>
+                <ol class="sesInfo-list flex-around">
+                    <div>
+                        <li> quilograma (kg) </li>
+                        <li> hectograma (hg) </li>
+                        <li> decagrama (dag) </li>
+                        <li> grama (g) </li>
+                    </div>
+                    <div>
+                        <li> decigrama (dg) </li>
+                        <li> centigrama (cg) </li>
+                        <li> miligrama (mg) </li>
+                    </div>
                 </ol>
             </div>
             <br>
@@ -56,33 +66,31 @@
             </h2>
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorT"> Temperatura </label>
-                    <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
+                    <label for="valorV"> Massa </label>
+                    <input type="number" placeholder="Digite aqui" id="valorV" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">
                     <div>
-                        <label for="unidT"> Escala de temperatura para</label>
-                        <select name="unidT" id="unidT" onchange="convert()">
-                            <option value="" selected> --- escolha --- </option>
-                            <option value="c">celsius</option>
-                            <option value="k">kelvin</option>
-                            <option value="f">fahrenheit</option>
+                        <label for="unidV"> Unidade de massa </label>
+                        <select name="unidV" id="unidV" onchange="convert()">
+                            <option value="-3"> mililitro(s) </option>
+                            <option value="0" selected> litro </option>
+                            <option value="3"> metro(s) cubicos </option>
                         </select>
                     </div>
                     <div>
-                        <label for="convT"> Converter para</label>
-                        <select name="convT" id="convT" onchange="convert()">
-                            <option value="" selected> --- escolha --- </option>
-                            <option value="k">kelvin</option>
-                            <option value="c">celsius</option>
-                            <option value="f">fahrenheit</option>
+                        <label for="convV"> Converter para</label>
+                        <select name="convV" id="convV" onchange="convert()">
+                            <option value="-3" selected> mililitro(s) </option>
+                            <option value="0"> litro </option>
+                            <option value="3"> metro(s) cubicos </option>
                         </select>
                     </div>
                 </div>
                 <br>
                 <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respT"> </span>
-                    <span id="calcT" class=""> </span>
+                    <span id="respV"> </span>
+                    <span id="calcV" class=""> </span>
                 </div>
                 <br>
             </div>
@@ -111,7 +119,7 @@
         <span class="text-grad-light"> Muito &#10084; obrigado! </span>
     </footer>
 
-    <script src="./convT.js"></script>
+    <script src="./convV.js"></script>
 </body>
 
 </html>

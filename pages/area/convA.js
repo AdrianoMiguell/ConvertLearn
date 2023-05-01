@@ -1,202 +1,40 @@
-const valorT = document.querySelector("#valorT");
-const unidT = document.querySelector("#unidT");
-const convT = document.querySelector("#convT");
-const respT = document.querySelector("#respT");
-const calcT = document.querySelector("#calcT");
+const valorA = document.querySelector("#valorA");
+const unidA = document.querySelector("#unidA");
+const convA = document.querySelector("#convA");
+const respA = document.querySelector("#respA");
+const calcA = document.querySelector("#calcA");
 
 let valor;
 let conv;
-let tempC;
-let tempK;
-let tempF;
+let comp;
 let unid;
+let convText;
 
 function convert() {
-  valor = valorT.value;
+  valor = valorA.value;
+  unid = unidA.options[unidA.selectedIndex].value;
+  conv = convA.options[convA.selectedIndex].value;
+  convText = convA.options[convA.selectedIndex].textContent;
 
-  unid = unidT.options[unidT.selectedIndex].value;
-  conv = convT.options[convT.selectedIndex].value;
-
-  if (valor != "") {
-    switch (unid) {
-      case "c":
-        convertC();
-        break;
-      case "k":
-        convertK();
-        break;
-      case "f":
-        convertF();
-        break;
-      default:
-        respT.innerHTML = "Escala de temperatura invalida ou não informada";
-        calcT.innerHTML = "";
-        break;
+  if (valor > 0) {
+    convertC(valor, unid, conv);
+    if (parseInt(conv) != parseFloat(conv)) {
+      respA.innerHTML =
+        "Comprimento: " + comp.toLocaleString("pt-BR") + " " + convText;
+    } else {
+      respA.innerHTML = "Comprimento: " + comp + " " + convText;
     }
+  } else if (valor < 0) {
+    respA.innerHTML =
+      "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respT.innerHTML = "Insina um valor";
+    respA.innerHTML = 'Qual é o comprimento mesmo? "0" não vale...';
   }
 }
 
-function convertC() {
-  switch (conv) {
-    case "k":
-      CforK(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempK +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> (" +
-        valor +
-        ") + 273.15 = " +
-        tempK +
-        " </span>";
-      break;
-    case "f":
-      CforF(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempF +
-        " Fahrenheit <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> ((" +
-        valor +
-        ") * 9 / 5) + 32 = " +
-        tempF +
-        " F° </span>";
-      break;
-    default:
-      respT.innerHTML = "Temperatura informada: " + valor + " Celsius <br>";
-      calcT.innerHTML = "";
-      break;
-  }
-}
-
-function convertF() {
-  switch (conv) {
-    case "k":
-      FforK(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempK +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        "<span class='dest-bold'> Calculo: </span> <br> <span> ( (" +
-        valor +
-        ") - 32) x 5 / 9) + 273,15 = " +
-        tempK +
-        " </span> <br> ";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (valor - 32 * 5) / 5 +
-        ") + 273,15 = " +
-        tempK +
-        " K </span>";
-
-      break;
-    case "c":
-      FforC(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempC +
-        " Celsius <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> ( (" +
-        valor +
-        ") - 32) * 9 / 5 = " +
-        tempC +
-        " C° </span>";
-      break;
-    default:
-      respT.innerHTML =
-        "Temperatura informada: " +
-        valor +
-        " Fahrenheit <br>";
-      calcT.innerHTML = "";
-      break;
-  }
-}
-
-function convertK() {
-  switch (conv) {
-    case "c":
-      KforC(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempC +
-        " Celsius <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> (" +
-        valor +
-        ") + 273.15 = " +
-        tempC +
-        " C° </span>";
-      break;
-    case "f":
-      KforF(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempF +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        "<span class='dest-bold'> Calculo: </span> <br> <span> ( (" +
-        valor +
-        ") - 273,15) x 5 / 9) + 32 = " +
-        tempF +
-        " </span> <br> ";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (Number(valor) - 273.15).toFixed(3) +
-        ") * 5 / 9 + 32 = " +
-        tempF +
-        " </span> <br>";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (((Number(valor) - 273.15) * 5) / 9).toFixed(3) +
-        ") + 32 = " +
-        tempF +
-        " </span>";
-      break;
-    default:
-      respT.innerHTML =
-        "Temperatura informada: " +
-        valor +
-        " Kelvin <br>";
-      calcT.innerHTML = "";
-      break;
-  }
-}
-
-function CforK(c) {
-  tempK = Number(c) + 273.15;
-  tempK = tempK.toFixed(2);
-  return tempK;
-}
-function CforF(c) {
-  tempF = (Number(c) * 9) / 5 + 32;
-  tempF = tempF.toFixed(2);
-  return tempF;
-}
-
-function FforK(f) {
-  tempK = ((Number(f) - 32) * 5) / 9 + 273.15;
-  tempK = tempK.toFixed(3);
-  return tempK;
-}
-function FforC(c) {
-  tempC = ((Number(c) - 32) * 5) / 9;
-  tempC = tempC.toFixed(2);
-  return tempC;
-}
-
-function KforF(k) {
-  tempF = ((Number(k) - 273.15) * 5) / 9 + 32;
-  tempF = tempF.toFixed(3);
-  return tempF;
-}
-function KforC(c) {
-  tempC = Number(c) - 273.15;
-  tempC = tempC.toFixed(2);
-  return tempC;
+// revisar logica
+function convertC(v, u, c) {
+  comp = (Number(v) * 10 ** u) / 10 ** Number(c);
+  console.log(comp);
+  return comp;
 }

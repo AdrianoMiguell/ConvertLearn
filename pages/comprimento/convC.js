@@ -30,6 +30,7 @@ function convert() {
 
 // revisar logica
 function convertC(v, u, c) {
-  comp = (Number(v) * u) / Number(c);
+  comp = (Number(v) * 10 ** u) / 10 ** Number(c);
+  console.log(comp);
   return comp;
 }

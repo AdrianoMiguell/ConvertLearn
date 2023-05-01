@@ -6,10 +6,11 @@ const calcB = document.querySelector("#calcB");
 
 let valor;
 let conv;
-let resp;
 let unid;
-let op;
-let unidText;
+let unidResult;
+let convResult;
+let time;
+let a;
 let convText;
 
 function convert() {
@@ -17,132 +18,132 @@ function convert() {
 
   unid = unidB.options[unidB.selectedIndex].value;
   conv = convB.options[convB.selectedIndex].value;
-  unidText = unidB.options[unidB.selectedIndex].textContent;
   convText = convB.options[convB.selectedIndex].textContent;
 
-  respB.innerHTML = "isso: " + convText.slice(-3);
-
-  if (unidText == convText) {
-    respB.innerHTML = "Valor: " + valor;
-  } else if (unidText.slice(-3) == "bit" || convText.slice(-3) == "bit") {
-    respB.innerHTML = "é bit;";
-
-    if (unid < conv) {
-      resp = (valor * 10 ** unid) / (8 * 10 ** conv);
-      respB.innerHTML = " unidade menor de bit " + resp.toLocaleString("pt-BR");
-    } else {
-      resp = valor * 10 ** unid * (8 * 10 ** conv);
-      respB.innerHTML = " unidade Maior de bit " + resp.toLocaleString("pt-BR");
-    }
-    
-  } else if (unidText.slice(-4) == "byte" || convText.slice(-4) == "byte") {
-    if (unid < conv) {
-      resp = (valor * 10 ** unid) / 10 ** conv;
-      respB.innerHTML = " unidade menor " + resp.toLocaleString("pt-BR");
-    } else {
-      resp = valor * 10 ** unid * 10 ** conv;
-      respB.innerHTML = " unidade Maior " + resp.toLocaleString("pt-BR");
-    }
+  if (valor > 0) {
+    choosen(unid, conv);
+  } else if (valor < 0) {
+    respB.innerHTML =
+      "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respB.innerHTML = "Deu ruim";
+    respB.innerHTML = 'Qual é o Tempo mesmo? "0" não vale...';
   }
-  // else{
-
-  //   if(unid < conv) {
-  //     resp = (valor * (10 ** unid)) / (10 ** conv)
-  //     respB.innerHTML = " unidade menor " + resp.toLocaleString("pt-BR");
-  //   }
-  //   else{
-  //     resp = (valor * (10 ** unid)) * (10 ** conv)
-  //     respB.innerHTML = " unidade Maior " + resp.toLocaleString("pt-BR");
-  //   }
 }
 
-// respB.innerHTML = " 1 byte = 8bits ; 2 ^ 3 = "+ 2**3;
-// respB.innerHTML += "<br> 1 KB = 2 ^ 10 Bytes; 1 Byte = 8 bits; entt é 8 * 2 ^ 10 =  "+ 8 * 2**10;
-// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
-// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
-// respB.innerHTML += " <br> 2 ^ 10 = "+ 2**10;
+// revisar logica
+function choosen(u, c) {
+  switch (u) {
+    case "bit":
+      b();
+      unidResult = a;
+      break;
+    case "Byte":
+      B();
+      unidResult = a;
+      break;
+    case "kbit":
+      kb();
+      unidResult = a;
+      break;
+    case "kByte":
+      kB();
+      unidResult = a;
+      break;
+    case "mbit":
+      mb();
+      unidResult = a;
+      break;
+    case "mByte":
+      mB();
+      unidResult = a;
+      break;
+    default:
+      respB.innerHTML = "Unidade não identificada!";
+      break;
+  }
 
-// if (valor == 0) {
-//   respB.innerHTML = "Informe um valor";
-//   calcB.innerHTML = "";
-// } else if (unid == "b" || conv == "b") {
-//   convBit();
-// } else {
-//   respB.innerHTML = "";
-//   calcB.innerHTML = "";
-// }
-// }
+  console.log("a = " + a);
 
-// function convBit() {
-//   if (unid == "B" || conv == "B") {
-//     if (unid == "b") {
-//       op = "/";
-//       resp = valor / 8;
-//     } else {
-//       op = "*";
-//       resp = valor * 8;
-//     }
-//     numMaior(resp);
-//     calcB.innerHTML = "Calculo: " + valor + " " + op + " 8";
-//   } else if (unid == "kB" || conv == "kB") {
-//     if (unid == "b") {
-//       op = "/";
-//       resp = valor / (8 * 10 ** 3);
-//     } else {
-//       op = "*";
-//       resp = valor * (8 * 10 ** 3);
-//     }
-//     numMaior(resp);
-//     calcB.innerHTML =
-//       "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 3) = " + resp;
-//   } else if (unid == "mB" || conv == "mB") {
-//     if (unid == "b") {
-//       op = "/";
-//       resp = valor / (8 * 10 ** 6);
-//     } else {
-//       op = "*";
-//       resp = valor * (8 * 10 ** 6);
-//     }
-//     numMaior(resp);
-//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
-//     calcB.innerHTML +=
-//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
-//   } else if (unid == "mB" || conv == "mB") {
-//     if (unid == "b") {
-//       op = "/";
-//       resp = valor / (8 * 10 ** 6);
-//     } else {
-//       op = "*";
-//       resp = valor * (8 * 10 ** 6);
-//     }
-//     numMaior(resp);
-//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
-//     calcB.innerHTML +=
-//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
-//   } else if (unid == "mB" || conv == "mB") {
-//     if (unid == "b") {
-//       op = "/";
-//       resp = valor / (8 * 10 ** 6);
-//     } else {
-//       op = "*";
-//       resp = valor * (8 * 10 ** 6);
-//     }
-//     numMaior(resp);
-//     calcB.innerHTML = "Calculo: " + valor + " " + op + " ( 8 * 10 ^ 6) <br>";
-//     calcB.innerHTML +=
-//       "Calculo: " + valor + " " + op + " " + 8 * 10 ** 6 + " = " + resp;
-//   } else {
-//     respB.innerHTML = valor;
-//     calcB.innerHTML = "";
-//   }
-// }
+  switch (c) {
+    case "bit":
+      b();
+      convResult = a;
+      break;
+    case "Byte":
+      B();
+      convResult = a;
+      break;
+    case "kbit":
+      kb();
+      convResult = a;
+      break;
+    case "kByte":
+      kB();
+      convResult = a;
+    case "mbit":
+      mb();
+      convResult = a;
+      break;
+    case "mByte":
+      mB();
+      convResult = a;
+      break;
+    default:
+      respB.innerHTML = "Unidade não identificada!";
+      break;
+  }
+  convertTime(unidResult, convResult);
+}
 
-// function numMaior(resp) {
-//   if (parseInt(resp) == parseFloat(resp)) {
-//     respB.innerHTML = "Inteiro: " + resp.toLocaleString("pt-BR");
-//   } else {
-//     respB.innerHTML = "Decimal: " + resp;
-//   }
-// }
+function convertTime(u, c) {
+  // if (u <= c) {
+  time = (valor * u) / c;
+  // } else {
+  // time = valor * u * c;
+  // }
+
+  console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
+
+  if (time < 10 ** -8) {
+    respB.innerHTML = "Tempo: " + time.toFixed(16) + " " + convText;
+  } else if (time < 10 ** -4) {
+    respB.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
+  } else if (time > 10 ** 10) {
+    respB.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
+  } else if (time > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
+    respB.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
+  } else {
+    respB.innerHTML = "Tempo: " + time + " " + convText;
+  }
+}
+
+function b() {
+  a = 1;
+}
+function B() {
+  a = 8;
+}
+function kb() {
+  a = 10 ** 3;
+}
+function kB() {
+  a = 8 * 10 ** 3;
+}
+function mb() {
+  a = 10 ** 6;
+}
+function mB() {
+  a = 8 * 10 ** 6;
+}
+function gb() {
+  a = 10 ** 9;
+}
+function gB() {
+  a = 8 * 10 ** 9;
+}
+function tb() {
+  a = 10 ** 12;
+}
+function tB() {
+  a = 8 * 10 ** 12;
+}

@@ -1,3 +1,4 @@
+const labelT = document.querySelector("#labelT");
 const valorT = document.querySelector("#valorT");
 const unidT = document.querySelector("#unidT");
 const convT = document.querySelector("#convT");
@@ -6,213 +7,156 @@ const calcT = document.querySelector("#calcT");
 
 let valor;
 let conv;
-let tempC;
-let tempK;
-let tempF;
 let unid;
+let unidResult;
+let convResult;
+let time;
+let a;
+let convText;
 
 function convert() {
   valor = valorT.value;
 
   unid = unidT.options[unidT.selectedIndex].value;
   conv = convT.options[convT.selectedIndex].value;
+  convText = convT.options[convT.selectedIndex].textContent;
+  // labelT.innerHTML = "Valor em: " + convText;
 
-  if (valor != "") {
-    switch (unid) {
-      case "c":
-        convertC();
-        break;
-      case "k":
-        convertK();
-        break;
-      case "f":
-        convertF();
-        break;
-      default:
-        respT.innerHTML = "Escala de temperatura invalida ou não informada";
-        calcT.innerHTML = "";
-        break;
-    }
+  if (valor > 0) {
+    choosen(unid, conv);
+  } else if (valor < 0) {
+    respT.innerHTML =
+      "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respT.innerHTML = "Insina um valor";
+    respT.innerHTML = 'Qual é o Tempo mesmo? "0" não vale...';
   }
 }
 
-function convertC() {
-  switch (conv) {
-    case "k":
-      CforK(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempK +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> (" +
-        valor +
-        ") + 273.15 = " +
-        tempK +
-        " </span>";
+// revisar logica
+function choosen(u, c) {
+  switch (u) {
+    case "mm":
+      milis();
+      unidResult = a;
       break;
-    case "f":
-      CforF(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempF +
-        " Fahrenheit <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> ((" +
-        valor +
-        ") * 9 / 5) + 32 = " +
-        tempF +
-        " F° </span>";
+    case "s":
+      segs();
+      unidResult = a;
+      break;
+    case "m":
+      mins();
+      unidResult = a;
+      break;
+    case "h":
+      hours();
+      unidResult = a;
+      break;
+    case "d":
+      days();
+      unidResult = a;
+      break;
+    case "w":
+      weeks();
+      unidResult = a;
+      break;
+    case "mes":
+      mounths();
+      unidResult = a;
+      break;
+    case "y":
+      years();
+      unidResult = a;
       break;
     default:
-      respT.innerHTML = "Temperatura informada: " + valor + " Celsius <br>";
-      calcT.innerHTML = "";
+      respT.innerHTML = "Unidade não identificada!";
       break;
   }
-}
 
-function convertF() {
-  switch (conv) {
-    case "k":
-      FforK(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempK +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        "<span class='dest-bold'> Calculo: </span> <br> <span> ( (" +
-        valor +
-        ") - 32) x 5 / 9) + 273,15 = " +
-        tempK +
-        " </span> <br> ";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (valor - 32 * 5) / 5 +
-        ") + 273,15 = " +
-        tempK +
-        " K </span>";
+  console.log("a = " + a);
 
+  switch (c) {
+    case "mm":
+      milis();
+      convResult = a;
       break;
-    case "c":
-      FforC(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempC +
-        " Celsius <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> ( (" +
-        valor +
-        ") - 32) * 9 / 5 = " +
-        tempC +
-        " C° </span>";
+    case "s":
+      segs();
+      convResult = a;
+      break;
+    case "m":
+      mins();
+      convResult = a;
+      break;
+    case "h":
+      hours();
+      convResult = a;
+      break;
+    case "d":
+      days();
+      convResult = a;
+      break;
+    case "w":
+      weeks();
+      convResult = a;
+      break;
+    case "mes":
+      mounths();
+      convResult = a;
+      break;
+    case "y":
+      years();
+      convResult = a;
       break;
     default:
-      respT.innerHTML =
-        "Temperatura informada: " +
-        valor +
-        " Fahrenheit <br>";
-      calcT.innerHTML = "";
+      respT.innerHTML = "Unidade não identificada!";
       break;
+  }
+  convertTime(unidResult, convResult);
+}
+
+function convertTime(u, c) {
+  // if (u <= c) {
+  time = (valor * u) / c;
+  // } else {
+    // time = valor * u * c;
+  // }
+
+  console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
+
+  if (time < 10 ** -8) {
+    respT.innerHTML = "Tempo: " + time.toFixed(16) + " " + convText;
+  } else if (time < 10 ** -4) {
+    respT.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
+  } else if (time > 10 ** 10) {
+    respT.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
+  } else if (time > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
+    respT.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
+  } else {
+    respT.innerHTML = "Tempo: " + time + " " + convText;
   }
 }
 
-function convertK() {
-  switch (conv) {
-    case "c":
-      KforC(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempC +
-        " Celsius <br>";
-      calcT.innerHTML =
-        " <span class='dest-bold'> Calculo: </span> <span> (" +
-        valor +
-        ") + 273.15 = " +
-        tempC +
-        " C° </span>";
-      break;
-    case "f":
-      KforF(valor);
-      respT.innerHTML =
-        "<span class='dest-bold'> Temperatura é: </span>" +
-        tempF +
-        " Kelvis <br>";
-      calcT.innerHTML =
-        "<span class='dest-bold'> Calculo: </span> <br> <span> ( (" +
-        valor +
-        ") - 273,15) x 5 / 9) + 32 = " +
-        tempF +
-        " </span> <br> ";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (Number(valor) - 273.15).toFixed(3) +
-        ") * 5 / 9 + 32 = " +
-        tempF +
-        " </span> <br>";
-      calcT.innerHTML +=
-        "<span> ( " +
-        (((Number(valor) - 273.15) * 5) / 9).toFixed(3) +
-        ") + 32 = " +
-        tempF +
-        " </span>";
-      break;
-    default:
-      respT.innerHTML =
-        "Temperatura informada: " +
-        valor +
-        " Kelvin <br>";
-      calcT.innerHTML = "";
-      break;
-  }
+function milis() {
+  a = 1 / 1000;
 }
-
-function CforK(c) {
-  tempK = Number(c) + 273.15;
-  tempK = tempK.toFixed(2);
-  return tempK;
+function segs() {
+  a = 1;
 }
-function CforF(c) {
-  tempF = (Number(c) * 9) / 5 + 32;
-  tempF = tempF.toFixed(2);
-  return tempF;
+function mins() {
+  a = 60;
 }
-
-function FforK(f) {
-  tempK = ((Number(f) - 32) * 5) / 9 + 273.15;
-  tempK = tempK.toFixed(3);
-  return tempK;
+function hours() {
+  a = 3600;
 }
-function FforC(c) {
-  tempC = ((Number(c) - 32) * 5) / 9;
-  tempC = tempC.toFixed(2);
-  return tempC;
+function days() {
+  a = 86400;
 }
-
-function KforF(k) {
-  tempF = ((Number(k) - 273.15) * 5) / 9 + 32;
-  tempF = tempF.toFixed(3);
-  return tempF;
+function weeks() {
+  a = 86400 * 7;
 }
-function KforC(c) {
-  tempC = Number(c) - 273.15;
-  tempC = tempC.toFixed(2);
-  return tempC;
+function mounths() {
+  a = 86400 * 30;
 }
-
-
-// se menor, divida, se maior, multiplica
-
-// 0,00000001 - x / 1e-9 milissegundo
-// 0,000001 - x / 1e-6 milissegundo
-// 0 - milissegundo
-// 1.000 - x * 10e3 segundo
-// 60.000 - x * (6 * 10e4) minuto
-// 3.600.000 - x * (3,6 * 10e6) hora
-// 86.400.000 - dia
-// 2.592.000.000 - mês
-// 31.104.000.000 - ano
-// 0 - milissegundos
-// 0 - milissegundos
-// 0 - milissegundos
+function years() {
+  a = 86400 * 365;
+}
