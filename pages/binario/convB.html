@@ -9,26 +9,33 @@
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
     <link rel="stylesheet" href="../../src/css/media.css">
+
+    <style>
+        .sesInfo-list {
+            text-transform: capitalize;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
         <nav class="gradient-simple">
-            <a href="../index.html" class="text-dec-none">
-                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
-            </a>
+            <h1 id="logo" class="text-grad-light"> HtC converter </h1>
             <ul class="navOps">
                 <a href="../comprimento/convC.html">
-                    <li class="navOps-item text-light"> Comprimentos </li>
+                    <li class="navOps-item text-light"> Comprimento </li>
                 </a>
                 <a href="../massa/convM.html#sesConvert">
-                    <li class="navOps-item text-light"> Massas </li>
+                    <li class="navOps-item text-light"> Massa </li>
                 </a>
                 <a href="../temperatura/convT.html#sesConvert">
-                    <li class="navOps-item text-light"> Temperaturas </li>
+                    <li class="navOps-item text-light"> Temperatura </li>
                 </a>
-                <a href="../index.html#others">
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../others.html">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
                 <a href="./sobre-nos.html">
@@ -41,7 +48,7 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo binarios </h1>
+                <h1> Convertendo dados binários </h1>
                 <p> Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
                     facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
                     chamada de sistema binário.</p>
@@ -69,13 +76,12 @@
 
             <br>
 
-            <h2>
-                Convertendo
-            </h2>
-
             <div id="sesConvert">
+                <h2>
+                    Converter dados
+                </h2>
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorB"> Unidade </label>
+                    <label for="valorB"> Valor </label>
                     <input type="number" placeholder="Digite aqui" id="valorB" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">

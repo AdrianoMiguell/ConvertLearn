@@ -15,31 +15,32 @@
 
     <header>
         <nav class="gradient-simple">
-            <a href="../index.html" class="text-dec-none text-grad-light">
-                <h1 id="logo"> ConverterLearn </h1>
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
             </a>
             <ul class="navOps">
-                <a href="">
-                    <li class="navOps-item text-light"> Distâncias </li>
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
                 </a>
-                <a href="">
-                    <li class="navOps-item text-light"> Medidas </li>
+                <a href="../massa/convM.html#sesConvert">
+                    <li class="navOps-item text-light"> Massa </li>
                 </a>
-                <a href="./convT.html">
-                    <li class="navOps-item text-light"> Temperaturas </li>
+                <a href="../temperatura/convT.html#sesConvert">
+                    <li class="navOps-item text-light"> Temperatura </li>
                 </a>
-                <a href="../others.html">
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
-                <a href="">
+                <a href="../sobre-nos.html">
                     <li class="navOps-item text-light"> Sobre nós </li>
-                </a>
-                <a href="">
-                    <li class="navOps-item text-light"> Contato </li>
                 </a>
             </ul>
         </nav>
     </header>
+
 
     <main>
         <section class="text-light">
@@ -79,6 +80,7 @@
                     <div>
                         <label for="unidT"> Unidade de medida </label>
                         <select name="unidT" id="unidT" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
                             <option value="mm" selected> milissegundo(s) </option>
                             <option value="s"> segundo(s) </option>
                             <option value="m"> minuto(s) </option>
@@ -92,6 +94,7 @@
                     <div>
                         <label for="convT"> Converter para</label>
                         <select name="convT" id="convT" onchange="convert()">
+                            <option value=""> --- escolha --- </option>
                             <option value="mm" selected> milissegundo(s) </option>
                             <option value="s"> segundo(s) </option>
                             <option value="m"> minuto(s) </option>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> ConvertLearn - Area </title>
+    <title> ConvertLearn - Volume </title>
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
     <link rel="stylesheet" href="../../src/css/media.css">
@@ -44,8 +44,8 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo medidas de áreas </h1>
-                <p>
+                <h1> Convertendo medidas de Litro </h1>
+                <!--  <p>
                     A área corresponde a medida da superfície de uma figura geométrica. Nessa médida levamos em conta
                     duas dimensões, que são a base e a altura da figura.
                 </p>
@@ -70,46 +70,46 @@
                             href="https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm">https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm</a>
                     </li>
                 </ul>
-            </div>
+            </div> -->
             <br>
             <h2>
                 Converter medidas
             </h2>
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorA"> Valor da área </label>
-                    <input type="number" placeholder="Digite aqui" id="valorA" onchange="convert()">
+                    <label for="valorL"> Valor da área </label>
+                    <input type="number" placeholder="Digite aqui" id="valorL" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">
                     <div>
-                        <label for="unidA"> Unidade de Área </label>
-                        <select name="unidA" id="unidA" onchange="convert()">
-                            <option value="-6"> milimetro(s) quadrado </option>
-                            <option value="-4"> centimetro(s) quadrado </option>
-                            <option value="-2"> decimetro(s) quadrado </option>
-                            <option value="0" selected> metro(s) quadrado </option>
-                            <option value="2"> decametro(s) quadrado </option>
-                            <option value="4"> hectometro(s) quadrado </option>
-                            <option value="6"> quilometro(s) quadrado </option>
+                        <label for="unidL"> Unidade de Área </label>
+                        <select name="unidL" id="unidL" onchange="convert()">
+                            <option value="-3"> mililitro(s) </option>
+                            <option value="-2"> centilitro(s) </option>
+                            <option value="-1"> decilitro(s) </option>
+                            <option value="0" selected> litro(s) </option>
+                            <option value="1"> decalitro(s) </option>
+                            <option value="2"> hectolitro(s) </option>
+                            <option value="3"> quilolitro(s) </option>
                         </select>
                     </div>
                     <div>
-                        <label for="convA"> Converter para </label>
-                        <select name="convA" id="convA" onchange="convert()">
-                            <option value="-6"> milimetro(s) quadrado </option>
-                            <option value="-4"> centimetro(s) quadrado </option>
-                            <option value="-2"> decimetro(s) quadrado </option>
-                            <option value="0" selected> metro(s) quadrado </option>
-                            <option value="2"> decametro(s) quadrado </option>
-                            <option value="4"> hectometro(s) quadrado </option>
-                            <option value="6"> quilometro(s) quadrado </option>
+                        <label for="convL"> Converter para </label>
+                        <select name="convL" id="convL" onchange="convert()">
+                            <option value="-3"> mililitro(s) </option>
+                            <option value="-2"> centilitro(s) </option>
+                            <option value="-1"> decilitro(s) </option>
+                            <option value="0" selected> litro(s) </option>
+                            <option value="1"> decalitro(s) </option>
+                            <option value="2"> hectolitro(s) </option>
+                            <option value="3"> quilolitro(s) </option>
                         </select>
                     </div>
                 </div>
                 <br>
                 <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respA"> </span>
-                    <span id="calcA" class=""> </span>
+                    <span id="respL"> </span>
+                    <span id="calcL" class=""> </span>
                 </div>
                 <br>
             </div>
@@ -127,7 +127,7 @@
                     <span> @adrianomiguell26 </span>
                 </div>
             </a>
-            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
+            <a href="https://github.com/AdlrianoMiguell" class="text-dec-none" target="_blank">
                 <div class="flex-col-around text-grad-light">
                     <i class="bi bi-github" style="font-size: 20pt;"></i>
                     <span> @AdrianoMiguell </span>
@@ -138,7 +138,7 @@
         <span class="text-grad-light"> Muito &#10084; obrigado! </span>
     </footer>
 
-    <script src="./convA.js"></script>
+    <script src="./convL.js"></script>
 </body>
 
 </html>

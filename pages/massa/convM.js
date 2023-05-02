@@ -22,7 +22,7 @@ function convert() {
     respM.innerHTML = "Massa: " + comp + " " + convText;
   } else if (valor < 0) {
     respM.innerHTML =
-      "Informe um valor positivo ok! Não existem medidas negativas";
+      "Informe um valor positivo ok! Não existem medidas de massa negativas";
   } else {
     respM.innerHTML = 'Qual é o Massa mesmo? "0" não vale...';
   }

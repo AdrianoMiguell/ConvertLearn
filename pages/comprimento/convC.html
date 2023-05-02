@@ -9,33 +9,47 @@
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
     <link rel="stylesheet" href="../../src/css/media.css">
-    
+
+    <style>
+        #unidC{
+            padding: .5em;
+        }
+        #unidC option{
+            padding: .5em;
+        }
+    </style>
 </head>
 
 <body>
 
     <header>
         <nav class="gradient-simple">
-            <h1 id="logo" class="text-grad-light"> HtC converter </h1>
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
             <ul class="navOps">
-                <a href="../comprimento/convC.html">
-                    <li class="navOps-item text-light"> Comprimentos </li>
+                <a href="../comprimento/convC.html#html#sesConvert">
+                    <li class="navOps-item text-light"> Comprimento </li>
                 </a>
                 <a href="../massa/convM.html#sesConvert">
-                    <li class="navOps-item text-light"> Massas </li>
+                    <li class="navOps-item text-light"> Massa </li>
                 </a>
                 <a href="../temperatura/convT.html#sesConvert">
-                    <li class="navOps-item text-light"> Temperaturas </li>
+                    <li class="navOps-item text-light"> Temperatura </li>
                 </a>
-                <a href="../others.html">
+                <a href="../tempo/convTime.html#sesConvert">
+                    <li class="navOps-item text-light"> Tempo </li>
+                </a>
+                <a href="../index.html#others">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
-                <a href="./sobre-nos.html">
+                <a href="../sobre-nos.html">
                     <li class="navOps-item text-light"> Sobre nós </li>
                 </a>
             </ul>
         </nav>
     </header>
+
 
     <main>
         <section class="text-light">
@@ -46,13 +60,34 @@
                     sistema internacional de unidades é o metro, e seus múltiplos (quilômetro, hectômetro e decâmetro) e
                     submúltiplos (decímetro, centímetro milímetro)."
                     <br><br> Veja mais sobre "Medidas de comprimento" em: <a
-                        href="https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm" class="text-light">https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm</a>
+                        href="https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm"
+                        class="text-light">https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm</a>
                 </p>
+                <br>
+                <ol class="sesInfo-list flex-around">
+                    <div>
+                        <li> nanômetro(s) </li>
+                        <li> micrômetro(s) </li>
+                        <li> milimetro(s) </li>
+                        <li> centimetro(s) </li>
+                        <li> decimetro(s) </li>
+                        <li> metro(s) </li>
+                    </div>
+                    <div>
+                        <li> decâmetro(s) </li>
+                        <li> hectômetro(s) </li>
+                        <li> quilômetro(s) </li>
+                        <li> megametro(s) </li>
+                        <li> gigametro(s) </li>
+                        <li> terametro(s) </li>
+                    </div>
+                </ol>
             </div>
             <br>
             <h2>
-                Converter
+                Converter medidas de comprimentos
             </h2>
+            <br>
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
                     <label for="valorC"> Medida </label>
@@ -62,25 +97,39 @@
                     <div>
                         <label for="unidC"> Unidade de medida </label>
                         <select name="unidC" id="unidC" onchange="convert()">
-                            <option value="1000"> quilômetro(s) </option>
-                            <option value="100"> hectômetro(s) </option>
-                            <option value="10"> decâmetro(s) </option>
-                            <option value="1" selected> metro(s) </option>
-                            <option value="0.1"> decimetro(s) </option>
-                            <option value="0.01"> centimetro(s) </option>
-                            <option value="0.001"> milimetro(s) </option>
+                            <optgroup> macro </optgroup>
+                            <option value="12"> terametro(s) </option>
+                            <option value="9"> gigametro(s) </option>
+                            <option value="6"> megametro(s) </option>
+                            <option value="3"> quilômetro(s) </option>
+                            <option value="2"> hectômetro(s) </option>
+                            <option value="1"> decâmetro(s) </option>
+                            <optgroup> micro </optgroup>
+                            <option value="0" selected> metro(s) </option>
+                            <option value="-1"> decimetro(s) </option>
+                            <option value="-2"> centimetro(s) </option>
+                            <option value="-3"> milimetro(s) </option>
+                            <option value="-6"> micrômetro(s) </option>
+                            <option value="-9"> nanômetro(s) </option>
                         </select>
                     </div>
                     <div>
                         <label for="convC"> Converter para</label>
                         <select name="convC" id="convC" onchange="convert()">
-                            <option value="1000"> quilômetro(s) </option>
-                            <option value="100"> hectômetro(s) </option>
-                            <option value="10"> decâmetro(s) </option>
-                            <option value="1"> metro(s) </option>
-                            <option value="0.1"> decimetro(s) </option>
-                            <option value="0.01" selected> centimetro(s) </option>
-                            <option value="0.001"> milimetro(s) </option>
+                            <optgroup> macro </optgroup>
+                            <option value="12"> terametro(s) </option>
+                            <option value="9"> gigametro(s) </option>
+                            <option value="6"> megametro(s) </option>
+                            <option value="3"> quilômetro(s) </option>
+                            <option value="2"> hectômetro(s) </option>
+                            <option value="1"> decâmetro(s) </option>
+                            <optgroup> micro </optgroup>
+                            <option value="0" selected> metro(s) </option>
+                            <option value="-1"> decimetro(s) </option>
+                            <option value="-2"> centimetro(s) </option>
+                            <option value="-3"> milimetro(s) </option>
+                            <option value="-6"> micrômetro(s) </option>
+                            <option value="-9"> nanômetro(s) </option>
                         </select>
                     </div>
                 </div>
