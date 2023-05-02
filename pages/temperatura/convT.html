@@ -45,30 +45,35 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo temperaturas </h1>
-                <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F)</p>
+                <h1> Escalas de temperatura </h1>
+                <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F). Abaixo trazemos uma
+                    breve explicação sobre cada uma delas. </p>
                 <br>
-                <ol class="sesInfo-list">
-                    <li>Fahrenheit: escala termométrica de símbolo F, no qual 32° F é o ponto de congelamento da água e
-                        212° F é o ponto de ebulição da água.</li>
-                    <li>Celsius: escala de temperatura, símbolo C, no qual 0° C é o ponto de congelamento da água e 100°
-                        C é o ponto de ebulição da água.</li>
-                    <li>Kelvin: escala de temperatura absoluta ou escala termodinâmica, cujo símbolo é K, no qual o
+                <ul class="sesInfo-list">
+                    <li> <strong>Fahrenheit :</strong> Escala termométrica de símbolo F, no qual 32° F é o ponto de
+                        congelamento da água e
+                        212° F é o ponto de ebulição da água.</li> <br>
+                    <li> <strong>Celsius :</strong> Escala de temperatura, símbolo C, no qual 0° C é o ponto de
+                        congelamento da água e 100°
+                        C é o ponto de ebulição da água.</li> <br>
+                    <li> <strong>Kelvin :</strong> Escala de temperatura absoluta ou escala termodinâmica, cujo símbolo
+                        é K, no qual o
                         ponto triplo da água tem o valor de 273,16 K.</li>
-                </ol>
+                </ul>
             </div>
+
             <br>
-            <h2>
-                Converter
-            </h2>
+            <h2> Convertendo temperaturas </h2>
+            <br>
+
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorT"> Temperatura </label>
+                    <label for="valorT"> Valor </label>
                     <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">
                     <div>
-                        <label for="unidT"> Escala de temperatura para</label>
+                        <label for="unidT"> Escala de temperatura </label>
                         <select name="unidT" id="unidT" onchange="convert()">
                             <option value="" selected> --- escolha --- </option>
                             <option value="c">celsius</option>

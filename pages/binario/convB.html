@@ -21,9 +21,11 @@
 
     <header>
         <nav class="gradient-simple">
-            <h1 id="logo" class="text-grad-light"> HtC converter </h1>
+            <a href="../index.html" class="text-dec-none">
+                <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+            </a>
             <ul class="navOps">
-                <a href="../comprimento/convC.html">
+                <a href="../comprimento/convC.html#html#sesConvert">
                     <li class="navOps-item text-light"> Comprimento </li>
                 </a>
                 <a href="../massa/convM.html#sesConvert">
@@ -35,10 +37,10 @@
                 <a href="../tempo/convTime.html#sesConvert">
                     <li class="navOps-item text-light"> Tempo </li>
                 </a>
-                <a href="../others.html">
+                <a href="../index.html#others">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
-                <a href="./sobre-nos.html">
+                <a href="../index.html#sobreNos">
                     <li class="navOps-item text-light"> Sobre nós </li>
                 </a>
             </ul>
@@ -48,23 +50,38 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo dados binários </h1>
-                <p> Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
+                <h1> Unidades de medida para dados de armazenamento </h1>
+                <p>
+                    Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
                     facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
-                    chamada de sistema binário.</p>
-                <p> Ao baixar um arquivo ou contratar um plano de acesso à internet, você vai encontrar expressões como
-                    megabits, gigabytes, terabytes e tantas outras. Essas são medidas que indicam o tamanho de um
-                    conjunto de dados.</p>
+                    chamada de sistema binário. Para o armazenamento de dados, são usados unidades decimais e binárias
+                    de medida para expressar o tamanho desses dados de armazenamento.</p>
+                <p>
+                    Unidades decimais como kilobyte (KB), megabyte (MB) e gigabyte (GB) são comumente usadas para
+                    expressar o tamanho dos dados. Unidades binárias de medida incluem kibibyte (KiB), mebibyte (MiB) e
+                    gibibyte (GiB).
+                </p>
+                <p> Entre as unidades de armazenamento, além das já mencionadas, temos: </p>
                 <br>
                 <ol class="sesInfo-list flex-around">
                     <div>
+                        <h2>escala binária</h2>
                         <li> bit </li>
+                        <li>kilobit</li>
+                        <li>megabit</li>
+                        <li>gigabit</li>
+                        <li>terabit</li>
+                        <li>petabit</li>
+                        <li>exabit</li>
+                        <li>zettabit</li>
+                        <li>yottabit</li>
+                    </div>
+                    <div>
+                        <h2>escala decimal</h2>
                         <li> byte </li>
                         <li> kilobyte </li>
                         <li> megabyte </li>
                         <li> gigabyte </li>
-                    </div>
-                    <div>
                         <li> terabyte </li>
                         <li> petabyte </li>
                         <li> exabyte </li>
@@ -78,7 +95,7 @@
 
             <div id="sesConvert">
                 <h2>
-                    Converter dados
+                    Convertendo dados binários
                 </h2>
                 <div class="sesConvert-unid" style="align-items: center;">
                     <label for="valorB"> Valor </label>
