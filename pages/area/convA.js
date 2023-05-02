@@ -27,7 +27,7 @@ function convert() {
       respA.innerHTML = "Área: " + area.toFixed(8) + " " + convText;
     } else if (area > 10 ** 10) {
       respA.innerHTML = "Área: " + area.toExponential() + " " + convText;
-    } else if (area > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
+    } else if (area > 10 ** 3) {
       respA.innerHTML =
         "Área: " + area.toLocaleString("pt-BR") + " " + convText;
     } else {

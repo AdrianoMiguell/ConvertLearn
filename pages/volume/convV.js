@@ -1,49 +1,49 @@
-const valorA = document.querySelector("#valorA");
-const unidA = document.querySelector("#unidA");
-const convA = document.querySelector("#convA");
-const respA = document.querySelector("#respA");
-const calcA = document.querySelector("#calcA");
+const valorV = document.querySelector("#valorV");
+const unidV = document.querySelector("#unidV");
+const convV = document.querySelector("#convV");
+const respV = document.querySelector("#respV");
+const calcV = document.querySelector("#calcV");
 
 let valor;
 let conv;
-let area;
+let vol;
 let unid;
 let convText;
 
 function convert() {
-  valor = valorA.value;
-  unid = unidA.options[unidA.selectedIndex].value;
-  conv = convA.options[convA.selectedIndex].value;
-  convText = convA.options[convA.selectedIndex].textContent;
+  valor = valorV.value;
+  unid = unidV.options[unidV.selectedIndex].value;
+  conv = convV.options[convV.selectedIndex].value;
+  convText = convV.options[convV.selectedIndex].textContent;
 
   if (valor > 0) {
     convertA(valor, unid, conv);
 
-    if (area < 10 ** -15) {
-      respA.innerHTML = "Área: " + area.toFixed(22) + " " + convText;
-    } else if (area < 10 ** -8) {
-      respA.innerHTML = "Área: " + area.toFixed(16) + " " + convText;
-    } else if (area < 10 ** -4) {
-      respA.innerHTML = "Área: " + area.toFixed(8) + " " + convText;
-    } else if (area > 10 ** 10) {
-      respA.innerHTML = "Área: " + area.toExponential() + " " + convText;
-    } else if (area > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
-      respA.innerHTML =
-        "Área: " + area.toLocaleString("pt-BR") + " " + convText;
+    if (vol < 10 ** -15) {
+      respV.innerHTML = "Volume: " + vol.toFixed(22) + " " + convText;
+    } else if (vol < 10 ** -8) {
+      respV.innerHTML = "Volume: " + vol.toFixed(16) + " " + convText;
+    } else if (vol < 10 ** -4) {
+      respV.innerHTML = "Volume: " + vol.toFixed(8) + " " + convText;
+    } else if (vol > 10 ** 10) {
+      respV.innerHTML = "Volume: " + vol.toExponential() + " " + convText;
+    } else if (vol > 10 ** 2) {
+      respV.innerHTML =
+        "Volume: " + vol.toLocaleString("pt-BR") + " " + convText;
     } else {
-      respA.innerHTML = "Área: " + area + " " + convText;
+      respV.innerHTML = "Volume: " + vol + " " + convText;
     }
   } else if (valor < 0) {
-    respA.innerHTML =
+    respV.innerHTML =
       "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respA.innerHTML = 'Qual é o Área mesmo? "0" não vale...';
+    respV.innerHTML = 'Qual é o volume mesmo? "0" não vale...';
   }
 }
 
 // revisar logica
 function convertA(v, u, c) {
-  area = (Number(v) * 10 ** u) / 10 ** Number(c);
-  console.log(area);
-  return area;
+  vol = (Number(v) * 10 ** u) / 10 ** Number(c);
+  console.log(vol);
+  return vol;
 }

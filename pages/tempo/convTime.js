@@ -129,7 +129,7 @@ function convertTime(u, c) {
     respT.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
   } else if (time > 10 ** 10) {
     respT.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
-  } else if (time > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
+  } else if (time > 10 ** 3) {
     respT.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
   } else {
     respT.innerHTML = "Tempo: " + time + " " + convText;

@@ -44,72 +44,67 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo medidas de áreas </h1>
+                <h1> Unidades de Volume </h1>
                 <p>
-                    A área corresponde a medida da superfície de uma figura geométrica. Nessa médida levamos em conta
-                    duas dimensões, que são a base e a altura da figura.
+                    Podemos encontrar o volume de todos os sólidos geométricos. O volume corresponde à “capacidade”
+                    desse sólido. Entre as unidades temos : <br>
                 </p>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li>quilômetro quadrado (km²) </li>
-                        <li> hectômetro quadrado (hm²) </li>
-                        <li> decâmetro quadrado (dam²) </li>
-                        <li> metro quadrado (m²) </li>
-                    </div>
-                    <div>
-                        <li> decímetro quadrado (dm²) </li>
-                        <li> centímetro quadrado (cm²) </li>
-                        <li> milímetro quadrado (mm²) </li>
-                    </div>
+                <br>
+                <ol class="sesInfo-list">
+                    <li>quilômetro cúbico(s) (km³) </li>
+                    <li> hectômetro cúbico(s) (hm³) </li>
+                    <li> decâmetro cúbico(s) (dam³) </li>
+                    <li> metro cúbico(s) (m³) </li>
+                    <li> decímetro cúbico(s) (dm³) </li>
+                    <li> centímetro cúbico(s) (cm³) </li>
+                    <li> milímetro cúbico(s) (mm³) </li>
                 </ol>
                 <br>
-                <ul class="sesInfo-list flex-around">
-                    <li>
-                        <p>Veja mais sobre "Conversão de Medidas de Superfície" em : </p>
-                        <a
-                            href="https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm">https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm</a>
-                    </li>
-                </ul>
+                <p>Mais informações encontrar no site: <a
+                        href="https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm">https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm</a>
+                </p>
+                <br>
             </div>
             <br>
             <h2>
-                Converter medidas
+                Convertendo unidades de volume
             </h2>
+            <br>
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorA"> Valor da área </label>
-                    <input type="number" placeholder="Digite aqui" id="valorA" onchange="convert()">
+                    <label for="valorV"> Valor </label>
+                    <input type="number" placeholder="Digite aqui" id="valorV" onchange="convert()">
                 </div>
                 <div class="sesConvert-opts">
                     <div>
-                        <label for="unidA"> Unidade de Área </label>
-                        <select name="unidA" id="unidA" onchange="convert()">
-                            <option value="-9"> mililitro(s) </option>
-                            <option value="-6"> centilitro(s) </option>
-                            <option value="-3"> decilitro(s) </option>
-                            <option value="0" selected> litro(s) </option>
-                            <option value="3"> decalitro(s) </option>
-                            <option value="6"> hectolitro(s) </option>
-                            <option value="9"> quilolitro(s) </option>
+                        <label for="unidV"> Unidade de volume </label>
+                        <select name="unidV" id="unidV" onchange="convert()">
+                            <option value="-9"> milimetro cúbico(s) </option>
+                            <option value="-6"> centímetro cúbico(s) </option>
+                            <option value="-3"> decímetro cúbico(s) </option>
+                            <option value="0" selected> metro cúbico(s) </option>
+                            <option value="3"> decametro cúbico(s) </option>
+                            <option value="6"> hectômetro cúbico(s) </option>
+                            <option value="9"> quilômetro cúbico(s) </option>
                         </select>
                     </div>
                     <div>
-                        <label for="convA"> Converter para </label>
-                        <select name="convA" id="convA" onchange="convert()">
-                            <option value="-9"> mililitro(s) </option>
-                            <option value="-6"> centilitro(s) </option>
-                            <option value="-3"> decilitro(s) </option>
-                            <option value="0" selected> litro(s) </option>
-                            <option value="3"> decalitro(s) </option>
-                            <option value="6"> hectolitro(s) </option>
-                            <option value="9"> quilolitro(s) </option>
+                        <label for="convV"> Converter para </label>
+                        <select name="convV" id="convV" onchange="convert()">
+                            <option value="-9"> milimetro cúbico(s) </option>
+                            <option value="-6"> centímetro cúbico(s) </option>
+                            <option value="-3"> decímetro cúbico(s) </option>
+                            <option value="0" selected> metro cúbico(s) </option>
+                            <option value="3"> decametro cúbico(s) </option>
+                            <option value="6"> hectômetro cúbico(s) </option>
+                            <option value="9"> quilômetro cúbico(s) </option>
                         </select>
                     </div>
                 </div>
                 <br>
                 <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respA"> </span>
-                    <span id="calcA" class=""> </span>
+                    <span id="respV"> </span>
+                    <span id="calcV" class=""> </span>
                 </div>
                 <br>
             </div>
@@ -138,7 +133,7 @@
         <span class="text-grad-light"> Muito &#10084; obrigado! </span>
     </footer>
 
-    <script src="./convA.js"></script>
+    <script src="./convV.js"></script>
 </body>
 
 </html>

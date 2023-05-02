@@ -57,6 +57,30 @@ function choosen(u, c) {
       mB();
       unidResult = a;
       break;
+    case "gbit":
+      gb();
+      unidResult = a;
+      break;
+    case "gByte":
+      gB();
+      unidResult = a;
+      break;
+    case "tbit":
+      tb();
+      unidResult = a;
+      break;
+    case "tByte":
+      tB();
+      unidResult = a;
+      break;
+    case "pbit":
+      pb();
+      unidResult = a;
+      break;
+    case "pByte":
+      pB();
+      unidResult = a;
+      break;
     default:
       respB.innerHTML = "Unidade não identificada!";
       break;
@@ -88,6 +112,30 @@ function choosen(u, c) {
       mB();
       convResult = a;
       break;
+    case "gbit":
+      gb();
+      convResult = a;
+      break;
+    case "gByte":
+      gB();
+      convResult = a;
+      break;
+    case "tbit":
+      tb();
+      convResult = a;
+      break;
+    case "tByte":
+      tB();
+      convResult = a;
+      break;
+    case "pbit":
+      pb();
+      convResult = a;
+      break;
+    case "pByte":
+      pB();
+      convResult = a;
+      break;
     default:
       respB.innerHTML = "Unidade não identificada!";
       break;
@@ -96,11 +144,7 @@ function choosen(u, c) {
 }
 
 function convertTime(u, c) {
-  // if (u <= c) {
   time = (valor * u) / c;
-  // } else {
-  // time = valor * u * c;
-  // }
 
   console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
 
@@ -110,7 +154,7 @@ function convertTime(u, c) {
     respB.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
   } else if (time > 10 ** 10) {
     respB.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
-  } else if (time > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
+  } else if (time > 10 ** 3) {
     respB.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
   } else {
     respB.innerHTML = "Tempo: " + time + " " + convText;
@@ -146,4 +190,10 @@ function tb() {
 }
 function tB() {
   a = 8 * 10 ** 12;
+}
+function pb() {
+  a = 10 ** 15;
+}
+function pB() {
+  a = 8 * 10 ** 15;
 }

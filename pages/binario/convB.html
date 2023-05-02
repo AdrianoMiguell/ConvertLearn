@@ -72,9 +72,9 @@
                         <li>gigabit</li>
                         <li>terabit</li>
                         <li>petabit</li>
-                        <li>exabit</li>
+                        <!-- <li>exabit</li>
                         <li>zettabit</li>
-                        <li>yottabit</li>
+                        <li>yottabit</li> -->
                     </div>
                     <div>
                         <h2>escala decimal</h2>
@@ -84,9 +84,9 @@
                         <li> gigabyte </li>
                         <li> terabyte </li>
                         <li> petabyte </li>
-                        <li> exabyte </li>
+                        <!-- <li> exabyte </li>
                         <li> zettabyte </li>
-                        <li> yottabyte </li>
+                        <li> yottabyte </li> -->
                     </div>
                 </ol>
             </div>
@@ -105,27 +105,41 @@
                     <div>
                         <label for="unidB"> Medida do valor </label>
                         <select name="unidB" id="unidB" onchange="convert()">
-                            <option value=""> --- escolha --- </option>
+                            <optgroup> unidade binaria </optgroup>
                             <option value="bit">bit</option>
-                            <option value="Byte" selected>byte</option>
                             <option value="kbit">kilobit</option>
+                            <option value="mbit">megabit</option>
+                            <option value="gbit">gigabit</option>
+                            <option value="tbit">terabit</option>
+                            <option value="pbit">petabit</option>
+
+                            <optgroup> unidade decimal </optgroup>
+                            <option value="Byte" selected>byte</option>
                             <option value="kByte">kilobyte</option>
-                            <option value="mbit">megabyte</option>
                             <option value="mByte">megabyte</option>
-                            <option value="gbit">gigabyte</option>
+                            <option value="gByte">gigabyte</option>
+                            <option value="tByte">terabyte</option>
+                            <option value="pByte">petabyte</option>
                         </select>
                     </div>
                     <div>
                         <label for="convB"> Converter para </label>
                         <select name="convB" id="convB" onchange="convert()">
-                            <option value=""> --- escolha --- </option>
-                            <option value="bit">bit</option>
-                            <option value="Byte" selected>byte</option>
+                            <optgroup> unidade binaria </optgroup>
+                            <option value="bit" selected>bit</option>
                             <option value="kbit">kilobit</option>
+                            <option value="mbit">megabit</option>
+                            <option value="gbit">gigabit</option>
+                            <option value="tbit">terabit</option>
+                            <option value="pbit">petabit</option>
+
+                            <optgroup> unidade decimal </optgroup>
+                            <option value="Byte">byte</option>
                             <option value="kByte">kilobyte</option>
-                            <option value="mbit">megabyte</option>
                             <option value="mByte">megabyte</option>
-                            <option value="gbit">gigabyte</option>
+                            <option value="gByte">gigabyte</option>
+                            <option value="tByte">terabyte</option>
+                            <option value="pByte">petabyte</option>
                         </select>
                     </div>
                 </div>
@@ -165,39 +179,3 @@
 </body>
 
 </html>
-
-
-
-
-<!-- 
-
-
-<div class="sesConvert-opts">
-<div>
-<label for="unidB"> Medida do valor </label>
-<select name="unidB" id="unidB" onchange="convert()">
-<option value=""> --- escolha --- </option>
-<option value="b" selected>bit</option>
-<option value="B">byte</option>
-<option value="kB">kilobyte</option>
-<option value="mB">megabyte</option>
-<option value="gB">gigabyte</option>
-<option value="tB">terabyte</option>
-</select>
-</div>
-<div>
-<label for="convB"> Converter para </label>
-<select name="convB" id="convB" onchange="convert()">
-<option value=""> --- escolha --- </option>
-<option value="b">bit</option>
-<option value="B">byte</option>
-<option value="kB" >kilobyte</option>
-<option value="mB" selected>megabyte</option>
-<option value="gB">gigabyte</option>
-<option value="tB">terabyte</option>
-</select>
-</div>
-</div>
-
-                
- -->
