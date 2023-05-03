@@ -19,9 +19,9 @@ function convert() {
   if (valor > 0) {
     convertL(valor, unid, conv);
 
-    // if (litro < 10 ** -8) {
-    //   respL.innerHTML = "Litro: " + litro.toFixed(16) + " " + convText;
-    // } else
+    if (litro < 10 ** -8) {
+      respL.innerHTML = "Litro: " + litro.toFixed(16) + " " + convText;
+    } else
     if (litro < 10 ** -4) {
       respL.innerHTML = "Litro: " + litro.toFixed(8) + " " + convText;
     } else if (litro > 10 ** 10) {

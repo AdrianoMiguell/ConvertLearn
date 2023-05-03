@@ -8,7 +8,6 @@
     <title> ConvertLearn - Volume </title>
     <link rel="stylesheet" href="../../src/css/styleG.css">
     <link rel="stylesheet" href="../../src/css/classes.css">
-    <link rel="stylesheet" href="../../src/css/media.css">
 </head>
 
 <body>
@@ -34,7 +33,7 @@
                 <a href="../index.html#others">
                     <li class="navOps-item text-light"> Outros </li>
                 </a>
-                <a href="../index.html#sobreNos">
+                <a href="../sobreNos.html">
                     <li class="navOps-item text-light"> Sobre nós </li>
                 </a>
             </ul>
@@ -44,11 +43,27 @@
     <main>
         <section class="text-light">
             <div class="sesInfo">
-                <h1> Convertendo medidas de Litro </h1>
-                <!--  <p>
-                    A área corresponde a medida da superfície de uma figura geométrica. Nessa médida levamos em conta
-                    duas dimensões, que são a base e a altura da figura.
+                <h1> Medidas de Litro </h1>
+                <p>
+                    O litro é uma medida utilizada para estimar uma quantidade que está inserida em um reservatório, recipiente. As unidades de litro, seus múltiplos e submúltiplos são:
                 </p>
+                <ol class="sesInfo-list flex-around">
+                    <div>
+                        <li> quilolitro </li>
+                        <li> hectolitro </li>
+                        <li> decâlitro </li>
+                        <li> litro </li>
+                    </div>
+                    <div>
+                        <li> decílitro </li>
+                        <li> centílitro </li>
+                        <li> milílitro </li>
+                    </div>
+                </ol>
+                <p>
+                    As medidas de volume também se relacionam com as medidas de litro pois ambas medem a capacidade de um corpo, ou seja, são grandezas que estimam a quantidade de liquido em um recipiente ou reservatório.
+                </p>
+                <!--  
                 <ol class="sesInfo-list flex-around">
                     <div>
                         <li>quilômetro quadrado (km²) </li>
@@ -73,7 +88,7 @@
             </div> -->
             <br>
             <h2>
-                Converter medidas
+                Convertendo medidas de litro
             </h2>
             <div id="sesConvert">
                 <div class="sesConvert-unid" style="align-items: center;">
@@ -84,6 +99,7 @@
                     <div>
                         <label for="unidL"> Unidade de litro </label>
                         <select name="unidL" id="unidL" onchange="convert()">
+                            <optgroup> litro </optgroup>
                             <option value="-3"> mililitro(s) </option>
                             <option value="-2"> centilitro(s) </option>
                             <option value="-1"> decilitro(s) </option>
@@ -91,11 +107,20 @@
                             <option value="1"> decalitro(s) </option>
                             <option value="2"> hectolitro(s) </option>
                             <option value="3"> quilolitro(s) </option>
+                            <optgroup> volume </optgroup>
+                            <option value="-6"> milimetro cúbico(s) </option>
+                            <option value="-3"> centímetro cúbico(s) </option>
+                            <option value="0"> decímetro cúbico(s) </option>
+                            <option value="3"> metro cúbico(s) </option>
+                            <option value="6"> decametro cúbico(s) </option>
+                            <option value="9"> hectômetro cúbico(s) </option>
+                            <option value="12"> quilômetro cúbico(s) </option>
                         </select>
                     </div>
                     <div>
                         <label for="convL"> Converter para </label>
                         <select name="convL" id="convL" onchange="convert()">
+                            <optgroup> litro </optgroup>
                             <option value="-3"> mililitro(s) </option>
                             <option value="-2"> centilitro(s) </option>
                             <option value="-1"> decilitro(s) </option>
@@ -103,6 +128,14 @@
                             <option value="1"> decalitro(s) </option>
                             <option value="2"> hectolitro(s) </option>
                             <option value="3"> quilolitro(s) </option>
+                            <optgroup> volume </optgroup>
+                            <option value="-6"> milimetro cúbico(s) </option>
+                            <option value="-3"> centímetro cúbico(s) </option>
+                            <option value="0"> decímetro cúbico(s) </option>
+                            <option value="3"> metro cúbico(s) </option>
+                            <option value="6"> decametro cúbico(s) </option>
+                            <option value="9"> hectômetro cúbico(s) </option>
+                            <option value="12"> quilômetro cúbico(s) </option>
                         </select>
                     </div>
                 </div>

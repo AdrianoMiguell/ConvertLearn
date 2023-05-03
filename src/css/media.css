@@ -13,13 +13,21 @@
         height: auto;
         width: 25px;
     }
+    select {
+        font-size: 11pt;
+    }
 }
 
 /* maximo de 980px | 500 - 980*/
 @media screen and (max-width: 980px) {
-    .sesConvert{
+    main {
+        padding: 5em;
+    }
+
+    .sesConvert {
         align-items: start;
     }
+
     .sesConvert-opts {
         justify-content: space-around;
     }
@@ -33,14 +41,23 @@
         height: auto;
         width: 35px;
     }
+
+    select {
+        font-size: 12pt;
+    }
 }
 
 /* minino de 980px | 980 - inf. */
 @media screen and (min-width: 980px) {
-    .sesConvert{
+    main {
+        padding: 5em;
+    }
+
+    .sesConvert {
         align-items: start;
         -webkit-text-size-adjust: 10pt;
     }
+
     .sesConvert-opts {
         justify-content: space-around;
     }
@@ -52,5 +69,8 @@
 
     .icon-circle img {
         width: 50px;
+    }
+    select {
+        font-size: 13pt;
     }
 }
