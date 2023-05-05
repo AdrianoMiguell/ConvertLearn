@@ -1,7 +1,20 @@
-/* maximo de 500px | 0 - 500*/
-@media screen and (max-width: 500px) {
+/* maximo de 500px | 0 - 550*/
+@media screen and (max-width: 550px) {
+    main {
+        padding: .75em;
+
+    }
+
     .navOps-item {
         font-size: 9pt;
+    }
+
+    #textTitle {
+        margin: 0;
+    }
+
+    .textIntro {
+        flex-wrap: wrap;
     }
 
     .icon-circle {
@@ -9,10 +22,15 @@
         height: 3em;
     }
 
+    .imgL {
+        width: 250px;
+    }
+
     .icon-circle img {
         height: auto;
         width: 25px;
     }
+
     select {
         font-size: 11pt;
     }
@@ -21,7 +39,19 @@
 /* maximo de 980px | 500 - 980*/
 @media screen and (max-width: 980px) {
     main {
-        padding: 5em;
+        padding: 3em;
+    }
+
+    #textTitle {
+        margin: 1em;
+    }
+
+    .textIntro {
+        flex-wrap: wrap;
+    }
+
+    .imgL {
+        width: 400px;
     }
 
     .sesConvert {
@@ -47,10 +77,16 @@
     }
 }
 
+
+
 /* minino de 980px | 980 - inf. */
 @media screen and (min-width: 980px) {
     main {
         padding: 5em;
+    }
+
+    #textTitle {
+        margin: 1em 20vw;
     }
 
     .sesConvert {
@@ -70,6 +106,7 @@
     .icon-circle img {
         width: 50px;
     }
+
     select {
         font-size: 13pt;
     }

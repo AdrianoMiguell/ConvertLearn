@@ -11,10 +11,11 @@
     --cq: 245, 222, 179;
     --cb: 37, 37, 34;
 
-    /* color: rgb(59, 53, 97);
-    color: rgb(239, 45, 86);
-    color: rgb(234, 217, 76);
-    color: rgb(245, 222, 179); */
+    color: #3b3561;
+    color: #ef2d56;
+    color: #ead94c;
+    color: #f5deb3;
+    color: #252522;
 }
 
 * {
@@ -67,7 +68,6 @@ nav {
 
 main {
     margin: 0;
-    padding: 2.5em 1em;
     word-wrap: break-word;
     min-height: 60vh;
 }
@@ -77,6 +77,11 @@ section {
     display: grid;
     gap: .5em;
     text-align: justify;
+}
+
+.hr{
+    border-top: 1px solid rgb(var(--cm));
+    opacity: .75;
 }
 
 #sesConvert {

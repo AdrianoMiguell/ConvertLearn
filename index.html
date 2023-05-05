@@ -31,14 +31,19 @@
             border-color: rgb(var(--cm));
         }
     </style>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg gradient-simple">
             <div class="container-fluid d-flex w-100 justify-content-between m-1 mx-2">
-                <a href="./index.html" class="navbar-brand me-5">
-                    <h1 id="logo" class="text-grad-light text-dec-none"> Convert & Learn </h1>
+                <a href="./index.html" class="navbar-brand d-flex align-items-center gap-2 me-5">
+                    <img src="./img/logoCL-long.png" alt="" width="125px">
                 </a>
 
                 <button class="navbar-toggler btn btn-light" type="button" data-bs-toggle="collapse"
@@ -73,25 +78,57 @@
             </div>
         </nav>
     </header>
+    <style>
+        .iconSolto {
+            /* position: absolute; */
+            transform: rotate(var(--r));
+            height: 4em;
+            transform: translateY(var(--y));
+            transform: translateX(var(--x));
+        }
+    </style>
 
     <main class="gradient-light">
-        <section class="">
-            <h1 class="text-dark">
-                Convertendo as unidades
-            </h1>
+        <section class="d-grid gap-5">
+            <div id="textTitle">
+                <h1 class="text-dark text-center my-5">
+                    Converter e Aprender
+                </h1>
+                <blockquote class="text-grad-dark">
+                    Venha e realize os seus calculos de conversão. Além de já convertermos automaticamente para
+                    você, ainda te ensinamos como realizar essa conversão. Nosso objetivo é proporcionar uma boa
+                    experiencia para você, e não deixâ-lo confuso de como realizar conversões.
+                </blockquote>
+            </div>
 
-            <br>
+            <div class=" sesInfo textIntro d-flex justify-content-around align-items-center gap-5 m-5">
+                <img src="img/education_convert.png" class="imgL" alt="" width="750px">
+                <div class="mx-5">
+                    <h1 class="text-dark text-center">
+                        Aprenda a converter unidades
+                    </h1>
+                    <br>
+                    <p class="text-grad-dark text-size">
+                        Domine a arte de converter unidades. Nosso objetivo, além de facilitar a sua vida realizando
+                        conversões automaticamente para você, é incentivá-lo a aprender como converter unidades e
+                        ajudá-lo a conferir se os
+                        seus calculos estão corretos. :-) <br>
+                        A arte de converter unidades é uma tarefa
+                        complexa, que exercita os nossos conhecimentos lógicos e matemáticos. <br> Muitas vezes, e para
+                        muitas pessoas, essa é uma tarefa chata ou complicada, ou os dois. Por isso, estamos aqui para
+                        facilitar a vida de quem pensa assim, tem essas dificuldades, e aquelas que só querem um pouco
+                        mais
+                        de agilidade. <br> Muito mais do que fornecer já prontas o calculo necessário para converter as
+                        unidades, nosso objetivo é ajudâ-lo a aprender e exercitar seus conhecimentos matemáticos. Por
+                        isso,
+                        saiba que não concordamos com o uso desse site para pegar respostas prontas por exemplo. Posso
+                        fazer
+                        isso? Não sei, você que sabe, mas seria muito legal se você não fisesse isso. Mas enfim, boa
+                        sorte,
+                        bom proveito! </p>
 
-            <div class="sesInfo">
-                <p class="text-grad-dark text-size" style="--ts: 12pt;"> A arte de converter unidades é uma tarefa
-                    complexa, que exercita os nossos conhecimentos lógicos e matemáticos. <br> Muitas vezes, e para
-                    muitas pessoas, essa é uma tarefa chata ou complicada, ou os dois. Por isso, estamos aqui para
-                    facilitar a vida de quem pensa assim, tem essas dificuldades, e aquelas que só querem um pouco mais
-                    de agilidade. <br> Muito mais do que fornecer já prontas o calculo necessário para converter as
-                    unidades, nosso objetivo é ajudâ-lo a aprender e exercitar seus conhecimentos matemáticos. Por isso,
-                    saiba que não concordamos com o uso desse site para pegar respostas prontas por exemplo. Posso fazer
-                    isso? Não sei, você que sabe, mas seria muito legal se você não fisesse isso. Mas enfim, boa sorte,
-                    bom proveito! </p>
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -177,6 +214,7 @@
                 <span>Litro</span>
             </a>
         </section>
+
     </main>
 
     <footer class="gradient-simple">
