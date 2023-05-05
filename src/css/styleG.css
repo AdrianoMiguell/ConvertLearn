@@ -44,9 +44,7 @@ nav {
 .navOps {
     list-style: none;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    column-gap: .5em;
     padding: 0 10px;
     margin: 0;
 }
