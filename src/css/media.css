@@ -62,12 +62,12 @@
         width: 400px;
     }
 
-    .sesConvert {
+    #sesConvert {
         align-items: start;
     }
 
     .sesConvert-opts {
-        justify-content: space-around;
+        gap: 10em;
     }
 
     .icon-circle {
@@ -100,17 +100,21 @@
         padding: 5em;
     }
 
+    .textIntro {
+        flex-wrap: nowrap;
+    }
+
     #textTitle {
         margin: 1em 20vw;
     }
 
-    .sesConvert {
+    #sesConvert {
         align-items: start;
-        -webkit-text-size-adjust: 10pt;
+        font-size: 15pt;
     }
 
-    .sesConvert-opts {
-        justify-content: space-around;
+    .sesConvert-opts>div {
+        margin-right: 5em;
     }
 
     .icon-circle {

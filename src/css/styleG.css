@@ -85,8 +85,7 @@ section {
 #sesConvert {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     gap: 1em;
 }
 
@@ -94,12 +93,12 @@ section {
 .sesConvert-opts {
     display: flex;
     line-height: 1.5em;
-    gap: 1em;
+    justify-content: space-between;
+    gap: 1em 2em;
 }
 
 .sesConvert-opts>div {
     display: grid;
-    margin: 0 1em;
     gap: 1em;
 }
 

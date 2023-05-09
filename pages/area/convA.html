@@ -70,11 +70,63 @@
 
     <main>
         <section class="text-light">
+            <h2 class="my-5 text-center">
+                Calculadora de conversão - medidas de superficie (área)
+            </h2>
+            <div class="d-flex justify-content-around flex-wrap align-items-center">
+                <div id="sesConvert">
+                    <div class="sesConvert-opts mb-4">
+                        <div>
+                            <label for="unidA"> Unidade de Área </label>
+                            <select name="unidA" id="unidA" onchange="convert()">
+                                <option value="-6"> milimetro(s) quadrado </option>
+                                <option value="-4"> centimetro(s) quadrado </option>
+                                <option value="-2"> decimetro(s) quadrado </option>
+                                <option value="0" selected> metro(s) quadrado </option>
+                                <option value="2"> decametro(s) quadrado </option>
+                                <option value="4"> hectometro(s) quadrado </option>
+                                <option value="6"> quilometro(s) quadrado </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convA"> Converter para </label>
+                            <select name="convA" id="convA" onchange="convert()">
+                                <option value="-6"> milimetro(s) quadrado </option>
+                                <option value="-4"> centimetro(s) quadrado </option>
+                                <option value="-2"> decimetro(s) quadrado </option>
+                                <option value="0" selected> metro(s) quadrado </option>
+                                <option value="2"> decametro(s) quadrado </option>
+                                <option value="4"> hectometro(s) quadrado </option>
+                                <option value="6"> quilometro(s) quadrado </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="sesConvert-unid" style="align-items: center;">
+                        <label for="valorA"> Valor da área </label>
+                        <input type="number" placeholder="Digite aqui" id="valorA" onchange="convert()">
+                    </div>
+                    <div class="sesConvert-unid flex-col-around gap-1">
+                        <span id="respA"> </span>
+                        <span id="calcA" class=""> </span>
+                    </div>
+                    <br>
+                </div>
+                <div class="p-5 bg-light rounded-1">
+                    <img src="../../img/conv-area.png" alt="" width="500px">
+                </div>
+            </div>
+            <br>
             <div class="sesInfo">
-                <h1> Convertendo medidas de áreas </h1>
+                <h1> Resumão - medidas de superfície </h1>
                 <p>
+                    As medidas de superficie estão intimamente ligadas ao osso cotidiano. Ao comprar um lote, pintar uma
+                    parede, comprar um móvel, o primeiro fato que precisamos ter em mente é a medida da área das
+                    superficies. Imagine se você compra um sofá que não caberá dentro de sua sala?!? Se levar em conta a
+                    área da superficie da sala, isso não acontecerá. <br>
                     A área corresponde a medida da superfície de uma figura geométrica. Nessa médida levamos em conta
-                    duas dimensões, que são a base e a altura da figura.
+                    duas dimensões, que são a base e a altura da figura. Para calcular, basta multiplicar a base vezes a
+                    altura da superfície.
+
                 </p>
                 <ol class="sesInfo-list flex-around">
                     <div>
@@ -89,56 +141,6 @@
                         <li> milímetro quadrado (mm²) </li>
                     </div>
                 </ol>
-                <br>
-                <ul class="sesInfo-list flex-around">
-                    <li>
-                        <p>Veja mais sobre "Conversão de Medidas de Superfície" em : </p>
-                        <a
-                            href="https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm">https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm</a>
-                    </li>
-                </ul>
-            </div>
-            <br>
-            <h2>
-                Converter medidas
-            </h2>
-            <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorA"> Valor da área </label>
-                    <input type="number" placeholder="Digite aqui" id="valorA" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidA"> Unidade de Área </label>
-                        <select name="unidA" id="unidA" onchange="convert()">
-                            <option value="-6"> milimetro(s) quadrado </option>
-                            <option value="-4"> centimetro(s) quadrado </option>
-                            <option value="-2"> decimetro(s) quadrado </option>
-                            <option value="0" selected> metro(s) quadrado </option>
-                            <option value="2"> decametro(s) quadrado </option>
-                            <option value="4"> hectometro(s) quadrado </option>
-                            <option value="6"> quilometro(s) quadrado </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="convA"> Converter para </label>
-                        <select name="convA" id="convA" onchange="convert()">
-                            <option value="-6"> milimetro(s) quadrado </option>
-                            <option value="-4"> centimetro(s) quadrado </option>
-                            <option value="-2"> decimetro(s) quadrado </option>
-                            <option value="0" selected> metro(s) quadrado </option>
-                            <option value="2"> decametro(s) quadrado </option>
-                            <option value="4"> hectometro(s) quadrado </option>
-                            <option value="6"> quilometro(s) quadrado </option>
-                        </select>
-                    </div>
-                </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respA"> </span>
-                    <span id="calcA" class=""> </span>
-                </div>
-                <br>
             </div>
         </section>
     </main>
