@@ -19,18 +19,24 @@ function convert() {
   if (valor > 0) {
     convertL(valor, unid, conv);
 
-    if (litro < 10 ** -8) {
-      respL.innerHTML = "Litro: " + litro.toFixed(16) + " " + convText;
-    } else
-    if (litro < 10 ** -4) {
-      respL.innerHTML = "Litro: " + litro.toFixed(8) + " " + convText;
-    } else if (litro > 10 ** 10) {
-      respL.innerHTML = "Litro: " + litro.toExponential() + " " + convText;
+    calcL.innerHTML =
+      "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
+    calcL.innerHTML += unid < conv ? " / " : " * ";
+    calcL.innerHTML +=
+      conv > 1000
+        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
+        : 10 ** conv / 10 ** unid;
+
+    if (litro > 10 ** 10) {
+      respL.innerHTML = "<strong>Litro:</strong> " + litro.toExponential() + " " + convText;
+      calcL.innerHTML += ") = " + litro.toExponential() + " " + convText + " </span>";
     } else if (litro > 10 ** 3) {
       respL.innerHTML =
-        "Litro: " + litro.toLocaleString("pt-BR") + " " + convText;
+        "<strong>Litro:</strong> " + litro.toLocaleString("pt-BR") + " " + convText;
+        calcL.innerHTML += ") = " + litro.toExponential() + " " + convText + " </span>";
     } else {
-      respL.innerHTML = "Litro: " + litro + " " + convText;
+      respL.innerHTML = "<strong>Litro:</strong> " + litro + " " + convText;
+      calcL.innerHTML += ") = " + litro.toExponential() + " " + convText + " </span>";
     }
   } else if (valor < 0) {
     respL.innerHTML =

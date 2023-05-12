@@ -19,25 +19,34 @@ function convert() {
   if (valor > 0) {
     convertA(valor, unid, conv);
 
-    if (vol < 10 ** -15) {
-      respV.innerHTML = "Volume: " + vol.toFixed(22) + " " + convText;
-    } else if (vol < 10 ** -8) {
-      respV.innerHTML = "Volume: " + vol.toFixed(16) + " " + convText;
-    } else if (vol < 10 ** -4) {
-      respV.innerHTML = "Volume: " + vol.toFixed(8) + " " + convText;
-    } else if (vol > 10 ** 10) {
-      respV.innerHTML = "Volume: " + vol.toExponential() + " " + convText;
+    calcV.innerHTML =
+      "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
+    calcV.innerHTML += unid < conv ? " / " : " * ";
+    calcV.innerHTML +=
+      conv > 1000
+        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
+        : 10 ** conv / 10 ** unid;
+
+    if (vol > 10 ** 10) {
+      respV.innerHTML = "<strong>Volume:</strong> " + vol.toExponential() + " " + convText;
+      calcV.innerHTML +=
+        ") = " + vol.toExponential() + " " + convText + " </span>";
     } else if (vol > 10 ** 2) {
       respV.innerHTML =
-        "Volume: " + vol.toLocaleString("pt-BR") + " " + convText;
+        "<strong>Volume:</strong> " + vol.toLocaleString("pt-BR") + " " + convText;
+      calcV.innerHTML +=
+        ") = " + vol.toLocaleString("pt-BR") + " " + convText + " </span>";
     } else {
-      respV.innerHTML = "Volume: " + vol + " " + convText;
+      respV.innerHTML = "<strong>Volume:</strong> " + vol + " " + convText;
+      calcV.innerHTML += ") = " + vol + " " + convText + " </span>";
     }
   } else if (valor < 0) {
     respV.innerHTML =
       "Informe um valor positivo ok! Não existem medidas negativas";
+    calcV.innerHTML = "";
   } else {
     respV.innerHTML = 'Qual é o volume mesmo? "0" não vale...';
+    calcV.innerHTML = "";
   }
 }
 

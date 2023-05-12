@@ -1,12 +1,57 @@
-/* maximo de 500px | 0 - 550*/
-@media screen and (max-width: 550px) {
-    .navOps {
-        justify-content: space-around;
+/* maximo de 400px | 0 - 400*/
+@media screen and (max-width: 400px) {
+
+    h1,
+    h2 {
+        font-size: 13pt !important;
+    }
+
+    p,
+    select,
+    li {
+        font-size: 10pt !important;
     }
 
     main {
-        padding: .25em;
+        padding: 0 .5em !important;
+    }
 
+    .icon-circle {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .imgL {
+        width: 200px;
+    }
+
+    .icon-circle img {
+        height: auto;
+        width: 20px;
+    }
+
+    .sesInfo-list {
+        row-gap: 1em !important;
+    }
+
+    .divConvert-unid,
+    .divConvert-opts {
+        gap: .5em !important;
+    }
+
+    .convImg>img {
+        max-width: 300px;
+    }
+}
+
+/* maximo de 500px | 400px - 550*/
+@media screen and (min-width:400px) and (max-width: 550px) {
+    main {
+        padding: 0 1em !important;
+    }
+
+    .navOps {
+        justify-content: space-around;
     }
 
     .navOps-item {
@@ -35,19 +80,33 @@
         width: 25px;
     }
 
-    select {
-        font-size: 11pt;
+    .divConvert-unid,
+    .divConvert-opts {
+        gap: .5em 1em !important;
     }
+
+    .sesInfo-list {
+        font-size: 13pt;
+        gap: 1em !important;
+    }
+    .sesInfo-list>div {
+        margin: 1em;
+    }
+
+    .convImg>img {
+        width: 350px;
+    }
+
 }
 
 /* maximo de 980px | 550 - 980*/
-@media screen and (min-width: 550px) {
-    .navOps {
-        justify-content: space-around;
-    }
-
+@media screen and (min-width: 550px) and (max-width: 980px) {
     main {
         padding: 2em;
+    }
+
+    .navOps {
+        justify-content: space-around;
     }
 
     #textTitle {
@@ -55,19 +114,24 @@
     }
 
     .textIntro {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .imgL {
         width: 400px;
     }
 
-    #sesConvert {
+    #divConvert {
         align-items: start;
     }
 
-    .sesConvert-opts {
+    .divConvert-opts {
         gap: 10em;
+    }
+
+    .sesInfo-list {
+        font-size: 13pt;
+        gap: 2em !important;
     }
 
     .icon-circle {
@@ -80,15 +144,18 @@
         width: 35px;
     }
 
-    select {
-        font-size: 12pt;
+    .convImg>img {
+        width: 450px;
+        padding: 1em;
     }
 }
 
-
-
 /* minino de 980px | 980 - inf. */
 @media screen and (min-width: 980px) {
+    p{
+        font-size: 13pt;
+        letter-spacing: .8pt;
+    }
     .navOps {
         width: 100%;
         justify-content: flex-end;
@@ -104,17 +171,18 @@
         flex-wrap: nowrap;
     }
 
-    #textTitle {
-        margin: 1em 20vw;
-    }
-
-    #sesConvert {
+    #divConvert {
         align-items: start;
-        font-size: 15pt;
+        font-size: 14pt;
     }
 
-    .sesConvert-opts>div {
+    .divConvert-opts>div {
         margin-right: 5em;
+    }
+
+    .sesInfo-list {
+        font-size: 16pt !important;
+        gap: 4em !important;
     }
 
     .icon-circle {
@@ -126,7 +194,13 @@
         width: 50px;
     }
 
-    select {
-        font-size: 13pt;
+    .convImg>img {
+        width: 450px;
+        padding: 2em;
+    }
+
+    .sesInfo {
+        gap: 2em !important;
+        flex-wrap: nowrap !important;
     }
 }

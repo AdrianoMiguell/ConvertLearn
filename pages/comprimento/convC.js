@@ -17,31 +17,37 @@ function convert() {
   convText = convC.options[convC.selectedIndex].textContent;
 
   if (valor > 0) {
-    console.log("Peguei a unidade de medida " + unid + " O valor é : " + valor);
     convertC(valor, unid, conv);
 
-    if (comp < 10 ** -15) {
-      respC.innerHTML = "Comprimento: " + comp.toFixed(22) + " " + convText;
-    }
-    else if (comp < 10 ** -8) {
-      respC.innerHTML = "Comprimento: " + comp.toFixed(16) + " " + convText;
-    } else if (comp < 10 ** -4) {
-      respC.innerHTML = "Comprimento: " + comp.toFixed(8) + " " + convText;
-    } else if (comp > 10 ** 10) {
-      respC.innerHTML = "Comprimento: " + comp.toExponential() + " " + convText;
+    calcC.innerHTML =
+      "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
+    calcC.innerHTML += unid < conv ? " / " : " * ";
+    calcC.innerHTML +=
+      conv > 1000
+        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
+        : 10 ** conv / 10 ** unid;
+
+    if (comp > 10 ** 10) {
+      respC.innerHTML = "<strong>Comprimento:</strong> " + comp.toExponential() + " " + convText;
+      calcC.innerHTML +=
+        ") = " + comp.toExponential() + " " + convText + " </span>";
     } else if (comp > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
-      respC.innerHTML = "Comprimento: " + comp.toLocaleString("pt-BR") + " " + convText;
+      respC.innerHTML =
+        "<strong>Comprimento:</strong> " + comp.toLocaleString("pt-BR") + " " + convText;
+      calcC.innerHTML +=
+        ") = " + comp.toLocaleString("pt-BR") + " " + convText + " </span>";
     } else {
-      respC.innerHTML = "Comprimento: " + comp + " " + convText;
+      respC.innerHTML = "<strong>Comprimento:</strong> " + comp + " " + convText;
+      calcC.innerHTML += ") = " + comp + " " + convText + " </span>";
     }
   } else if (valor < 0) {
     respC.innerHTML =
       "Informe um valor positivo ok! Não existem medidas negativas";
+    calcC.innerHTML = "";
   } else {
     respC.innerHTML = 'Qual é o comprimento mesmo? "0" não vale...';
+    calcC.innerHTML = "";
   }
-
- 
 }
 
 // revisar logica

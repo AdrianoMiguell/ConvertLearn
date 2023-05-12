@@ -69,13 +69,19 @@
     </header>
 
     <main>
-        <section class="text-light">
-            <h2 class="my-5 text-center">
-                Calculadora de conversão - medidas de superficie (área)
-            </h2>
-            <div class="d-flex justify-content-around flex-wrap align-items-center">
-                <div id="sesConvert">
-                    <div class="sesConvert-opts mb-4">
+        <section class="text-light py-5">
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - medidas de superficie (área)
+                </h2>
+                <p>Faça os seus calculos de conversão de área de forma simples e fácil com a calculadora de conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😉
+                </p>
+            </div>            
+
+            <div id="sesConvert">
+                <div id="divConvert">
+                    <div class="divConvert-opts mb-4">
                         <div>
                             <label for="unidA"> Unidade de Área </label>
                             <select name="unidA" id="unidA" onchange="convert()">
@@ -101,24 +107,36 @@
                             </select>
                         </div>
                     </div>
-                    <div class="sesConvert-unid" style="align-items: center;">
+                    <div class="divConvert-unid" style="align-items: center;">
                         <label for="valorA"> Valor da área </label>
                         <input type="number" placeholder="Digite aqui" id="valorA" onchange="convert()">
                     </div>
-                    <div class="sesConvert-unid flex-col-around gap-1">
-                        <span id="respA"> </span>
-                        <span id="calcA" class=""> </span>
+                    <div class="divConvert-resp d-grid gap-1 my-3">
+                        <span id="respA"> Escolha um valor </span>
+                        <span id="calcA"> </span>
                     </div>
                     <br>
                 </div>
-                <div class="p-5 bg-light rounded-1">
-                    <img src="../../img/conv-area.png" alt="" width="500px">
+                <div>
+                    <ol class="sesInfo-list">
+                        <div>
+                            <li> milímetro(s) quadrado (mm²) </li>
+                            <li> centímetro(s) quadrado (cm²) </li>
+                            <li> decímetro(s) quadrado (dm²) </li>
+                            <li> metro(s) quadrado (m²) </li>
+                        </div>
+                        <div>
+                            <li> decâmetro(s) quadrado (dam²) </li>
+                            <li> hectômetro(s) quadrado (hm²) </li>
+                            <li>quilômetro(s) quadrado (km²) </li>
+                        </div>
+                    </ol>
                 </div>
             </div>
             <br>
+            <h2> Resumão - medidas de superfície </h2>
             <div class="sesInfo">
-                <h1> Resumão - medidas de superfície </h1>
-                <p>
+                <p style="display: inline-block">
                     As medidas de superficie estão intimamente ligadas ao osso cotidiano. Ao comprar um lote, pintar uma
                     parede, comprar um móvel, o primeiro fato que precisamos ter em mente é a medida da área das
                     superficies. Imagine se você compra um sofá que não caberá dentro de sua sala?!? Se levar em conta a
@@ -126,21 +144,14 @@
                     A área corresponde a medida da superfície de uma figura geométrica. Nessa médida levamos em conta
                     duas dimensões, que são a base e a altura da figura. Para calcular, basta multiplicar a base vezes a
                     altura da superfície.
-
+                    <br>                    
+                    Mas o foco aqui é a conversão de uma unidade para outra. Para fazer esse calculo, você irá
+                    <strong>multiplicar</strong> (se for converter para uma unidade maior que a atual) ou
+                    <strong>dividir</strong> (se for converter para uma unidade menor) por 100.
                 </p>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li>quilômetro quadrado (km²) </li>
-                        <li> hectômetro quadrado (hm²) </li>
-                        <li> decâmetro quadrado (dam²) </li>
-                        <li> metro quadrado (m²) </li>
-                    </div>
-                    <div>
-                        <li> decímetro quadrado (dm²) </li>
-                        <li> centímetro quadrado (cm²) </li>
-                        <li> milímetro quadrado (mm²) </li>
-                    </div>
-                </ol>
+                <div class="convImg bg-light rounded-1 py-3 px-1" style="height: auto;">
+                    <img src="../../img/conv-area.png" alt="">
+                </div>
             </div>
         </section>
     </main>

@@ -69,76 +69,87 @@
     </header>
 
     <main>
-        <section class="text-light">
+        <section class="text-light py-4">
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - unidades de tempo
+                </h2>
+                <p>Faça os seus calculos de conversão de unidades de tempo de forma simples e fácil com a calculadora de
+                    conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😉
+                </p>
+            </div>
+
+            <div id="sesConvert">
+                <div id="divConvert">
+                    <div class="divConvert-unid" style="align-items: center;">
+                        <label for="valorT" id="labelT"> Valor : </label>
+                        <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
+                    </div>
+                    <div class="divConvert-opts">
+                        <div>
+                            <label for="unidT"> Unidade de medida </label>
+                            <select name="unidT" id="unidT" onchange="convert()">
+                                <option value="mm" selected> milissegundo(s) </option>
+                                <option value="s"> segundo(s) </option>
+                                <option value="m"> minuto(s) </option>
+                                <option value="h"> hora(s) </option>
+                                <option value="d"> dia(s) </option>
+                                <option value="w"> semana(s) </option>
+                                <option value="mes"> mês(es) </option>
+                                <option value="y"> ano(s) </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convT"> Converter para</label>
+                            <select name="convT" id="convT" onchange="convert()">
+                                <option value="mm" selected> milissegundo(s) </option>
+                                <option value="s"> segundo(s) </option>
+                                <option value="m"> minuto(s) </option>
+                                <option value="h"> hora(s) </option>
+                                <option value="d"> dia(s) </option>
+                                <option value="w"> semana(s) </option>
+                                <option value="mes"> mês(es) </option>
+                                <option value="y"> ano(s) </option>
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="divConvert-resp flex-col-around gap-1" style="user-select: text;">
+                        <span id="respT"> Escolha um valor </span>
+                        <span id="calcT" class=""> </span>
+                    </div>
+                    <br>
+                </div>
+                <div>
+                    <ol class="sesInfo-list flex-around">
+                        <div>
+                            <li> milissegundo(s) </li>
+                            <li> segundo(s) </li>
+                            <li> minuto(s) </li>
+                            <li> hora(s) </li>
+                        </div>
+                        <div>
+                            <li> dia(s) </li>
+                            <li> semana(s) </li>
+                            <li> mês(es) </li>
+                            <li> ano(s) </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+
+            <br>
+            <h2> Resumo: unidades de tempo </h2>
+
             <div class="sesInfo">
-                <h1 style="font-size: 15pt;"> Unidades de medida de tempo </h1>
                 <p> As unidades de tempo são muito importantes no cotidiano de todo ser humano. Com elas podemos dizer
                     em quantos segundos tomamos banho, ou em quantos minutos escovamos os dentes, e vice-versa. <br>
-                    Transformar assim, mutuamente essas medidas, é uma boa jogada para adiantarmos o nosso entendimento
+                    Transformar assim, mutuamente essas unidades, é uma boa jogada para adiantarmos o nosso entendimento
                     de tempo, quando realizamos pequenas atividades.
                 </p>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li> milissegundo </li>
-                        <li> segundo </li>
-                        <li> minuto </li>
-                        <li> hora </li>
-                        <li> dia </li>
-                    </div>
-                    <div>
-                        <li> semana </li>
-                        <li> mês </li>
-                        <li> ano </li>
-                        <li> continua ... </li>
-                    </div>
-                </ol>
             </div>
             <br>
-            <h2>
-                Convertendo unidades de tempo
-            </h2>
-            <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorT" id="labelT"> Valor : </label>
-                    <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidT"> Unidade de medida </label>
-                        <select name="unidT" id="unidT" onchange="convert()">
-                            <option value=""> --- escolha --- </option>
-                            <option value="mm" selected> milissegundo(s) </option>
-                            <option value="s"> segundo(s) </option>
-                            <option value="m"> minuto(s) </option>
-                            <option value="h"> hora(s) </option>
-                            <option value="d"> dia(s) </option>
-                            <option value="w"> semana(s) </option>
-                            <option value="mes"> mês(s) </option>
-                            <option value="y"> ano(s) </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="convT"> Converter para</label>
-                        <select name="convT" id="convT" onchange="convert()">
-                            <option value=""> --- escolha --- </option>
-                            <option value="mm" selected> milissegundo(s) </option>
-                            <option value="s"> segundo(s) </option>
-                            <option value="m"> minuto(s) </option>
-                            <option value="h"> hora(s) </option>
-                            <option value="d"> dia(s) </option>
-                            <option value="w"> semana(s) </option>
-                            <option value="mes"> mês(s) </option>
-                            <option value="y"> ano(s) </option>
-                        </select>
-                    </div>
-                </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1" style="user-select: text;">
-                    <span id="respT"> </span>
-                    <span id="calcT" class=""> </span>
-                </div>
-                <br>
-            </div>
         </section>
     </main>
 

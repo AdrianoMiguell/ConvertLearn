@@ -68,95 +68,100 @@
         </nav>
     </header>
 
-
     <main>
         <section class="text-light">
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - medidas de comprimento
+                </h2>
+                <p>Faça os seus calculos de conversão de comprimentos de forma simples e fácil com a calculadora de
+                    conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😉
+                </p>
+            </div>
+
+            <div id="sesConvert">
+                <div id="divConvert">
+                    <div class="divConvert-opts mb-4">
+                        <div>
+                            <label for="unidC"> Unidade de medida </label>
+                            <select name="unidC" id="unidC" onchange="convert()">
+                                <optgroup> macro </optgroup>
+                                <option value="12"> terametro(s) </option>
+                                <option value="9"> gigametro(s) </option>
+                                <option value="6"> megametro(s) </option>
+                                <option value="3"> quilômetro(s) </option>
+                                <option value="2"> hectômetro(s) </option>
+                                <option value="1"> decâmetro(s) </option>
+                                <optgroup> micro </optgroup>
+                                <option value="0" selected> metro(s) </option>
+                                <option value="-1"> decimetro(s) </option>
+                                <option value="-2"> centimetro(s) </option>
+                                <option value="-3"> milimetro(s) </option>
+                                <option value="-6"> micrômetro(s) </option>
+                                <option value="-9"> nanômetro(s) </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convC"> Converter para</label>
+                            <select name="convC" id="convC" onchange="convert()">
+                                <optgroup> macro </optgroup>
+                                <option value="12"> terametro(s) </option>
+                                <option value="9"> gigametro(s) </option>
+                                <option value="6"> megametro(s) </option>
+                                <option value="3"> quilômetro(s) </option>
+                                <option value="2"> hectômetro(s) </option>
+                                <option value="1"> decâmetro(s) </option>
+                                <optgroup> micro </optgroup>
+                                <option value="0" selected> metro(s) </option>
+                                <option value="-1"> decimetro(s) </option>
+                                <option value="-2"> centimetro(s) </option>
+                                <option value="-3"> milimetro(s) </option>
+                                <option value="-6"> micrômetro(s) </option>
+                                <option value="-9"> nanômetro(s) </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="divConvert-unid">
+                        <label for="valorC"> Valor </label>
+                        <input type="number" placeholder="Digite aqui" id="valorC" onchange="convert()">
+                    </div>
+                    <div class="divConvert-resp d-grid gap-1 my-3">
+                        <span id="respC"> Escolha um valor </span>
+                        <span id="calcC" class=""> </span>
+                    </div>
+                </div>
+                <div>
+                    <ol class="sesInfo-list">
+                        <div>
+                            <li> milímetro(s) cúbico(s) (mm) </li>
+                            <li> centímetro(s) cúbico(s) (cm) </li>
+                            <li> decímetro(s) cúbico(s) (dm) </li>
+                            <li> metro(s) cúbico(s) (m) </li>
+                        </div>
+                        <div>
+                            <li> decâmetro(s) cúbico(s) (dam) </li>
+                            <li> hectômetro(s) cúbico(s) (hm) </li>
+                            <li>quilômetro(s) cúbico(s) (km) </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+
+            <br>
+
+            <h2> Resumão - medidas de comprimento </h2>
+
             <div class="sesInfo">
-                <h1> Convertendo unidades de comprimento </h1>
                 <p> "As unidades de medidas de comprimento surgem para suprir a necessidade do ser humano de medir
                     vários tipos de distâncias. Existem várias unidades de medidas de comprimento, a utilizada no
-                    sistema internacional de unidades é o metro, e seus múltiplos (quilômetro, hectômetro e decâmetro) e
-                    submúltiplos (decímetro, centímetro milímetro)."
-                    <br><br> Veja mais sobre "Medidas de comprimento" em: <a
-                        href="https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm"
-                        class="text-light">https://brasilescola.uol.com.br/matematica/medidas-de-comprimento.htm</a>
+                    sistema internacional de unidades é o metro, e seus múltiplos (quilômetro, hectômetro e
+                    decâmetro) e
+                    submúltiplos (decímetro, centímetro milímetro).".
                 </p>
-                <br>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li> nanômetro(s) </li>
-                        <li> micrômetro(s) </li>
-                        <li> milimetro(s) </li>
-                        <li> centimetro(s) </li>
-                        <li> decimetro(s) </li>
-                        <li> metro(s) </li>
-                    </div>
-                    <div>
-                        <li> decâmetro(s) </li>
-                        <li> hectômetro(s) </li>
-                        <li> quilômetro(s) </li>
-                        <li> megametro(s) </li>
-                        <li> gigametro(s) </li>
-                        <li> terametro(s) </li>
-                    </div>
-                </ol>
-            </div>
-            <br>
-            <h2>
-                Converter medidas de comprimentos
-            </h2>
-            <br>
-            <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorC"> Medida </label>
-                    <input type="number" placeholder="Digite aqui" id="valorC" onchange="convert()">
+                <div class="convImg bg-light rounded-1 py-3 px-1" style="height: auto;">
+                    <img src="../../img/conv-comp.png" alt="">
                 </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidC"> Unidade de medida </label>
-                        <select name="unidC" id="unidC" onchange="convert()">
-                            <optgroup> macro </optgroup>
-                            <option value="12"> terametro(s) </option>
-                            <option value="9"> gigametro(s) </option>
-                            <option value="6"> megametro(s) </option>
-                            <option value="3"> quilômetro(s) </option>
-                            <option value="2"> hectômetro(s) </option>
-                            <option value="1"> decâmetro(s) </option>
-                            <optgroup> micro </optgroup>
-                            <option value="0" selected> metro(s) </option>
-                            <option value="-1"> decimetro(s) </option>
-                            <option value="-2"> centimetro(s) </option>
-                            <option value="-3"> milimetro(s) </option>
-                            <option value="-6"> micrômetro(s) </option>
-                            <option value="-9"> nanômetro(s) </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="convC"> Converter para</label>
-                        <select name="convC" id="convC" onchange="convert()">
-                            <optgroup> macro </optgroup>
-                            <option value="12"> terametro(s) </option>
-                            <option value="9"> gigametro(s) </option>
-                            <option value="6"> megametro(s) </option>
-                            <option value="3"> quilômetro(s) </option>
-                            <option value="2"> hectômetro(s) </option>
-                            <option value="1"> decâmetro(s) </option>
-                            <optgroup> micro </optgroup>
-                            <option value="0" selected> metro(s) </option>
-                            <option value="-1"> decimetro(s) </option>
-                            <option value="-2"> centimetro(s) </option>
-                            <option value="-3"> milimetro(s) </option>
-                            <option value="-6"> micrômetro(s) </option>
-                            <option value="-9"> nanômetro(s) </option>
-                        </select>
-                    </div>
-                </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respC"> </span>
-                    <span id="calcC" class=""> </span>
-                </div>
-                <br>
             </div>
         </section>
     </main>

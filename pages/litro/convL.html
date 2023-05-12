@@ -70,63 +70,23 @@
 
     <main>
         <section class="text-light">
-            <div class="sesInfo">
-                <h1> Medidas de Litro </h1>
-                <p>
-                    O litro é uma medida utilizada para estimar uma quantidade que está inserida em um reservatório,
-                    recipiente. As unidades de litro, seus múltiplos e submúltiplos são:
-                </p>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li> quilolitro </li>
-                        <li> hectolitro </li>
-                        <li> decâlitro </li>
-                        <li> litro </li>
-                    </div>
-                    <div>
-                        <li> decílitro </li>
-                        <li> centílitro </li>
-                        <li> milílitro </li>
-                    </div>
-                </ol>
-                <p>
-                    As medidas de volume também se relacionam com as medidas de litro pois ambas medem a capacidade de
-                    um corpo, ou seja, são grandezas que estimam a quantidade de liquido em um recipiente ou
-                    reservatório.
-                </p>
-                <!--  
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li>quilômetro quadrado (km²) </li>
-                        <li> hectômetro quadrado (hm²) </li>
-                        <li> decâmetro quadrado (dam²) </li>
-                        <li> metro quadrado (m²) </li>
-                    </div>
-                    <div>
-                        <li> decímetro quadrado (dm²) </li>
-                        <li> centímetro quadrado (cm²) </li>
-                        <li> milímetro quadrado (mm²) </li>
-                    </div>
-                </ol>
-                <br>
-                <ul class="sesInfo-list flex-around">
-                    <li>
-                        <p>Veja mais sobre "Conversão de Medidas de Superfície" em : </p>
-                        <a
-                            href="https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm">https://brasilescola.uol.com.br/matematica/conversao-medidas-superficie.htm</a>
-                    </li>
-                </ul>
-            </div> -->
-                <br>
-                <h2>
-                    Convertendo medidas de litro
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - Medidas de capacidade (litro)
                 </h2>
-                <div id="sesConvert">
-                    <div class="sesConvert-unid" style="align-items: center;">
-                        <label for="valorL"> Valor do litro </label>
+                <p>Faça os seus calculos de conversão de medidas de litro de forma simples e fácil com a calculadora de
+                    conversão. Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja
+                    converter. 😉
+                </p>
+            </div>
+
+            <div id="sesConvert">
+                <div id="divConvert">
+                    <div class="divConvert-unid" style="align-items: center;">
+                        <label for="valorL"> Valor </label>
                         <input type="number" placeholder="Digite aqui" id="valorL" onchange="convert()">
                     </div>
-                    <div class="sesConvert-opts">
+                    <div class="divConvert-opts">
                         <div>
                             <label for="unidL"> Unidade de litro </label>
                             <select name="unidL" id="unidL" onchange="convert()">
@@ -170,13 +130,41 @@
                             </select>
                         </div>
                     </div>
-                    <br>
-                    <div class="sesConvert-unid flex-col-around gap-1">
-                        <span id="respL"> </span>
+                    <div class="divConvert-resp flex-col-around gap-1 my-3">
+                        <span id="respL"> Escolha um valor </span>
                         <span id="calcL" class=""> </span>
                     </div>
-                    <br>
                 </div>
+                <div>
+                    <ol class="sesInfo-list flex-around">
+                        <div>
+                            <li> quilolitro(s) </li>
+                            <li> hectolitro(s) </li>
+                            <li> decâlitro(s) </li>
+                            <li> litro(s) </li>
+                        </div>
+                        <div>
+                            <li> decílitro(s) </li>
+                            <li> centílitro(s) </li>
+                            <li> milílitro(s) </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+            <br>
+            <h2> Resumão - medidas de capacidade </h2>
+            <div class="sesInfo mb-5">
+                <p style="display: inline-block">
+                    O litro é uma medida utilizada para estimar uma quantidade que está inserida em um reservatório ou recipiente. As medidas de volume também se relacionam com as medidas de litro pois ambas medem a capacidade de um corpo, ou seja, são grandezas que estimam a quantidade de liquido em um recipiente.
+                    <br>
+                    Para fazer a conversão nas medidas de litros, basta
+                    <strong>multiplicar</strong> (se for converter para uma unidade maior que a atual) ou
+                    <strong>dividir</strong> (se for converter para uma unidade menor) por 10.
+                </p>
+                <div class="convImg bg-light rounded-1 py-3 px-1" style="height: auto;">
+                    <img src="../../img/conv-litro.png" alt="">
+                </div>
+            </div>
         </section>
     </main>
 

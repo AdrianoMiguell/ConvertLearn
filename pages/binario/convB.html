@@ -70,106 +70,113 @@
 
     <main>
         <section class="text-light">
-            <div class="sesInfo">
-                <h1> Unidades de medida para dados de armazenamento </h1>
-                <p>
-                    Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como forma de
-                    facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa abordagem é
-                    chamada de sistema binário. Para o armazenamento de dados, são usados unidades decimais e binárias
-                    de medida para expressar o tamanho desses dados de armazenamento.</p>
-                <p>
-                    Unidades decimais como kilobyte (KB), megabyte (MB) e gigabyte (GB) são comumente usadas para
-                    expressar o tamanho dos dados. Unidades binárias de medida incluem kibibyte (KiB), mebibyte (MiB) e
-                    gibibyte (GiB).
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - medidas de armazenamento de dados
+                </h2>
+                <p>Faça os seus calculos de conversão de unidades de dados de forma simples e fácil com a calculadora de
+                    conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😉
                 </p>
-                <p> Entre as unidades de armazenamento, além das já mencionadas, temos: </p>
-                <br>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <h2>escala binária</h2>
-                        <li> bit </li>
-                        <li>kilobit</li>
-                        <li>megabit</li>
-                        <li>gigabit</li>
-                        <li>terabit</li>
-                        <li>petabit</li>
-                        <!-- <li>exabit</li>
-                        <li>zettabit</li>
-                        <li>yottabit</li> -->
-                    </div>
-                    <div>
-                        <h2>escala decimal</h2>
-                        <li> byte </li>
-                        <li> kilobyte </li>
-                        <li> megabyte </li>
-                        <li> gigabyte </li>
-                        <li> terabyte </li>
-                        <li> petabyte </li>
-                        <!-- <li> exabyte </li>
-                        <li> zettabyte </li>
-                        <li> yottabyte </li> -->
-                    </div>
-                </ol>
             </div>
 
-            <br>
-
-            <div id="sesConvert">
-                <h2>
-                    Convertendo dados binários
-                </h2>
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorB"> Valor </label>
-                    <input type="number" placeholder="Digite aqui" id="valorB" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidB"> Medida do valor </label>
-                        <select name="unidB" id="unidB" onchange="convert()">
-                            <optgroup> unidade binaria </optgroup>
-                            <option value="bit">bit</option>
-                            <option value="kbit">kilobit</option>
-                            <option value="mbit">megabit</option>
-                            <option value="gbit">gigabit</option>
-                            <option value="tbit">terabit</option>
-                            <option value="pbit">petabit</option>
-
-                            <optgroup> unidade decimal </optgroup>
-                            <option value="Byte" selected>byte</option>
-                            <option value="kByte">kilobyte</option>
-                            <option value="mByte">megabyte</option>
-                            <option value="gByte">gigabyte</option>
-                            <option value="tByte">terabyte</option>
-                            <option value="pByte">petabyte</option>
-                        </select>
+            <div id="sesConvert" class="my-4">
+                <div id="divConvert">
+                    <div class="divConvert-opts">
+                        <div>
+                            <label for="unidB"> Unidade do valor </label>
+                            <select name="unidB" id="unidB" onchange="convert()">
+                                <optgroup> unidade binaria </optgroup>
+                                <option value="bit">bit</option>
+                                <option value="kbit">kilobit</option>
+                                <option value="mbit">megabit</option>
+                                <option value="gbit">gigabit</option>
+                                <option value="tbit">terabit</option>
+                                <option value="pbit">petabit</option>
+                                <optgroup> unidade decimal </optgroup>
+                                <option value="Byte" selected>byte</option>
+                                <option value="kByte">kilobyte</option>
+                                <option value="mByte">megabyte</option>
+                                <option value="gByte">gigabyte</option>
+                                <option value="tByte">terabyte</option>
+                                <option value="pByte">petabyte</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convB"> Converter para </label>
+                            <select name="convB" id="convB" onchange="convert()">
+                                <optgroup> unidade binaria </optgroup>
+                                <option value="bit" selected>bit</option>
+                                <option value="kbit">kilobit</option>
+                                <option value="mbit">megabit</option>
+                                <option value="gbit">gigabit</option>
+                                <option value="tbit">terabit</option>
+                                <option value="pbit">petabit</option>
+                                <optgroup> unidade decimal </optgroup>
+                                <option value="Byte">byte</option>
+                                <option value="kByte">kilobyte</option>
+                                <option value="mByte">megabyte</option>
+                                <option value="gByte">gigabyte</option>
+                                <option value="tByte">terabyte</option>
+                                <option value="pByte">petabyte</option>
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="convB"> Converter para </label>
-                        <select name="convB" id="convB" onchange="convert()">
-                            <optgroup> unidade binaria </optgroup>
-                            <option value="bit" selected>bit</option>
-                            <option value="kbit">kilobit</option>
-                            <option value="mbit">megabit</option>
-                            <option value="gbit">gigabit</option>
-                            <option value="tbit">terabit</option>
-                            <option value="pbit">petabit</option>
-
-                            <optgroup> unidade decimal </optgroup>
-                            <option value="Byte">byte</option>
-                            <option value="kByte">kilobyte</option>
-                            <option value="mByte">megabyte</option>
-                            <option value="gByte">gigabyte</option>
-                            <option value="tByte">terabyte</option>
-                            <option value="pByte">petabyte</option>
-                        </select>
+                    <div class="divConvert-unid my-1">
+                        <label for="valorB"> Valor </label>
+                        <input type="number" placeholder="Digite aqui" id="valorB" onchange="convert()">
+                    </div>
+                    <div class="divConvert-resp d-grid gap-1 my-2">
+                        <span id="respB"> Escolha um valor </span>
+                        <span id="calcB" class=""> </span>
                     </div>
                 </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respB"> </span>
-                    <span id="calcB" class=""> </span>
+                <div>
+                    <ol class="sesInfo-list flex-around">
+                        <div>
+                            <li> bit </li>
+                            <li>kilobit</li>
+                            <li>megabit</li>
+                            <li>gigabit</li>
+                            <li>terabit</li>
+                            <li>petabit</li>
+                            <!-- <li>exabit</li>
+                            <li>zettabit</li>
+                            <li>yottabit</li> -->
+                        </div>
+                        <div>
+                            <li> byte </li>
+                            <li> kilobyte </li>
+                            <li> megabyte </li>
+                            <li> gigabyte </li>
+                            <li> terabyte </li>
+                            <li> petabyte </li>
+                            <!-- <li> exabyte </li>
+                            <li> zettabyte </li>
+                            <li> yottabyte </li> -->
+                        </div>
+                    </ol>
                 </div>
-                <br>
+            </div>
+
+            <h2> Resumo: unidades de armazenamento de dados </h2>
+            <div class="sesInfo">
+                <div>
+                    <p>
+                        Computadores (e outros dispositivos eletrônicos) trabalham com impulsos elétricos que, como
+                        forma de
+                        facilitar a nossa compreensão, são representados apenas por 1 ou 0, razão pela qual essa
+                        abordagem é
+                        chamada de sistema binário. Para o armazenamento de dados, são usados unidades decimais e
+                        binárias
+                        de medida para expressar o tamanho desses dados de armazenamento.</p>
+                    <p>
+                        Unidades decimais como kilobyte (KB), megabyte (MB) e gigabyte (GB) são comumente usadas para
+                        expressar o tamanho dos dados. Unidades binárias de medida incluem kibibyte (KiB), mebibyte
+                        (MiB) e
+                        gibibyte (GiB).
+                    </p>
+                </div>
             </div>
         </section>
     </main>

@@ -26,7 +26,7 @@ function convert() {
     respB.innerHTML =
       "Informe um valor positivo ok! Não existem medidas negativas";
   } else {
-    respB.innerHTML = 'Qual é o Tempo mesmo? "0" não vale...';
+    respB.innerHTML = 'Qual é o valor mesmo? "0" não vale...';
   }
 }
 
@@ -149,15 +149,15 @@ function convertTime(u, c) {
   console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
 
   if (time < 10 ** -8) {
-    respB.innerHTML = "Tempo: " + time.toFixed(16) + " " + convText;
+    respB.innerHTML = "Dados: " + time.toFixed(16) + " " + convText;
   } else if (time < 10 ** -4) {
-    respB.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
+    respB.innerHTML = "Dados: " + time.toFixed(8) + " " + convText;
   } else if (time > 10 ** 10) {
-    respB.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
+    respB.innerHTML = "Dados: " + time.toExponential() + " " + convText;
   } else if (time > 10 ** 3) {
-    respB.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
+    respB.innerHTML = "Dados: " + time.toLocaleString("pt-BR") + " " + convText;
   } else {
-    respB.innerHTML = "Tempo: " + time + " " + convText;
+    respB.innerHTML = "Dados: " + time + " " + convText;
   }
 }
 

@@ -68,60 +68,73 @@
     </header>
 
     <main>
-        <section class="text-light">
-            <div class="sesInfo">
-                <h1> Escalas de temperatura </h1>
-                <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F). Abaixo trazemos uma
-                    breve explicação sobre cada uma delas. </p>
-                <br>
-                <ul class="sesInfo-list">
-                    <li> <strong>Fahrenheit :</strong> Escala termométrica de símbolo F, no qual 32° F é o ponto de
-                        congelamento da água e
-                        212° F é o ponto de ebulição da água.</li> <br>
-                    <li> <strong>Celsius :</strong> Escala de temperatura, símbolo C, no qual 0° C é o ponto de
-                        congelamento da água e 100°
-                        C é o ponto de ebulição da água.</li> <br>
-                    <li> <strong>Kelvin :</strong> Escala de temperatura absoluta ou escala termodinâmica, cujo símbolo
-                        é K, no qual o
-                        ponto triplo da água tem o valor de 273,16 K.</li>
-                </ul>
+        <section class="text-light py-4">
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - escalas de temperatura
+                </h2>
+                <p>Faça os seus calculos de conversão de temperaturas de forma simples e fácil com a calculadora de
+                    conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😉
+                </p>
             </div>
 
-            <br>
-            <h2> Convertendo temperaturas </h2>
-            <br>
-
-            <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorT"> Valor </label>
-                    <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidT"> Escala de temperatura </label>
-                        <select name="unidT" id="unidT" onchange="convert()">
-                            <option value="" selected> --- escolha --- </option>
-                            <option value="c">celsius</option>
-                            <option value="k">kelvin</option>
-                            <option value="f">fahrenheit</option>
-                        </select>
+            <div id="sesConvert" style="justify-content: center; align-items: start; column-gap: 2em; margin: 2.5em 0;">
+                <div id="divConvert">
+                    <div class="divConvert-unid">
+                        <label for="valorT"> Valor </label>
+                        <input type="number" placeholder="Digite aqui" id="valorT" onchange="convert()">
                     </div>
-                    <div>
-                        <label for="convT"> Converter para</label>
-                        <select name="convT" id="convT" onchange="convert()">
-                            <option value="" selected> --- escolha --- </option>
-                            <option value="k">kelvin</option>
-                            <option value="c">celsius</option>
-                            <option value="f">fahrenheit</option>
-                        </select>
+                    <div class="divConvert-opts">
+                        <div>
+                            <label for="unidT"> Escala de temperatura </label>
+                            <select name="unidT" id="unidT" onchange="convert()">
+                                <option value="" selected> --- escolha --- </option>
+                                <option value="c">celsius</option>
+                                <option value="k">kelvin</option>
+                                <option value="f">fahrenheit</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convT"> Converter para</label>
+                            <select name="convT" id="convT" onchange="convert()">
+                                <option value="" selected> --- escolha --- </option>
+                                <option value="k">kelvin</option>
+                                <option value="c">celsius</option>
+                                <option value="f">fahrenheit</option>
+                            </select>
+                        </div>
                     </div>
+                    <br>
                 </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respT"> </span>
+                <div class="divConvert-resp flex-col-around gap-1">
+                    <span id="respT"> Escolha um valor </span>
                     <span id="calcT" class=""> </span>
                 </div>
-                <br>
+            </div>
+
+            <h2> Resumo: escalas de temperatura </h2>
+
+            <div class="sesInfo">
+                <div>
+                    <p> As escalas de temperatura são três: Kelvin (K), Celsius(C) e Fahrenheit (F). Abaixo trazemos uma
+                        breve explicação sobre cada uma delas. </p>
+                    <div>
+                        <ul>
+                            <li> <strong>Fahrenheit :</strong> Escala termométrica de símbolo F, no qual 32° F é o ponto
+                                de
+                                congelamento da água e
+                                212° F é o ponto de ebulição da água.</li>
+                            <li> <strong>Celsius :</strong> Escala de temperatura, símbolo C, no qual 0° C é o ponto de
+                                congelamento da água e 100°
+                                C é o ponto de ebulição da água.</li>
+                            <li> <strong>Kelvin :</strong> Escala de temperatura absoluta ou escala termodinâmica, cujo
+                                símbolo
+                                é K, no qual o
+                                ponto triplo da água tem o valor de 273,16 K.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

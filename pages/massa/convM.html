@@ -69,73 +69,96 @@
     </header>
 
     <main>
-        <section class="text-light">
+        <section class="text-light py-4">
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - Medidas de massa
+                </h2>
+                <p>Faça os seus calculos de conversão de medidas de massa de forma simples e fácil com a calculadora de
+                    conversão. Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja
+                    converter. 😉
+                </p>
+            </div>
+
+            <div id="sesConvert">
+                <div id="divConvert">
+                    <div class="divConvert-opts">
+                        <div>
+                            <label for="unidM"> Unidade de massa </label>
+                            <select name="unidM" id="unidM" onchange="convert()">
+                                <option value="-3"> miligrama(s) </option>
+                                <option value="-2"> centigrama(s) </option>
+                                <option value="-1"> decigrama(s) </option>
+                                <option value="0" selected> grama(s) </option>
+                                <option value="1"> decagrama(s) </option>
+                                <option value="2"> hectograma(s) </option>
+                                <option value="3"> quilograma(s) </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convM"> Converter para</label>
+                            <select name="convM" id="convM" onchange="convert()">
+                                <option value="-3"> miligrama(s) </option>
+                                <option value="-2"> centigrama(s) </option>
+                                <option value="-1"> decigrama(s) </option>
+                                <option value="0" selected> grama(s) </option>
+                                <option value="1"> decagrama(s) </option>
+                                <option value="2"> hectograma(s) </option>
+                                <option value="3"> quilograma(s) </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="divConvert-unid" style="align-items: center;">
+                        <label for="valorM"> Valor </label>
+                        <input type="number" placeholder="Digite aqui" id="valorM" onchange="convert()">
+                    </div>
+                    <div class="divConvert-resp d-grid gap-1 my-3">
+                        <span id="respM"> Escolha um valor </span>
+                        <span id="calcM" > </span>
+                    </div>
+                </div>
+                <div>
+                    <ol class="sesInfo-list">
+                        <div>
+                            <li> miligrama(s) (mg) </li>
+                            <li> centigrama(s) (cg) </li>
+                            <li> decigrama(s) (dg) </li>
+                            <li> grama(s) (g) </li>
+                        </div>
+                        <div>
+                            <li> decagrama(s) (dag) </li>
+                            <li> hectograma(s) (hg) </li>
+                            <li> quilograma(s) (kg) </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+
+            <br>
+            <h2> Resumão - medidas de massa </h2>
             <div class="sesInfo">
-                <h1> Medidas de massa </h1>
-                <br>
+                <p style="display: inline-block">
+                    Essas medidas são usadas para determinar a massa que um corpo possui. A unidade padrão de massa no
+                    Sistema Internacional de unidades (SI) é o quilograma (kg).
+                    <br>
+                    Para fazer a conversão nas medidas de massa, basta
+                    <strong>multiplicar</strong> (se for converter para uma unidade maior que a atual) ou
+                    <strong>dividir</strong> (se for converter para uma unidade menor) por 10.
+                </p>
+                <div class="convImg bg-light rounded-1 py-3 px-1 my-3">
+                    <img src="../../img/conv-massa.png" alt="">
+                </div>
+            </div>
+            <!-- 
+            <div class="sesInfo">
+                <h1> Resumo: Medidas de massa </h1>
                 <p>
                     Essas medidas são usadas para determinar a massa que um corpo possui. A unidade padrão de massa no
                     Sistema Internacional de unidades (SI) é o quilograma (kg). Dentre as unidades usadas no sistema de
                     massas, temos:
                 </p>
-                <ol class="sesInfo-list flex-around">
-                    <div>
-                        <li> quilograma (kg) </li>
-                        <li> hectograma (hg) </li>
-                        <li> decagrama (dag) </li>
-                        <li> grama (g) </li>
-                    </div>
-                    <div>
-                        <li> decigrama (dg) </li>
-                        <li> centigrama (cg) </li>
-                        <li> miligrama (mg) </li>
-                    </div>
-                </ol>
-            </div>
 
-            <br>
-            <h2>
-                Convertendo massas
-            </h2>
-            <br>
-            <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorM"> Massa </label>
-                    <input type="number" placeholder="Digite aqui" id="valorM" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidM"> Unidade de massa </label>
-                        <select name="unidM" id="unidM" onchange="convert()">
-                            <option value="-3"> miligrama(s) </option>
-                            <option value="-2"> centigrama(s) </option>
-                            <option value="-1"> decigrama(s) </option>
-                            <option value="0" selected> grama(s) </option>
-                            <option value="1"> decagrama(s) </option>
-                            <option value="2"> hectograma(s) </option>
-                            <option value="3"> quilograma(s) </option>
-                        </select>
-                    </div>
-                    <div>
-                        <label for="convM"> Converter para</label>
-                        <select name="convM" id="convM" onchange="convert()">
-                            <option value="-3"> miligrama(s) </option>
-                            <option value="-2"> centigrama(s) </option>
-                            <option value="-1"> decigrama(s) </option>
-                            <option value="0" selected> grama(s) </option>
-                            <option value="1"> decagrama(s) </option>
-                            <option value="2"> hectograma(s) </option>
-                            <option value="3"> quilograma(s) </option>
-                        </select>
-                    </div>
-                </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respM"> </span>
-                    <span id="calcM" class=""> </span>
-                </div>
-                <br>
-            </div>
+            </div> -->
         </section>
     </main>
 

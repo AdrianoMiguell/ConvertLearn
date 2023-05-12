@@ -70,68 +70,82 @@
 
     <main>
         <section class="text-light">
-            <div class="sesInfo">
-                <h1> Unidades de Volume </h1>
-                <p>
-                    Podemos encontrar o volume de todos os sólidos geométricos. O volume corresponde à “capacidade”
-                    desse sólido. Entre as unidades temos : <br>
+            <div class="mb-4">
+                <h2 class="text-center mb-3">
+                    Calculadora de conversão - medidas de volume
+                </h2>
+                <p>Faça os seus calculos de conversão de volume de forma simples e fácil com a calculadora de conversão.
+                    Escolha a unidade desejada e a unidade de conversão, ou seja, para qual unidade deseja converter. 😊
                 </p>
-                <br>
-                <ol class="sesInfo-list">
-                    <li>quilômetro cúbico(s) (km³) </li>
-                    <li> hectômetro cúbico(s) (hm³) </li>
-                    <li> decâmetro cúbico(s) (dam³) </li>
-                    <li> metro cúbico(s) (m³) </li>
-                    <li> decímetro cúbico(s) (dm³) </li>
-                    <li> centímetro cúbico(s) (cm³) </li>
-                    <li> milímetro cúbico(s) (mm³) </li>
-                </ol>
-                <br>
-                <p>Mais informações você pode encontrar no site: <a
-                        href="https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm">https://mundoeducacao.uol.com.br/matematica/formulas-para-calculo-volumes.htm</a>
-                </p>
-                <br>
             </div>
-            <br>
-            <h2>
-                Convertendo unidades de volume
-            </h2>
-            <br>
+
             <div id="sesConvert">
-                <div class="sesConvert-unid" style="align-items: center;">
-                    <label for="valorV"> Valor </label>
-                    <input type="number" placeholder="Digite aqui" id="valorV" onchange="convert()">
-                </div>
-                <div class="sesConvert-opts">
-                    <div>
-                        <label for="unidV"> Unidade de volume </label>
-                        <select name="unidV" id="unidV" onchange="convert()">
-                            <option value="-9"> milimetro cúbico(s) </option>
-                            <option value="-6"> centímetro cúbico(s) </option>
-                            <option value="-3"> decímetro cúbico(s) </option>
-                            <option value="0" selected> metro cúbico(s) </option>
-                            <option value="3"> decametro cúbico(s) </option>
-                            <option value="6"> hectômetro cúbico(s) </option>
-                            <option value="9"> quilômetro cúbico(s) </option>
-                        </select>
+                <div id="divConvert">
+                    <div class="divConvert-opts mb-4">
+                        <div>
+                            <label for="unidV"> Unidade de volume </label>
+                            <select name="unidV" id="unidV" onchange="convert()">
+                                <option value="-9"> milimetro(s) cúbico(s) </option>
+                                <option value="-6"> centímetro(s) cúbico(s) </option>
+                                <option value="-3"> decímetro(s) cúbico(s) </option>
+                                <option value="0" selected> metro(s) cúbico(s) </option>
+                                <option value="3"> decametro(s) cúbico(s) </option>
+                                <option value="6"> hectômetro(s) cúbico(s) </option>
+                                <option value="9"> quilômetro(s) cúbico(s) </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="convV"> Converter para </label>
+                            <select name="convV" id="convV" onchange="convert()">
+                                <option value="-9"> milimetro(s) cúbico(s) </option>
+                                <option value="-6"> centímetro(s) cúbico(s) </option>
+                                <option value="-3"> decímetro(s) cúbico(s) </option>
+                                <option value="0" selected> metro(s) cúbico(s) </option>
+                                <option value="3"> decametro(s) cúbico(s) </option>
+                                <option value="6"> hectômetro(s) cúbico(s) </option>
+                                <option value="9"> quilômetro(s) cúbico(s) </option>
+                            </select>
+                        </div>
                     </div>
-                    <div>
-                        <label for="convV"> Converter para </label>
-                        <select name="convV" id="convV" onchange="convert()">
-                            <option value="-9"> milimetro cúbico(s) </option>
-                            <option value="-6"> centímetro cúbico(s) </option>
-                            <option value="-3"> decímetro cúbico(s) </option>
-                            <option value="0" selected> metro cúbico(s) </option>
-                            <option value="3"> decametro cúbico(s) </option>
-                            <option value="6"> hectômetro cúbico(s) </option>
-                            <option value="9"> quilômetro cúbico(s) </option>
-                        </select>
+                    <div class="divConvert-unid">
+                        <label for="valorV"> Valor </label>
+                        <input type="number" placeholder="Digite aqui" id="valorV" onchange="convert()">
+                    </div>
+                    <div class="divConvert-resp d-grid gap-1 my-3">
+                        <span id="respV"> Escolha um valor </span>
+                        <span id="calcV" class=""> </span>
                     </div>
                 </div>
-                <br>
-                <div class="sesConvert-unid flex-col-around gap-1">
-                    <span id="respV"> </span>
-                    <span id="calcV" class=""> </span>
+                <div>
+                    <ol class="sesInfo-list">
+                        <div>
+                            <li> milímetro(s) cúbico(s) (mm³) </li>
+                            <li> centímetro(s) cúbico(s) (cm³) </li>
+                            <li> decímetro(s) cúbico(s) (dm³) </li>
+                            <li> metro(s) cúbico(s) (m³) </li>
+                        </div>
+                        <div>
+                            <li> decâmetro(s) cúbico(s) (dam³) </li>
+                            <li> hectômetro(s) cúbico(s) (hm³) </li>
+                            <li>quilômetro(s) cúbico(s) (km³) </li>
+                        </div>
+                    </ol>
+                </div>
+            </div>
+
+            <br>
+
+            <h2> Resumo - Medidas de volume </h2>
+            <div class="sesInfo">
+                <p>
+                    Podemos encontrar a volume de um sólido geométrico apartir das três dimensões:
+                    <strong>comprimento</strong>, <strong>altura</strong> e <strong>largura</strong>. Para calcular o
+                    volume desse sólido, basta multiplicar ambas as propriedades. <br>
+                    Para a conversão de uma medida de volume para outra, é preciso multiplicar (se for converter para
+                    uma unidade maior que a atual) ou dividir (se for converter para uma unidade menor) por 1.000 (10³).
+                </p>
+                <div class="convImg bg-light rounded-1 py-3 px-1" style="height: auto;">
+                    <img src="../../img/conv-vol.png" alt="">
                 </div>
                 <br>
             </div>
