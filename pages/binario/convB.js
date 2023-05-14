@@ -9,7 +9,7 @@ let conv;
 let unid;
 let unidResult;
 let convResult;
-let time;
+let dado;
 let a;
 let convText;
 
@@ -104,6 +104,7 @@ function choosen(u, c) {
     case "kByte":
       kB();
       convResult = a;
+      break;
     case "mbit":
       mb();
       convResult = a;
@@ -140,26 +141,31 @@ function choosen(u, c) {
       respB.innerHTML = "Unidade não identificada!";
       break;
   }
-  convertTime(unidResult, convResult);
+  convertDado(unidResult, convResult);
 }
 
-function convertTime(u, c) {
-  time = (valor * u) / c;
+function convertDado(u, c) {
+  dado = (valor * u) / c;
 
-  console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
+  calcB.innerHTML =
+    "<span> <strong>Calculo:</strong> (" + valor.toLocaleString("pt-BR");
+  calcB.innerHTML += u < c ? " / " : " * ";
+  calcB.innerHTML += u >= c ? (u / c).toLocaleString("pt-br") : (c / u).toLocaleString("pt-br");
 
-  if (time < 10 ** -8) {
-    respB.innerHTML = "Dados: " + time.toFixed(16) + " " + convText;
-  } else if (time < 10 ** -4) {
-    respB.innerHTML = "Dados: " + time.toFixed(8) + " " + convText;
-  } else if (time > 10 ** 10) {
-    respB.innerHTML = "Dados: " + time.toExponential() + " " + convText;
-  } else if (time > 10 ** 3) {
-    respB.innerHTML = "Dados: " + time.toLocaleString("pt-BR") + " " + convText;
+  if (dado > 10 ** 10) {
+    respB.innerHTML = "Dados: " + dado.toExponential() + " " + convText;
+    calcB.innerHTML += ") = " + dado.toExponential() + " " + convText + " </span>";
+  } else if (dado > 10 ** 3) {
+    respB.innerHTML = "Dados: " + dado.toLocaleString("pt-BR") + " " + convText;
+    calcB.innerHTML += ") = " + dado.toLocaleString("pt-BR") + " " + convText + " </span>";
   } else {
-    respB.innerHTML = "Dados: " + time + " " + convText;
+    respB.innerHTML = "Dados: " + dado + " " + convText;
+    calcB.innerHTML += ") = " + dado + " " + convText + " </span>";
   }
 }
+
+// 1  8
+// 8  1
 
 function b() {
   a = 1;
@@ -169,8 +175,10 @@ function B() {
 }
 function kb() {
   a = 10 ** 3;
+  console.log("K bit");
 }
 function kB() {
+  console.log("KByte");
   a = 8 * 10 ** 3;
 }
 function mb() {

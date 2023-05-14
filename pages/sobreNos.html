@@ -15,19 +15,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ConverterLearn - sobre nós </title>
-    <link rel="stylesheet" href="../src/css/styleG.css">
-    <link rel="stylesheet" href="../src/css/classes.css">
 
     <style>
+        @media screen and (max-width: 768px) {
+            @media (max-width: 400px) {
+                .myImg {
+                    width: 100vw !important;
+                    align-items: center !important;
+                    font-size: 10pt !important;
+                    flex-direction: column;
+                }
+
+                .myImg>img {
+                    width: 75px !important;
+                    height: 75px !important;
+                }
+
+                .myText {
+                    margin: 5px .25em !important;
+                }
+            }
+
+            .myText {
+                margin: 5px .5em !important;
+            }
+
+            #sobreNos div {
+                margin: 1em !important;
+                width: 90vw;
+            }
+        }
+
+        #sobreNos div {
+            margin: 2em;
+        }
+
         .myImg {
             padding: 5px;
-            border-radius: .25em;
-            min-width: 30em;
+            border-radius: 2px;
+            width: 30em;
             display: flex;
             align-items: center;
             justify-content: space-around;
             gap: 1em;
-            margin: 2em;
         }
 
         .myImg>img {
@@ -40,6 +70,10 @@
             margin: 5px 1.25em;
             word-wrap: break-word;
         }
+
+        .gradient-light {
+            box-shadow: none !important;
+        }
     </style>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -49,9 +83,12 @@
         crossorigin="anonymous"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8474068703843385"
         crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../src/css/styleG.css">
+    <link rel="stylesheet" href="../src/css/classes.css">
 </head>
 
-<body>
+<body class="gradient-light">
     <header>
         <nav class="navbar navbar-expand-lg gradient-simple">
             <div class="container-fluid d-flex w-100 justify-content-between m-1 mx-2">
@@ -91,13 +128,13 @@
         </nav>
     </header>
 
-    <main class="gradient-light">
+    <main class="p-0 py-4">
         <section id="sobreNos">
-            <h1 class="text-dark">
-                Sobre nós
-            </h1>
             <div class="sesInfo">
-                <p class="text-grad-dark text-size"> Olá, meu nome é Adriano Miguel. Tenho formação no curso técnico em
+                <h1 class="text-dark text-center">
+                    Sobre nós
+                </h1>
+                <p class="text-size"> Olá, meu nome é Adriano Miguel. Tenho formação no curso técnico em
                     informática, e dentro desse universo que é a informatica, amo a área da programação. Durante a minha
                     passagem pelo ensino médio, senti a falta de sites que auxiliem os alunos a realizarem a conversão
                     de valores de forma mais dinâmica, didatica e explicativa. <br> Com isso em mente, criei esse site
@@ -105,70 +142,29 @@
                     intuito de auxiliar a estudantes e publico em geral, que precisa realizar conversões de valores, mas
                     que fica em dúvida se fez a conversão de forma correta ou não. Esse é o nosso objetivo. Desejamos um
                     bom proveito e bons estudos. </p>
-                <div class="myImg gradient-simple">
-                    <img src="https://lh3.googleusercontent.com/sP4OxvZpPxpQzdqCoi-80Mnbpz2chZb0OOt2tsUZzHSsh4tl2RlJqTOtLP2LWKl26kFaBAVqbqBCQS2KssHVUOWJrTT5MU--RPr5Y2dYiFkxL73SdvE7WXnhcJrs16uI3uRibxLiCGGnQSeRE8bM54YlfYaP7nf0ofIFFtESfnvZCssCWC2uYQeCKIZC847kA_iNkhj0p-RKZJUmmJdA9n2MGFCsfc4z8gs952quVNS9m1p7yhtkRKK7syeqMEyzbuQA4BSBuxtb9Gi_C4I4VLAIdsUrOY5zz-Lm5Gi3n4JjGbswlyndBX_wjrMcZIdzVsdw2xrYNzAdtKdFV7Q8R6dvrAd22mv5ffxmk6H44U7IiA2Fq9rQtQ90VSQdc7pwYBmukD-Wu7wz1JsFir-M8y_71gbfcgPXxGslck_0qVlLpnW11_cdrTcIP0T6dCywchWphlqsOFoNlfYZXgtzyj677BJDLkVPkWJPwjYPho2LBolFc9CsvGStRJcIz6j5r0MSOShL7975SPcceV3xZvvtUAFPnTJHDl5SkEkVTVZ2OZt9F8TPRho56jGWFp7Q4mXf7xfe0ZfYl6EmG5i7S4chCOHPW1g_YmDBs4pgvNgyuc18C0tdP1fYdlnw_omE4Yi0oPHqTW6WylmBzBaNJ3dz-sE41pNFxa-BkAYZGAfXtaEQu7xe6L-mMKdNhCdX7M5sdudS9nE6f8jU92xPUl0nea1nGDypfbmwGSZ2Wn2amwLX-fRxRxuXGceI-RlvuG-leckZKKg8Al06sSTwt8nFoUfw5IdgMOMXmQ6tDAeUJhCQh_WvNE7oZ8Mgr5Isx15Ot6ixUoyLmi8TpOa6n9faAi_8EAxoSru8-p3Deos5Fe8a979KI5IZyUzfkIvjQGn6neoUEBlWKusTQXn0Sb6UGIq4eYskTuyFy-w-OpdAjqsPrZ__olyR5MpoaI4RN2UYwdTAXFyOcZFBJOY=w580-h580-s-no?authuser=0"
-                        alt="">
-                    <div class="myText text-light">
-                        <p>
-                            Formado no curso técnico em informática pelo IF Sertão - Campus
-                            Petrolina.
-                            Atualmente cursando graduação de "Licenciatura em computação" nesse mesmo Instituto.
-                        </p>
-                    </div>
+            </div>
+
+            <div class="myImg gradient-simple m-0">
+                <img src="https://lh3.googleusercontent.com/sP4OxvZpPxpQzdqCoi-80Mnbpz2chZb0OOt2tsUZzHSsh4tl2RlJqTOtLP2LWKl26kFaBAVqbqBCQS2KssHVUOWJrTT5MU--RPr5Y2dYiFkxL73SdvE7WXnhcJrs16uI3uRibxLiCGGnQSeRE8bM54YlfYaP7nf0ofIFFtESfnvZCssCWC2uYQeCKIZC847kA_iNkhj0p-RKZJUmmJdA9n2MGFCsfc4z8gs952quVNS9m1p7yhtkRKK7syeqMEyzbuQA4BSBuxtb9Gi_C4I4VLAIdsUrOY5zz-Lm5Gi3n4JjGbswlyndBX_wjrMcZIdzVsdw2xrYNzAdtKdFV7Q8R6dvrAd22mv5ffxmk6H44U7IiA2Fq9rQtQ90VSQdc7pwYBmukD-Wu7wz1JsFir-M8y_71gbfcgPXxGslck_0qVlLpnW11_cdrTcIP0T6dCywchWphlqsOFoNlfYZXgtzyj677BJDLkVPkWJPwjYPho2LBolFc9CsvGStRJcIz6j5r0MSOShL7975SPcceV3xZvvtUAFPnTJHDl5SkEkVTVZ2OZt9F8TPRho56jGWFp7Q4mXf7xfe0ZfYl6EmG5i7S4chCOHPW1g_YmDBs4pgvNgyuc18C0tdP1fYdlnw_omE4Yi0oPHqTW6WylmBzBaNJ3dz-sE41pNFxa-BkAYZGAfXtaEQu7xe6L-mMKdNhCdX7M5sdudS9nE6f8jU92xPUl0nea1nGDypfbmwGSZ2Wn2amwLX-fRxRxuXGceI-RlvuG-leckZKKg8Al06sSTwt8nFoUfw5IdgMOMXmQ6tDAeUJhCQh_WvNE7oZ8Mgr5Isx15Ot6ixUoyLmi8TpOa6n9faAi_8EAxoSru8-p3Deos5Fe8a979KI5IZyUzfkIvjQGn6neoUEBlWKusTQXn0Sb6UGIq4eYskTuyFy-w-OpdAjqsPrZ__olyR5MpoaI4RN2UYwdTAXFyOcZFBJOY=w580-h580-s-no?authuser=0"
+                    alt="">
+                <div class="myText text-light">
+                    <p>
+                        Formado no curso técnico em informática pelo IF Sertão - Campus
+                        Petrolina.
+                        Atualmente cursando graduação de "Licenciatura em computação" nesse mesmo Instituto.
+                    </p>
                 </div>
+            </div>
+
+
         </section>
 
 
         <section style="margin: 5em 1em;">
             <h2> Créditos de Imagens e icones </h2>
-            <div> As imagens de icones usadas neste site foram retiradas do site <a href="https://icons8.com"
-                    target="_blank" class="text-dec-none"> <strong>ICONS 8</strong> </a>. </div>
+            <div> As imagens de icones usadas neste site foram retiradas do site <a href="https://www.svgrepo.com/"
+                    target="_blank" class="text-dec-none"> <strong> SVG REPO </strong> </a>. </div>
 
-            <section class="flex-around" style="--gap: 2em 4em; margin: 1em;">
-                <a target="_blank" class="text-dec-none flex-col-around"
-                    href="https://icons8.com/icon/79415/temperature">
-                    <img src="https://img.icons8.com/ios-glyphs/90/null/temperature--v1.png" width="90px" />
-                    Temperature icon by Icons8
-                </a>
-                <a target="_blank" class="text-dec-none flex-col-around" href="https://icons8.com/icon/9458/weight-kg">
-                    <img src="https://img.icons8.com/ios-filled/100/null/weight-kg.png" width="90px" />
-                    Weight Kg icon by Icons8
-                </a>
-
-
-                <a target="_blank" class="text-dec-none flex-col-around"
-                    href="https://icons8.com/icon/37926/binary-file">
-                    <img src="https://img.icons8.com/ios-filled/100/null/binary-file.png" width="90px" />
-                    Binary File icon by Icons8
-                </a>
-
-                <a target="_blank" class="text-dec-none flex-col-around" href="https://icons8.com/icon/9452/length">
-                    <img src="https://img.icons8.com/ios-filled/100/null/length.png" width="90px" />
-                    Length icon by Icons8
-                </a>
-
-                <a target="_blank" class="text-dec-none flex-col-around"
-                    href="https://icons8.com/icon/kwf3RT3hWCX9/ruler-combined">
-                    <img src="https://img.icons8.com/ios-glyphs/90/null/ruler-combined.png" width="90px" />
-                    Ruler Combined icon by Icons8
-                </a>
-
-                <a target="_blank" class="text-dec-none flex-col-around"
-                    href="https://icons8.com/icon/98115/front-view">
-                    <img src="https://img.icons8.com/material-rounded/96/null/front-view.png" width="90px" />
-                    Front View icon by Icons8
-                </a>
-
-                <a target="_blank" class="text-dec-none flex-col-around" href="https://icons8.com/icon/19099/time">
-                    <img src="https://img.icons8.com/ios-filled/100/null/time.png" width="90px" />
-                    Time icon by Icons8
-                </a>
-
-                <a target="_blank" class="text-dec-none flex-col-around" href="https://icons8.com/icon/8344/milk">
-                    <img src="https://img.icons8.com/ios-filled/100/null/milk.png" width="90px" />
-                    Milk icon by Icons8
-                </a>
-            </section>
         </section>
     </main>
 
@@ -197,7 +193,6 @@
         </div>
     </footer>
 
-    <script src="temperatura/convT.js"></script>
 </body>
 
 </html>

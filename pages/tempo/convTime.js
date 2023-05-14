@@ -115,24 +115,22 @@ function choosen(u, c) {
 }
 
 function convertTime(u, c) {
-  // if (u <= c) {
   time = (valor * u) / c;
-  // } else {
-    // time = valor * u * c;
-  // }
 
-  console.log("time = " + time + ", u = " + u + ", c = " + c + " - a = " + a);
+  calcT.innerHTML =
+    "<span> <strong>Calculo:</strong> (" + valor.toLocaleString("pt-BR");
+  calcT.innerHTML += u < c ? " / " : " * ";
+  calcT.innerHTML += u >= c ? (u / c).toLocaleString("pt-br") : (c / u).toLocaleString("pt-br");
 
-  if (time < 10 ** -8) {
-    respT.innerHTML = "Tempo: " + time.toFixed(16) + " " + convText;
-  } else if (time < 10 ** -4) {
-    respT.innerHTML = "Tempo: " + time.toFixed(8) + " " + convText;
-  } else if (time > 10 ** 10) {
+  if (time > 10 ** 10) {
     respT.innerHTML = "Tempo: " + time.toExponential() + " " + convText;
+    calcT.innerHTML += ") = " + time.toExponential() + " " + convText + " </span>";
   } else if (time > 10 ** 3) {
     respT.innerHTML = "Tempo: " + time.toLocaleString("pt-BR") + " " + convText;
+    calcT.innerHTML += ") = " + time.toLocaleString("pt-BR") + " " + convText + " </span>";
   } else {
     respT.innerHTML = "Tempo: " + time + " " + convText;
+    calcT.innerHTML += ") = " + time + " " + convText + " </span>";
   }
 }
 

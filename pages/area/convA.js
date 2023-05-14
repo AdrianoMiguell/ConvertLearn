@@ -20,7 +20,7 @@ function convert() {
     convertA(valor, unid, conv);
 
     calcA.innerHTML =
-      "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
+      "<span> <strong>Calculo:</strong> (" + valor.toLocaleString("pt-BR");
     calcA.innerHTML += unid < conv ? " / " : " * ";
     calcA.innerHTML +=
       conv > 1000

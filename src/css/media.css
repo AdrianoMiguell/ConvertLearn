@@ -11,9 +11,20 @@
     li {
         font-size: 10pt !important;
     }
+    .navOps{
+        justify-content: center;
+        gap: 5px;
+    }
+    .navOps>a:first-child, .navOps>a:nth-child(3){
+        display: none;
+    }
+
+    nav, footer{
+        width: 25em !important;
+    }
 
     main {
-        padding: 0 .5em !important;
+        padding: 2em .5em !important;
     }
 
     .icon-circle {
@@ -25,7 +36,7 @@
         width: 200px;
     }
 
-    .icon-circle img {
+    .icon-circle svg {
         height: auto;
         width: 20px;
     }
@@ -37,6 +48,9 @@
     .divConvert-unid,
     .divConvert-opts {
         gap: .5em !important;
+    }
+    .sesInfo-list {
+        display: grid !important;
     }
 
     .convImg>img {
@@ -58,6 +72,10 @@
         font-size: 9pt;
     }
 
+    .navOps>a:first-child{
+        display: none;
+    }
+
     #textTitle {
         margin: 0;
     }
@@ -75,7 +93,7 @@
         width: 250px;
     }
 
-    .icon-circle img {
+    .icon-circle svg {
         height: auto;
         width: 25px;
     }
@@ -139,7 +157,7 @@
         width: 4em;
     }
 
-    .icon-circle img {
+    .icon-circle svg {
         height: auto;
         width: 35px;
     }
@@ -190,7 +208,7 @@
         height: 5em;
     }
 
-    .icon-circle img {
+    .icon-circle svg {
         width: 50px;
     }
 

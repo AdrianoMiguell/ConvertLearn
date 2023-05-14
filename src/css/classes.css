@@ -86,3 +86,7 @@
 .rounded{
     border-radius: 10px;
 }
+
+.w-break{
+    word-wrap: break-word;
+}
