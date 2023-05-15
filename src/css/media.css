@@ -25,6 +25,7 @@
 
     main {
         padding: 2em .5em !important;
+        width: 90vw !important;
     }
 
     .icon-circle {
@@ -62,6 +63,7 @@
 @media screen and (min-width:400px) and (max-width: 550px) {
     main {
         padding: 2em 1em !important;
+        width: 90vw !important;
     }
 
     .navOps {
