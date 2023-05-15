@@ -15,7 +15,7 @@
         justify-content: center;
         gap: 5px;
     }
-    .navOps>a:first-child, .navOps>a:nth-child(3){
+    .navOps>a:first-child, .navOps>a:last-child{
         display: none;
     }
 
@@ -61,7 +61,7 @@
 /* maximo de 500px | 400px - 550*/
 @media screen and (min-width:400px) and (max-width: 550px) {
     main {
-        padding: 0 1em !important;
+        padding: 2em 1em !important;
     }
 
     .navOps {

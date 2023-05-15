@@ -6,6 +6,9 @@
     background: linear-gradient(to bottom, #fff, rgb(var(--cq)));
     box-shadow: 0 0 2px 2px rgb(var(--cb));
 }
+.backg-light{
+    background: rgba(var(--cq), .4);
+}
 
 .text-light{
     color: rgb(var(--cq));
