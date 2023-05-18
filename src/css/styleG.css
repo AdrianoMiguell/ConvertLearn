@@ -25,8 +25,13 @@
     letter-spacing: .8pt;
 }
 
+h1, h2, h3{
+    margin: 1em 0 !important;
+}
+
 body {
-    width: 100vw;
+    width: 100%;
+    /* min-width: 90vw; */
     user-select: none !important;
     background-color: rgb(var(--cb));
     min-height: 100vh;
@@ -35,7 +40,6 @@ body {
 }
 
 nav {
-    width: 100vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -69,7 +73,7 @@ nav {
 }
 
 main {
-    width: 100vw;
+    width: 98vw;
     margin: 0;
     word-wrap: break-word;
     min-height: 60vh;
@@ -164,7 +168,6 @@ select {
 }
 
 footer {
-    width: 100vw;
     bottom: 0;
     left: 0;
     margin-bottom: 0;

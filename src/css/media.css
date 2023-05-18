@@ -214,6 +214,10 @@
         width: 50px;
     }
 
+    .imgL {
+        width: 500px;
+    }
+
     .convImg>img {
         width: 450px;
         padding: 2em;
