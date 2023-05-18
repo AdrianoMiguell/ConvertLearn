@@ -1,4 +1,40 @@
 /* maximo de 400px | 0 - 400*/
+@media screen and (max-width: 300px){
+    nav, footer{
+        max-width: 25em !important;
+    }
+
+    #sesConvert {
+        padding-left: 10px;
+        justify-content: space-between !important;
+    }
+    .divConvert-opts{
+        display: grid !important;
+        gap: .5rem !important;
+    }
+    .divConvert-opts>div {
+        gap: .5em !important;
+    }
+    input, select{
+        padding: 2px 4px !important;
+        font-size: 9pt !important;
+    }
+    .divConvert-resp{
+        padding: .2rem !important;
+        gap: .15rem !important;
+    }
+    .divConvert-unid{
+        justify-content: start !important;
+    }
+    .imgL, .convImg>img {
+        width: 200px;
+    }
+    footer>div{
+        display: grid !important;
+        gap: .5em;
+    }
+}
+
 @media screen and (max-width: 400px) {
 
     h1,
@@ -20,7 +56,7 @@
     }
 
     nav, footer{
-        width: 25em !important;
+        width: 100%;
     }
 
     main {
