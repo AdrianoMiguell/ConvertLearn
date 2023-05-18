@@ -20,22 +20,29 @@ function convert() {
     convertA(valor, unid, conv);
 
     calcA.innerHTML =
-      "<span> <strong>Calculo:</strong> (" + valor.toLocaleString("pt-BR");
-    calcA.innerHTML += unid < conv ? " / " : " * ";
-    calcA.innerHTML +=
-      conv > 1000
-        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
-        : 10 ** conv / 10 ** unid;
+      "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
 
+    if (conv > unid) {
+      calcA.innerHTML += " / ";
+      calcA.innerHTML += (10 ** conv / 10 ** unid).toLocaleString("pt-BR");
+    } else {
+      calcA.innerHTML += " * ";
+      calcA.innerHTML += (10 ** unid / 10 ** conv).toLocaleString("pt-BR");
+    }
 
     if (area > 10 ** 10) {
-      respA.innerHTML = "<strong>Área:</strong> " + area.toExponential() + " " + convText;
-      calcA.innerHTML += ") = " + area.toExponential() + " " + convText + " </span>";
+      respA.innerHTML =
+        "<strong>Área:</strong> " + area.toExponential() + " " + convText;
+      calcA.innerHTML +=
+        ") = " + area.toExponential() + " " + convText + " </span>";
     } else if (area > 10 ** 3) {
       respA.innerHTML =
-        "<strong>Área:</strong> " + area.toLocaleString("pt-BR") + " " + convText;
-      calcA.innerHTML += ") = " +
-        area.toLocaleString("pt-BR") + " " + convText + " </span>";
+        "<strong>Área:</strong> " +
+        area.toLocaleString("pt-BR") +
+        " " +
+        convText;
+      calcA.innerHTML +=
+        ") = " + area.toLocaleString("pt-BR") + " " + convText + " </span>";
     } else {
       respA.innerHTML = "<strong>Área:</strong> " + area + " " + convText;
       calcA.innerHTML += ") = " + area + " " + convText + " </span>";

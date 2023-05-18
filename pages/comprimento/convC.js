@@ -21,23 +21,34 @@ function convert() {
 
     calcC.innerHTML =
       "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
-    calcC.innerHTML += unid < conv ? " / " : " * ";
-    calcC.innerHTML +=
-      conv > 1000
-        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
-        : 10 ** conv / 10 ** unid;
+
+    if (conv > unid) {
+      calcC.innerHTML += " / ";
+      calcC.innerHTML += (10 ** conv / 10 ** unid).toLocaleString("pt-BR");
+    } else {
+      calcC.innerHTML += " * ";
+      calcC.innerHTML += (10 ** unid / 10 ** conv).toLocaleString("pt-BR");
+    }
 
     if (comp > 10 ** 10) {
-      respC.innerHTML = "<strong>Comprimento:</strong> " + comp.toExponential() + " " + convText;
+      respC.innerHTML =
+        "<strong>Comprimento:</strong> " +
+        comp.toExponential() +
+        " " +
+        convText;
       calcC.innerHTML +=
         ") = " + comp.toExponential() + " " + convText + " </span>";
     } else if (comp > 10 ** 3 && parseInt(conv) != parseFloat(conv)) {
       respC.innerHTML =
-        "<strong>Comprimento:</strong> " + comp.toLocaleString("pt-BR") + " " + convText;
+        "<strong>Comprimento:</strong> " +
+        comp.toLocaleString("pt-BR") +
+        " " +
+        convText;
       calcC.innerHTML +=
         ") = " + comp.toLocaleString("pt-BR") + " " + convText + " </span>";
     } else {
-      respC.innerHTML = "<strong>Comprimento:</strong> " + comp + " " + convText;
+      respC.innerHTML =
+        "<strong>Comprimento:</strong> " + comp + " " + convText;
       calcC.innerHTML += ") = " + comp + " " + convText + " </span>";
     }
   } else if (valor < 0) {

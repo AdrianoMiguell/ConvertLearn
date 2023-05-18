@@ -21,19 +21,26 @@ function convert() {
 
     calcV.innerHTML =
       "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
-    calcV.innerHTML += unid < conv ? " / " : " * ";
-    calcV.innerHTML +=
-      conv > 1000
-        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
-        : 10 ** conv / 10 ** unid;
+
+    if (conv > unid) {
+      calcV.innerHTML += " / ";
+      calcV.innerHTML += (10 ** conv / 10 ** unid).toLocaleString("pt-BR");
+    } else {
+      calcV.innerHTML += " * ";
+      calcV.innerHTML += (10 ** unid / 10 ** conv).toLocaleString("pt-BR");
+    }
 
     if (vol > 10 ** 10) {
-      respV.innerHTML = "<strong>Volume:</strong> " + vol.toExponential() + " " + convText;
+      respV.innerHTML =
+        "<strong>Volume:</strong> " + vol.toExponential() + " " + convText;
       calcV.innerHTML +=
         ") = " + vol.toExponential() + " " + convText + " </span>";
     } else if (vol > 10 ** 2) {
       respV.innerHTML =
-        "<strong>Volume:</strong> " + vol.toLocaleString("pt-BR") + " " + convText;
+        "<strong>Volume:</strong> " +
+        vol.toLocaleString("pt-BR") +
+        " " +
+        convText;
       calcV.innerHTML +=
         ") = " + vol.toLocaleString("pt-BR") + " " + convText + " </span>";
     } else {

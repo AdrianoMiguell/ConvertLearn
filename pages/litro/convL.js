@@ -21,11 +21,14 @@ function convert() {
 
     calcL.innerHTML =
       "<span> <strong>Calculo:</strong> ( " + valor.toLocaleString("pt-BR");
-    calcL.innerHTML += unid < conv ? " / " : " * ";
-    calcL.innerHTML +=
-      conv > 1000
-        ? (10 ** conv / 10 ** unid).toLocaleString("pt-BR")
-        : 10 ** conv / 10 ** unid;
+
+    if (conv > unid) {
+      calcL.innerHTML += " / ";
+      calcL.innerHTML += (10 ** conv / 10 ** unid).toLocaleString("pt-BR");
+    } else {
+      calcL.innerHTML += " * ";
+      calcL.innerHTML += (10 ** unid / 10 ** conv).toLocaleString("pt-BR");
+    }
 
     if (litro > 10 ** 10) {
       respL.innerHTML = "<strong>Litro:</strong> " + litro.toExponential() + " " + convText;
