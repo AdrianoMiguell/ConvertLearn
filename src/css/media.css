@@ -1,5 +1,5 @@
 /* maximo de 400px | 0 - 400*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 550px) {
 
     h1,
     h2 {
@@ -83,7 +83,7 @@
 }
 
 /* maximo de 500px | 400px - 550*/
-@media screen and (min-width:400px) and (max-width: 550px) {
+/* @media screen and (min-width:400px) and (max-width: 550px) {
     main {
         padding: 2em 1em !important;
         width: 90vw !important;
@@ -141,7 +141,7 @@
         width: 350px;
     }
 
-}
+} */
 
 /* maximo de 980px | 550 - 980*/
 @media screen and (min-width: 550px) and (max-width: 980px) {
