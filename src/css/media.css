@@ -1,40 +1,4 @@
 /* maximo de 400px | 0 - 400*/
-@media screen and (max-width: 300px){
-    nav, footer{
-        max-width: 25em !important;
-    }
-
-    #sesConvert {
-        padding-left: 10px;
-        justify-content: space-between !important;
-    }
-    .divConvert-opts{
-        display: grid !important;
-        gap: .5rem !important;
-    }
-    .divConvert-opts>div {
-        gap: .5em !important;
-    }
-    input, select{
-        padding: 2px 4px !important;
-        font-size: 9pt !important;
-    }
-    .divConvert-resp{
-        padding: .2rem !important;
-        gap: .15rem !important;
-    }
-    .divConvert-unid{
-        justify-content: start !important;
-    }
-    .imgL, .convImg>img {
-        width: 200px;
-    }
-    footer>div{
-        display: grid !important;
-        gap: .5em;
-    }
-}
-
 @media screen and (max-width: 400px) {
 
     h1,
@@ -47,30 +11,64 @@
     li {
         font-size: 10pt !important;
     }
-    .navOps{
+
+    nav,
+    footer {
+        max-width: 100% !important;
+    }
+
+    #sesConvert {
+        padding-left: 10px;
+        justify-content: space-between !important;
+    }
+
+    .divConvert-opts,  .divConvert-unid {
+        display: grid !important;
+        gap: .5rem !important;
+    }
+
+    .divConvert-opts>div {
+        gap: .5em !important;
+    }
+
+    input,
+    select {
+        padding: 2px 4px !important;
+        font-size: 9pt !important;
+    }
+
+    .divConvert-resp {
+        padding: .2rem !important;
+        gap: .15rem !important;
+    }
+
+    .divConvert-unid {
+        justify-content: start !important;
+    }
+
+    .imgL,
+    .convImg>img {
+        width: 200px;
+    }
+
+    footer>div {
+        display: grid !important;
+        gap: .5em;
+    }
+
+    .navOps {
         justify-content: center;
         gap: 5px;
     }
-    .navOps>a:first-child, .navOps>a:last-child{
+
+    .navOps>a:first-child,
+    .navOps>a:last-child {
         display: none;
     }
 
-    nav, footer{
-        width: 100%;
-    }
-
     main {
-        padding: 2em .5em !important;
+        padding: 2em .25em !important;
         width: 90vw !important;
-    }
-
-    .icon-circle {
-        width: 2.5em;
-        height: 2.5em;
-    }
-
-    .imgL {
-        width: 200px;
     }
 
     .icon-circle svg {
@@ -79,19 +77,8 @@
     }
 
     .sesInfo-list {
-        row-gap: 1em !important;
-    }
-
-    .divConvert-unid,
-    .divConvert-opts {
-        gap: .5em !important;
-    }
-    .sesInfo-list {
         display: grid !important;
-    }
-
-    .convImg>img {
-        max-width: 300px;
+        row-gap: 1em !important;
     }
 }
 
@@ -110,7 +97,7 @@
         font-size: 9pt;
     }
 
-    .navOps>a:first-child{
+    .navOps>a:first-child {
         display: none;
     }
 
@@ -145,6 +132,7 @@
         font-size: 13pt;
         gap: 1em !important;
     }
+
     .sesInfo-list>div {
         margin: 1em;
     }
@@ -208,10 +196,11 @@
 
 /* minino de 980px | 980 - inf. */
 @media screen and (min-width: 980px) {
-    p{
+    p {
         font-size: 13pt;
         letter-spacing: .8pt;
     }
+
     .navOps {
         width: 100%;
         justify-content: flex-end;
