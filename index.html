@@ -1,357 +1,620 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSZENZ1DEY"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RSZENZ1DEY"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-RSZENZ1DEY');
+      gtag("config", "G-RSZENZ1DEY");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="copyright" content="© 2023 AdrianoMiguell" />
 
-    <title> ConvertLearn </title>
+    <title>ConvertLearn</title>
     <meta name="author" content="Adriano Miguel" />
-    <meta name="description"
-        content="Realize a conversão de unidades diversas e ainda saia com o calculo completo da conversão. Venha converter sem dificuldades.">
-    <meta name="robots" content="max-snippet:-1">
-    <meta name="keywords" content="converter, medidas, unidade, calcular">
+    <meta
+      name="description"
+      content="Realize a conversão de unidades diversas e ainda saia com o calculo completo da conversão. Venha converter sem dificuldades."
+    />
+    <meta name="robots" content="max-snippet:-1" />
+    <meta name="keywords" content="converter, medidas, unidade, calcular" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon_io/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8474068703843385"
+      crossorigin="anonymous"
+    ></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8474068703843385"
-        crossorigin="anonymous"></script>
-        
-    <link rel="stylesheet" href="../src/css/styleG.css">
-    <link rel="stylesheet" href="../src/css/classes.css">
+    <link rel="stylesheet" href="../src/css/styleG.css" />
+  </head>
 
-    <style>
-        .icon-circle {
-            cursor: pointer;
-            border-color: rgb(var(--cm));
-        }
-
-        .gradient-icon {
-            box-shadow: 0 0 1px 2px rgb(var(--cb));
-            background: radial-gradient(rgb(var(--cs)) 40%, rgb(var(--cm)));
-            transition-duration: .2s;
-        }
-
-        .gradient-icon:hover,
-        .gradient-icon:focus-visible {
-            box-shadow: 0 0 1px 2px rgb(var(--cb)),
-                0 0 5px 1px rgb(var(--cb)) inset;
-            transition-duration: .2s;
-            /* box-shadow: 0 0 1px 2px #fff; */
-        }
-    </style>
-</head>
-
-<body class="backg-light">
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg gradient-simple">
-            <div class="container-fluid d-flex w-100 justify-content-between m-1 mx-2">
-                <a href="./index.html" class="navbar-brand d-flex align-items-center gap-2">
-                    <img src="./img/logoCL-long.png" alt="logo do site 'Convert & Learn'" width="125px">
-                </a>
+      <nav class="navbar navbar-expand-lg">
+        <div
+          class="container-fluid d-flex w-100 justify-content-between m-1 mx-2"
+        >
+          <a href="./index.html" class="navbar-brand d-flex align-items-center">
+            <img
+              src="./img/logomarca-convert_learn.png"
+              alt="logo do site 'Convert & Learn'"
+            />
+            <span> ConvertLearn </span>
+          </a>
 
-                <button class="navbar-toggler btn gradient-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+          <button
+            class="navbar-toggler btn gradient-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="my-2 mb-lg-0 navOps">
-                        <a href="./pages/comprimento/convC.html#html#sesConvert">
-                            <li class="navOps-item text-light"> Comprimento </li>
-                        </a>
-                        <a href="./pages/massa/convM.html#sesConvert">
-                            <li class="navOps-item text-light"> Massa </li>
-                        </a>
-                        <a href="./pages/temperatura/convT.html#sesConvert">
-                            <li class="navOps-item text-light"> Temperatura </li>
-                        </a>
-                        <a href="./pages/tempo/convTime.html#sesConvert">
-                            <li class="navOps-item text-light"> Tempo </li>
-                        </a>
-                        <a href="./index.html#others">
-                            <li class="navOps-item text-light"> Outros </li>
-                        </a>
-                        <a href="./pages/sobreNos.html">
-                            <li class="navOps-item text-light"> Sobre nós </li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="my-2 mb-lg-0 navOps">
+              <a href="./pages/comprimento/convC.html#html#sesConvert">
+                <li class="nav-items">Comprimento</li>
+              </a>
+              <a href="./pages/massa/convM.html#sesConvert">
+                <li class="nav-items">Massa</li>
+              </a>
+              <a href="./pages/temperatura/convT.html#sesConvert">
+                <li class="nav-items">Temperatura</li>
+              </a>
+              <a href="./pages/tempo/convTime.html#sesConvert">
+                <li class="nav-items">Tempo</li>
+              </a>
+              <a href="./index.html#others">
+                <li class="nav-items">Outros</li>
+              </a>
+              <a href="./pages/sobreNos.html">
+                <li class="nav-items">Sobre nós</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="banner">
+        <img
+          src="img/education_convert-light.png"
+          class="img_education_convert"
+          alt="Arte de homem estudando e sinais da matemática em sua volta."
+        />
+      </div>
     </header>
 
-    <main class="m-0">
-        <section class="d-grid gap-5 w-100">
-            <div id="textTitle">
-                <h1 class="text-dark text-center my-4">
-                    Converter e Aprender
-                </h1>
-                <p class="w-break text-size">
-                    Venha e realize os seus calculos de conversão. Além de já convertermos automaticamente para
-                    você, ainda te ensinamos como realizar essa conversão. 
-                    <br>
-                    Converter unidades é uma atividade que exercita os nossos conhecimentos matemáticos e lógicos. <br>
-                    Muitas vezes, e para muitas pessoas, essa é uma tarefa chata e/ou complicada. Por isso, estamos aqui para facilitar a
-                    vida de quem pensa assim. E muito mais do que apenas fornecer respostas e calculos prontos da
-                    conversão, queremos te ajudar a aprender e exercitar seus conhecimentos com relação a esse assunto. <br>
-                    Por isso, queremos que esse site contribua para o seu aprendizado, e não seja usado apenas para, por
-                    exemplo, conferir respostas. Te desejamos um bom proveito e um bom aprendizado!
+    <main class="container my-5">
+      <section class="d-grid gap-5 my-5">
+        <div id="textTitle">
+          <h1 class="text-dark text-center my-5">Converter e Aprender</h1>
+          <p class="w-break text-size">
+            Venha e realize os seus calculos de conversão. Além de já
+            convertermos automaticamente para você, ainda te ensinamos como
+            realizar essa conversão.
+            <br />
+            Converter unidades é uma atividade que exercita os nossos
+            conhecimentos matemáticos e lógicos. <br />
+            Muitas vezes, e para muitas pessoas, essa é uma tarefa chata e/ou
+            complicada. Por isso, estamos aqui para facilitar a vida de quem
+            pensa assim. E muito mais do que apenas fornecer respostas e
+            calculos prontos da conversão, queremos te ajudar a aprender e
+            exercitar seus conhecimentos com relação a esse assunto. <br />
+            Por isso, queremos que esse site contribua para o seu aprendizado, e
+            não seja usado apenas para, por exemplo, conferir respostas. Te
+            desejamos um bom proveito e um bom aprendizado!
+          </p>
+        </div>
+      </section>
+
+      <section id="others">
+        <h1 class="text-center">Opções de conversões</h1>
+
+        <ul class="list-unity">
+          <li class="list-item">
+            <a
+              href="./pages/temperatura/convT.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  fill="#1d2240"
+                  viewBox="0 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>temperature-three-quarters</title>
+                    <path
+                      d="M20.75 6.008c0-6.246-9.501-6.248-9.5 0v13.238c-1.235 1.224-2 2.921-2 4.796 0 3.728 3.022 6.75 6.75 6.75s6.75-3.022 6.75-6.75c0-1.875-0.765-3.572-2-4.796l-0.001-0zM16 29.25c-2.9-0-5.25-2.351-5.25-5.251 0-1.553 0.674-2.948 1.745-3.909l0.005-0.004 0.006-0.012c0.13-0.122 0.215-0.29 0.231-0.477l0-0.003c0.001-0.014 0.007-0.024 0.008-0.038l0.006-0.029v-13.52c-0.003-0.053-0.005-0.115-0.005-0.178 0-1.704 1.381-3.085 3.085-3.085 0.060 0 0.12 0.002 0.179 0.005l-0.008-0c0.051-0.003 0.11-0.005 0.17-0.005 1.704 0 3.085 1.381 3.085 3.085 0 0.063-0.002 0.125-0.006 0.186l0-0.008v13.52l0.006 0.029 0.007 0.036c0.015 0.191 0.101 0.36 0.231 0.482l0 0 0.006 0.012c1.076 0.966 1.75 2.361 1.75 3.913 0 2.9-2.35 5.25-5.25 5.251h-0zM16.75 21.367v-11.522c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 11.522c-1.164 0.338-2 1.394-2 2.646 0 1.519 1.231 2.75 2.75 2.75s2.75-1.231 2.75-2.75c0-1.252-0.836-2.308-1.981-2.641l-0.019-0.005zM26.5 2.25c-1.795 0-3.25 1.455-3.25 3.25s1.455 3.25 3.25 3.25c1.795 0 3.25-1.455 3.25-3.25v0c-0.002-1.794-1.456-3.248-3.25-3.25h-0zM26.5 7.25c-0.966 0-1.75-0.784-1.75-1.75s0.784-1.75 1.75-1.75c0.966 0 1.75 0.784 1.75 1.75v0c-0.001 0.966-0.784 1.749-1.75 1.75h-0z"
+                    ></path>
+                  </g>
+                </svg>
+                <h3 class="title">Temperatura</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  As escalas de temperatura são sistemas de medição utilizados
+                  para quantificar a intensidade térmica de um corpo. As três
+                  escalas mais comuns são Celsius, Fahrenheit e Kelvin.
                 </p>
-            </div>
-
-            <div class="sesInfo textIntro d-flex justify-content-around align-items-center gap-5 my-2 mx-4">
-                <img src="img/education_convert.png" class="imgL" alt="Arte de homem estudando e sinais da matemática em sua volta.">
-                <div class="mx-4">
-                    <h1 class="text-dark text-center fs-2 mb-3">
-                        Aprenda a converter unidades
-                    </h1>
-                    <blockquote class="text-dark text-size">
-                        Domine a arte de converter unidades. Nosso objetivo, além de facilitar a sua vida realizando
-                        conversões automaticamente para você, é incentivá-lo a aprender como converter unidades e
-                        ajudá-lo a conferir se os
-                        seus calculos estão corretos. :-) <br>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
-
-        <section id="others" class="flex-around" style="--gap: 2em 4em; margin: 5em 1em;
-        ">
-            <a href="./pages/temperatura/convT.html" target="_parent" class="text-dec-none text-grad-dark link-icon">
-                <div class="icon-circle gradient-simple">
-                    <svg fill="#f5deb3" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <title>temperature-three-quarters</title>
-                            <path
-                                d="M20.75 6.008c0-6.246-9.501-6.248-9.5 0v13.238c-1.235 1.224-2 2.921-2 4.796 0 3.728 3.022 6.75 6.75 6.75s6.75-3.022 6.75-6.75c0-1.875-0.765-3.572-2-4.796l-0.001-0zM16 29.25c-2.9-0-5.25-2.351-5.25-5.251 0-1.553 0.674-2.948 1.745-3.909l0.005-0.004 0.006-0.012c0.13-0.122 0.215-0.29 0.231-0.477l0-0.003c0.001-0.014 0.007-0.024 0.008-0.038l0.006-0.029v-13.52c-0.003-0.053-0.005-0.115-0.005-0.178 0-1.704 1.381-3.085 3.085-3.085 0.060 0 0.12 0.002 0.179 0.005l-0.008-0c0.051-0.003 0.11-0.005 0.17-0.005 1.704 0 3.085 1.381 3.085 3.085 0 0.063-0.002 0.125-0.006 0.186l0-0.008v13.52l0.006 0.029 0.007 0.036c0.015 0.191 0.101 0.36 0.231 0.482l0 0 0.006 0.012c1.076 0.966 1.75 2.361 1.75 3.913 0 2.9-2.35 5.25-5.25 5.251h-0zM16.75 21.367v-11.522c0-0.414-0.336-0.75-0.75-0.75s-0.75 0.336-0.75 0.75v0 11.522c-1.164 0.338-2 1.394-2 2.646 0 1.519 1.231 2.75 2.75 2.75s2.75-1.231 2.75-2.75c0-1.252-0.836-2.308-1.981-2.641l-0.019-0.005zM26.5 2.25c-1.795 0-3.25 1.455-3.25 3.25s1.455 3.25 3.25 3.25c1.795 0 3.25-1.455 3.25-3.25v0c-0.002-1.794-1.456-3.248-3.25-3.25h-0zM26.5 7.25c-0.966 0-1.75-0.784-1.75-1.75s0.784-1.75 1.75-1.75c0.966 0 1.75 0.784 1.75 1.75v0c-0.001 0.966-0.784 1.749-1.75 1.75h-0z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-                <span>Temperatura</span>
+              </div>
             </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="./pages/comprimento/convC.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  version="1.0"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 64 64"
+                  enable-background="new 0 0 64 64"
+                  xml:space="preserve"
+                  fill="#1d2240"
+                  stroke="#1d2240"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <circle fill="#1d2240" cx="50" cy="21.014" r="2"></circle>
+                      <path
+                        fill="#1d2240"
+                        d="M62.838,17.992L46.021,1.175c-1.55-1.548-4.057-1.548-5.606,0l-2.102,2.104l4.204,4.203 c0.388,0.387,0.388,1.015,0,1.401c-0.388,0.389-1.015,0.389-1.401,0l-4.204-4.204l-2.804,2.803l7.008,7.007 c0.387,0.388,0.387,1.015,0,1.402c-0.388,0.387-1.015,0.387-1.401,0l-7.007-7.006l-2.803,2.802l4.203,4.204 c0.388,0.387,0.388,1.014,0,1.4c-0.387,0.388-1.014,0.388-1.4,0l-4.204-4.203L25.7,15.891l4.205,4.203 c0.387,0.388,0.387,1.014,0,1.402c-0.388,0.389-1.015,0.389-1.401-0.001l-4.205-4.204l-2.803,2.805l7.008,7.006 c0.387,0.388,0.387,1.014,0,1.402c-0.389,0.387-1.015,0.387-1.402,0l-7.006-7.008l-2.804,2.803l4.204,4.204 c0.388,0.388,0.388,1.015,0,1.402c-0.389,0.387-1.015,0.387-1.401,0L15.891,25.7l-2.803,2.804l4.204,4.204 c0.387,0.386,0.387,1.013,0,1.4c-0.388,0.388-1.015,0.388-1.401,0l-4.204-4.203l-2.803,2.803l7.007,7.007 c0.387,0.387,0.387,1.014,0,1.401c-0.388,0.387-1.015,0.387-1.402,0l-7.006-7.008l-2.804,2.804l4.204,4.204 c0.389,0.387,0.389,1.015,0.001,1.401c-0.389,0.387-1.016,0.387-1.401,0l-4.204-4.204l-2.104,2.102 c-1.549,1.549-1.549,4.056,0,5.606l16.817,16.816c1.549,1.55,4.057,1.55,5.606,0l39.24-39.239 C64.388,22.049,64.388,19.541,62.838,17.992z M50,25.014c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S52.209,25.014,50,25.014z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+                <h3 class="title">Comprimento</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de comprimento é um processo comum
+                  para expressar distâncias em diferentes sistemas de medida. As
+                  unidades de comprimento mais utilizadas incluem o sistema
+                  métrico (metro, centímetro, milímetro) e o sistema imperial
+                  (polegada, pé, jarda, milha).
+                </p>
+              </div>
+            </a>
+          </li>
 
-            <a href="./pages/comprimento/convC.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
-                        xml:space="preserve" fill="#f5deb3" stroke="#f5deb3">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <g>
-                                <circle fill="#f5deb3" cx="50" cy="21.014" r="2"></circle>
-                                <path fill="#f5deb3"
-                                    d="M62.838,17.992L46.021,1.175c-1.55-1.548-4.057-1.548-5.606,0l-2.102,2.104l4.204,4.203 c0.388,0.387,0.388,1.015,0,1.401c-0.388,0.389-1.015,0.389-1.401,0l-4.204-4.204l-2.804,2.803l7.008,7.007 c0.387,0.388,0.387,1.015,0,1.402c-0.388,0.387-1.015,0.387-1.401,0l-7.007-7.006l-2.803,2.802l4.203,4.204 c0.388,0.387,0.388,1.014,0,1.4c-0.387,0.388-1.014,0.388-1.4,0l-4.204-4.203L25.7,15.891l4.205,4.203 c0.387,0.388,0.387,1.014,0,1.402c-0.388,0.389-1.015,0.389-1.401-0.001l-4.205-4.204l-2.803,2.805l7.008,7.006 c0.387,0.388,0.387,1.014,0,1.402c-0.389,0.387-1.015,0.387-1.402,0l-7.006-7.008l-2.804,2.803l4.204,4.204 c0.388,0.388,0.388,1.015,0,1.402c-0.389,0.387-1.015,0.387-1.401,0L15.891,25.7l-2.803,2.804l4.204,4.204 c0.387,0.386,0.387,1.013,0,1.4c-0.388,0.388-1.015,0.388-1.401,0l-4.204-4.203l-2.803,2.803l7.007,7.007 c0.387,0.387,0.387,1.014,0,1.401c-0.388,0.387-1.015,0.387-1.402,0l-7.006-7.008l-2.804,2.804l4.204,4.204 c0.389,0.387,0.389,1.015,0.001,1.401c-0.389,0.387-1.016,0.387-1.401,0l-4.204-4.204l-2.104,2.102 c-1.549,1.549-1.549,4.056,0,5.606l16.817,16.816c1.549,1.55,4.057,1.55,5.606,0l39.24-39.239 C64.388,22.049,64.388,19.541,62.838,17.992z M50,25.014c-2.209,0-4-1.791-4-4s1.791-4,4-4s4,1.791,4,4S52.209,25.014,50,25.014z">
-                                </path>
-                            </g>
-                        </g>
-                    </svg>
-                </div>
-                <span>Comprimento</span>
+          <li class="list-item">
+            <a
+              href="./pages/area/convA.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  viewBox="0 0 15 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M1 0H0V14.5C0 14.5 0 14.5 0 14.5V15H0.497812C0.498541 15 0.499271 15 0.500001 15H14.5C14.5007 15 14.5015 15 14.5022 15H15V14.501C15 14.5013 15 14.5007 15 14.501L15 2.5C15 2.28265 14.8596 2.09019 14.6526 2.02386C14.4456 1.95752 14.2195 2.03252 14.0931 2.20939L9.49016 8.65355L6.9 5.2C6.80264 5.07019 6.64833 4.99569 6.48613 5.0002C6.32392 5.0047 6.17399 5.08764 6.08398 5.22265L1 12.8486V0Z"
+                      fill="#1d2240"
+                    ></path>
+                  </g>
+                </svg>
+                <h3 class="title">Área</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de área é um processo que envolve a
+                  mudança da medida de uma determinada área de uma unidade para
+                  outra. As unidades de área mais comuns incluem metros
+                  quadrados (m²), centímetros quadrados (cm²), quilômetros
+                  quadrados (km²), acres, hectares, pés quadrados (ft²) e
+                  polegadas quadradas (in²).
+                </p>
+              </div>
             </a>
+          </li>
 
-            <a href="./pages/area/convA.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M1 0H0V14.5C0 14.5 0 14.5 0 14.5V15H0.497812C0.498541 15 0.499271 15 0.500001 15H14.5C14.5007 15 14.5015 15 14.5022 15H15V14.501C15 14.5013 15 14.5007 15 14.501L15 2.5C15 2.28265 14.8596 2.09019 14.6526 2.02386C14.4456 1.95752 14.2195 2.03252 14.0931 2.20939L9.49016 8.65355L6.9 5.2C6.80264 5.07019 6.64833 4.99569 6.48613 5.0002C6.32392 5.0047 6.17399 5.08764 6.08398 5.22265L1 12.8486V0Z"
-                                fill="#f5deb3"></path>
-                        </g>
-                    </svg>
-                </div>
-                <span>Área</span>
+          <li class="list-item">
+            <a
+              href="./pages/volume/convV.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M20.3873 7.1575L11.9999 12L3.60913 7.14978"
+                      stroke="#1d2240"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M12 12V21"
+                      stroke="#1d2240"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M11 2.57735C11.6188 2.22008 12.3812 2.22008 13 2.57735L19.6603 6.42265C20.2791 6.77992 20.6603 7.44017 20.6603 8.1547V15.8453C20.6603 16.5598 20.2791 17.2201 19.6603 17.5774L13 21.4226C12.3812 21.7799 11.6188 21.7799 11 21.4226L4.33975 17.5774C3.72094 17.2201 3.33975 16.5598 3.33975 15.8453V8.1547C3.33975 7.44017 3.72094 6.77992 4.33975 6.42265L11 2.57735Z"
+                      stroke="#1d2240"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+                <h3 class="title">Volume</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de volume é um processo comum em
+                  diversos contextos, como na física, química, culinária,
+                  construção e muitas outras áreas. As unidades de volume podem
+                  variar de acordo com o sistema de medida utilizado, mas as
+                  mais comuns incluem litros, metros cúbicos, galões, entre
+                  outras.
+                </p>
+              </div>
             </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="./pages/massa/convM.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  viewBox="0 0 91 91"
+                  enable-background="new 0 0 91 91"
+                  id="Layer_1"
+                  version="1.1"
+                  xml:space="preserve"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  fill="#1d2240"
+                  stroke="#1d2240"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <g>
+                      <g>
+                        <path
+                          d="M23.301,90.346c-0.945,0-1.885-0.398-2.545-1.174c-1.197-1.406-1.027-3.512,0.375-4.709l11.285-9.613 c1.406-1.197,3.514-1.027,4.711,0.377c1.195,1.404,1.027,3.512-0.379,4.709l-11.285,9.611 C24.836,90.084,24.064,90.346,23.301,90.346z"
+                          fill="#f2eda245596B"
+                        ></path>
+                        <path
+                          d="M67.996,90.346c-0.768,0-1.537-0.262-2.164-0.799l-11.279-9.611c-1.404-1.197-1.572-3.305-0.375-4.711 c1.195-1.404,3.305-1.572,4.709-0.375l11.277,9.615c1.404,1.195,1.572,3.303,0.375,4.707 C69.879,89.947,68.941,90.346,67.996,90.346z"
+                          fill="#f2eda245596B"
+                        ></path>
+                        <path
+                          d="M45.65,13.708c-1.848,0-3.34-1.494-3.34-3.34V4.751c0-1.846,1.492-3.342,3.34-3.342 c1.842,0,3.34,1.496,3.34,3.342v5.617C48.99,12.214,47.492,13.708,45.65,13.708z"
+                          fill="#f2eda245596B"
+                        ></path>
+                        <g>
+                          <path
+                            d="M45.438,10.167c-19.375,0-35.139,15.762-35.139,35.138c0,19.371,15.764,35.135,35.139,35.135 s35.139-15.764,35.139-35.135C80.576,25.929,64.813,10.167,45.438,10.167z"
+                            fill="#f2eda2"
+                          ></path>
+                        </g>
+                        <g>
+                          <path
+                            d="M45.488,62.021c-0.002,0-0.004,0-0.004,0c-1.385,0.004-2.502,1.125-2.502,2.51l0.01,5.406 c0,1.383,1.123,2.502,2.504,2.502c0.002,0,0.004,0,0.004,0c1.385-0.004,2.504-1.125,2.502-2.508l-0.008-5.408 C47.992,63.141,46.869,62.021,45.488,62.021z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M28.576,45.222c0-1.383-1.121-2.506-2.506-2.506h-5.412c-1.383,0-2.504,1.123-2.504,2.506 c0,1.383,1.121,2.504,2.504,2.504h5.412C27.455,47.727,28.576,46.605,28.576,45.222z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M30.547,57.762l-3.654,3.988c-0.934,1.021-0.863,2.607,0.156,3.539c0.482,0.441,1.088,0.66,1.691,0.66 c0.678,0,1.354-0.275,1.848-0.816l3.654-3.988c0.934-1.021,0.863-2.605-0.156-3.539C33.068,56.672,31.484,56.74,30.547,57.762z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M29.469,33.939c0.48,0.441,1.088,0.658,1.693,0.658c0.676,0,1.352-0.273,1.846-0.813 c0.936-1.02,0.865-2.604-0.154-3.541l-3.988-3.657c-1.018-0.932-2.604-0.865-3.539,0.154s-0.865,2.606,0.152,3.542L29.469,33.939 z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M70.217,42.716h-5.41c-1.385,0-2.506,1.123-2.506,2.506c0,1.383,1.121,2.504,2.506,2.504h5.41 c1.383,0,2.506-1.121,2.506-2.504C72.723,43.839,71.6,42.716,70.217,42.716z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M61.451,56.379c-1.023-0.932-2.605-0.863-3.539,0.156c-0.934,1.021-0.865,2.605,0.156,3.539l3.988,3.646 c0.48,0.441,1.086,0.658,1.691,0.658c0.678,0,1.354-0.275,1.848-0.814c0.934-1.023,0.863-2.605-0.156-3.539L61.451,56.379z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                          <path
+                            d="M48.051,22.011c0-1.385-1.123-2.504-2.506-2.504s-2.504,1.119-2.504,2.504v23.065 c0,0.025-0.01,0.053-0.01,0.082c0,0.651,0.268,1.301,0.736,1.77c0.094,0.094,0.203,0.174,0.311,0.252 c0.023,0.018,0.045,0.041,0.068,0.057c0.02,0.012,0.039,0.02,0.059,0.031c0.389,0.246,0.846,0.395,1.34,0.395 c0.916,0,1.709-0.496,2.146-1.229c0.232-0.385,0.367-0.82,0.367-1.276c0-0.029-0.008-0.055-0.008-0.082V22.011z"
+                            fill="#3b35616EC4A7"
+                          ></path>
+                          <path
+                            d="M60.379,32.548l3.65-3.988c0.936-1.02,0.865-2.606-0.156-3.54c-1.018-0.932-2.604-0.867-3.539,0.156 l-3.652,3.989c-0.934,1.02-0.863,2.605,0.158,3.539c0.48,0.441,1.086,0.658,1.689,0.658 C59.207,33.363,59.885,33.089,60.379,32.548z"
+                            fill="#3b356195AEC2"
+                          ></path>
+                        </g>
+                        <path
+                          d="M69.369,7.366H21.934c-1.846,0-3.34-1.494-3.34-3.34c0-1.844,1.494-3.34,3.34-3.34h47.436 c1.842,0,3.34,1.496,3.34,3.34C72.709,5.872,71.211,7.366,69.369,7.366z"
+                          fill="#3b35616EC4A7"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+                <h3 class="title">Massa</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de massa é uma operação comum em
+                  diversas disciplinas, como física, química, engenharia e
+                  outras áreas científicas.
+                </p>
+              </div>
+            </a>
+          </li>
+          <li class="list-item">
+            <a
+              href="./pages/tempo/convTime.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  fill="#1d2240"
+                  viewBox="0 0 32 32"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  stroke="#1d2240"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <title>time</title>
+                    <path
+                      d="M0 16q0-3.232 1.28-6.208t3.392-5.12 5.12-3.392 6.208-1.28q3.264 0 6.24 1.28t5.088 3.392 3.392 5.12 1.28 6.208q0 3.264-1.28 6.208t-3.392 5.12-5.12 3.424-6.208 1.248-6.208-1.248-5.12-3.424-3.392-5.12-1.28-6.208zM4 16q0 3.264 1.6 6.048t4.384 4.352 6.016 1.6 6.016-1.6 4.384-4.352 1.6-6.048-1.6-6.016-4.384-4.352-6.016-1.632-6.016 1.632-4.384 4.352-1.6 6.016zM14.016 16v-5.984q0-0.832 0.576-1.408t1.408-0.608 1.408 0.608 0.608 1.408v4h4q0.8 0 1.408 0.576t0.576 1.408-0.576 1.44-1.408 0.576h-6.016q-0.832 0-1.408-0.576t-0.576-1.44z"
+                    ></path>
+                  </g>
+                </svg>
+                <h3 class="title">Tempo</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de tempo é um processo importante para
+                  expressar intervalos temporais em diferentes formatos. As
+                  principais unidades de tempo incluem segundos, minutos, horas,
+                  dias, semanas, meses e anos.
+                </p>
+              </div>
+            </a>
+          </li>
 
-            <a href="./pages/volume/convV.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M20.3873 7.1575L11.9999 12L3.60913 7.14978" stroke="#f5deb3" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M12 12V21" stroke="#f5deb3" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <path
-                                d="M11 2.57735C11.6188 2.22008 12.3812 2.22008 13 2.57735L19.6603 6.42265C20.2791 6.77992 20.6603 7.44017 20.6603 8.1547V15.8453C20.6603 16.5598 20.2791 17.2201 19.6603 17.5774L13 21.4226C12.3812 21.7799 11.6188 21.7799 11 21.4226L4.33975 17.5774C3.72094 17.2201 3.33975 16.5598 3.33975 15.8453V8.1547C3.33975 7.44017 3.72094 6.77992 4.33975 6.42265L11 2.57735Z"
-                                stroke="#f5deb3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </div>
-                <span>Volume</span>
+          <li class="list-item">
+            <a
+              href="./pages/binario/convB.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.29289 1.29289C9.48043 1.10536 9.73478 1 10 1H18C19.6569 1 21 2.34315 21 4V7C21 7.55228 20.5523 8 20 8C19.4477 8 19 7.55228 19 7V4C19 3.44772 18.5523 3 18 3H11V8C11 8.55228 10.5523 9 10 9H5V20C5 20.5523 5.44772 21 6 21H8C8.55228 21 9 21.4477 9 22C9 22.5523 8.55228 23 8 23H6C4.34315 23 3 21.6569 3 20V8C3 7.73478 3.10536 7.48043 3.29289 7.29289L9.29289 1.29289ZM6.41421 7H9V4.41421L6.41421 7ZM19 18C19 17.4477 19.4477 17 20 17H21C21.5523 17 22 17.4477 22 18V22C22 22.5523 21.5523 23 21 23C20.4477 23 20 22.5523 20 22V19C19.4477 19 19 18.5523 19 18ZM13 20C13 19.4477 13.4477 19 14 19C14.5523 19 15 19.4477 15 20C15 20.5523 14.5523 21 14 21C13.4477 21 13 20.5523 13 20ZM14 17C12.3431 17 11 18.3431 11 20C11 21.6569 12.3431 23 14 23C15.6569 23 17 21.6569 17 20C17 18.3431 15.6569 17 14 17ZM20 12C19.4477 12 19 12.4477 19 13C19 13.5523 19.4477 14 20 14C20.5523 14 21 13.5523 21 13C21 12.4477 20.5523 12 20 12ZM17 13C17 11.3431 18.3431 10 20 10C21.6569 10 23 11.3431 23 13C23 14.6569 21.6569 16 20 16C18.3431 16 17 14.6569 17 13ZM13 10C12.4477 10 12 10.4477 12 11C12 11.5523 12.4477 12 13 12V15C13 15.5523 13.4477 16 14 16C14.5523 16 15 15.5523 15 15V11C15 10.4477 14.5523 10 14 10H13Z"
+                      fill="#1d2240"
+                    ></path>
+                  </g>
+                </svg>
+                <!-- <img src="https://img.icons8.com/ios-filled/100/null/binary-file.png" /> -->
+                <h3 class="title">Binários</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades binárias é um processo fundamental na
+                  computação e na compreensão de sistemas digitais.
+                </p>
+              </div>
             </a>
+          </li>
 
-            <a href="./pages/massa/convM.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg viewBox="0 0 91 91" enable-background="new 0 0 91 91" id="Layer_1" version="1.1"
-                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" fill="#f5deb3" stroke="#f5deb3">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <g>
-                                <g>
-                                    <path
-                                        d="M23.301,90.346c-0.945,0-1.885-0.398-2.545-1.174c-1.197-1.406-1.027-3.512,0.375-4.709l11.285-9.613 c1.406-1.197,3.514-1.027,4.711,0.377c1.195,1.404,1.027,3.512-0.379,4.709l-11.285,9.611 C24.836,90.084,24.064,90.346,23.301,90.346z"
-                                        fill="#3b356145596B"></path>
-                                    <path
-                                        d="M67.996,90.346c-0.768,0-1.537-0.262-2.164-0.799l-11.279-9.611c-1.404-1.197-1.572-3.305-0.375-4.711 c1.195-1.404,3.305-1.572,4.709-0.375l11.277,9.615c1.404,1.195,1.572,3.303,0.375,4.707 C69.879,89.947,68.941,90.346,67.996,90.346z"
-                                        fill="#3b356145596B"></path>
-                                    <path
-                                        d="M45.65,13.708c-1.848,0-3.34-1.494-3.34-3.34V4.751c0-1.846,1.492-3.342,3.34-3.342 c1.842,0,3.34,1.496,3.34,3.342v5.617C48.99,12.214,47.492,13.708,45.65,13.708z"
-                                        fill="#3b356145596B"></path>
-                                    <g>
-                                        <path
-                                            d="M45.438,10.167c-19.375,0-35.139,15.762-35.139,35.138c0,19.371,15.764,35.135,35.139,35.135 s35.139-15.764,35.139-35.135C80.576,25.929,64.813,10.167,45.438,10.167z"
-                                            fill="#3b3561"></path>
-                                    </g>
-                                    <g>
-                                        <path
-                                            d="M45.488,62.021c-0.002,0-0.004,0-0.004,0c-1.385,0.004-2.502,1.125-2.502,2.51l0.01,5.406 c0,1.383,1.123,2.502,2.504,2.502c0.002,0,0.004,0,0.004,0c1.385-0.004,2.504-1.125,2.502-2.508l-0.008-5.408 C47.992,63.141,46.869,62.021,45.488,62.021z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M28.576,45.222c0-1.383-1.121-2.506-2.506-2.506h-5.412c-1.383,0-2.504,1.123-2.504,2.506 c0,1.383,1.121,2.504,2.504,2.504h5.412C27.455,47.727,28.576,46.605,28.576,45.222z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M30.547,57.762l-3.654,3.988c-0.934,1.021-0.863,2.607,0.156,3.539c0.482,0.441,1.088,0.66,1.691,0.66 c0.678,0,1.354-0.275,1.848-0.816l3.654-3.988c0.934-1.021,0.863-2.605-0.156-3.539C33.068,56.672,31.484,56.74,30.547,57.762z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M29.469,33.939c0.48,0.441,1.088,0.658,1.693,0.658c0.676,0,1.352-0.273,1.846-0.813 c0.936-1.02,0.865-2.604-0.154-3.541l-3.988-3.657c-1.018-0.932-2.604-0.865-3.539,0.154s-0.865,2.606,0.152,3.542L29.469,33.939 z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M70.217,42.716h-5.41c-1.385,0-2.506,1.123-2.506,2.506c0,1.383,1.121,2.504,2.506,2.504h5.41 c1.383,0,2.506-1.121,2.506-2.504C72.723,43.839,71.6,42.716,70.217,42.716z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M61.451,56.379c-1.023-0.932-2.605-0.863-3.539,0.156c-0.934,1.021-0.865,2.605,0.156,3.539l3.988,3.646 c0.48,0.441,1.086,0.658,1.691,0.658c0.678,0,1.354-0.275,1.848-0.814c0.934-1.023,0.863-2.605-0.156-3.539L61.451,56.379z"
-                                            fill="#3b356195AEC2"></path>
-                                        <path
-                                            d="M48.051,22.011c0-1.385-1.123-2.504-2.506-2.504s-2.504,1.119-2.504,2.504v23.065 c0,0.025-0.01,0.053-0.01,0.082c0,0.651,0.268,1.301,0.736,1.77c0.094,0.094,0.203,0.174,0.311,0.252 c0.023,0.018,0.045,0.041,0.068,0.057c0.02,0.012,0.039,0.02,0.059,0.031c0.389,0.246,0.846,0.395,1.34,0.395 c0.916,0,1.709-0.496,2.146-1.229c0.232-0.385,0.367-0.82,0.367-1.276c0-0.029-0.008-0.055-0.008-0.082V22.011z"
-                                            fill="#3b35616EC4A7"></path>
-                                        <path
-                                            d="M60.379,32.548l3.65-3.988c0.936-1.02,0.865-2.606-0.156-3.54c-1.018-0.932-2.604-0.867-3.539,0.156 l-3.652,3.989c-0.934,1.02-0.863,2.605,0.158,3.539c0.48,0.441,1.086,0.658,1.689,0.658 C59.207,33.363,59.885,33.089,60.379,32.548z"
-                                            fill="#3b356195AEC2"></path>
-                                    </g>
-                                    <path
-                                        d="M69.369,7.366H21.934c-1.846,0-3.34-1.494-3.34-3.34c0-1.844,1.494-3.34,3.34-3.34h47.436 c1.842,0,3.34,1.496,3.34,3.34C72.709,5.872,71.211,7.366,69.369,7.366z"
-                                        fill="#3b35616EC4A7"></path>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                    </span>
-                </div>
-                <span>Massa</span>
+          <li class="list-item">
+            <a
+              href="./pages/litro/convL.html"
+              target="_parent"
+              class="text-decoration-none"
+            >
+              <div class="title-unity">
+                <svg
+                  class="icon-unity"
+                  viewBox="0 0 48 48"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M13 14H30C30 14 38 18.1481 38 27.7993C38 37.4504 30 42 30 42H13C13 42 6 35.9785 6 28C6 20.0215 13 14 13 14Z"
+                      stroke="#1d2240"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M38 28C25 25 19 34 6 28"
+                      stroke="#1d2240"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M31 14H40C40 14 44 18 44 30"
+                      stroke="#1d2240"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                    <path
+                      d="M9 6L32 8.66667L31 14H13L9 6Z"
+                      fill="#588cd0"
+                      stroke="#1d2240"
+                      stroke-width="4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+                <h3 class="title">Litro</h3>
+              </div>
+              <div class="desc-unity">
+                <p class="text">
+                  A conversão de unidades de litros é uma operação comum em
+                  contextos que envolvem volumes de líquidos.
+                </p>
+              </div>
             </a>
-           
-            <a href="./pages/tempo/convTime.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg fill="#f5deb3" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                        stroke="#f5deb3">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <title>time</title>
-                            <path
-                                d="M0 16q0-3.232 1.28-6.208t3.392-5.12 5.12-3.392 6.208-1.28q3.264 0 6.24 1.28t5.088 3.392 3.392 5.12 1.28 6.208q0 3.264-1.28 6.208t-3.392 5.12-5.12 3.424-6.208 1.248-6.208-1.248-5.12-3.424-3.392-5.12-1.28-6.208zM4 16q0 3.264 1.6 6.048t4.384 4.352 6.016 1.6 6.016-1.6 4.384-4.352 1.6-6.048-1.6-6.016-4.384-4.352-6.016-1.632-6.016 1.632-4.384 4.352-1.6 6.016zM14.016 16v-5.984q0-0.832 0.576-1.408t1.408-0.608 1.408 0.608 0.608 1.408v4h4q0.8 0 1.408 0.576t0.576 1.408-0.576 1.44-1.408 0.576h-6.016q-0.832 0-1.408-0.576t-0.576-1.44z">
-                            </path>
-                        </g>
-                    </svg>
-                </div>
-                <span>Tempo</span>
-            </a>
-
-             <a href="./pages/binario/convB.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M9.29289 1.29289C9.48043 1.10536 9.73478 1 10 1H18C19.6569 1 21 2.34315 21 4V7C21 7.55228 20.5523 8 20 8C19.4477 8 19 7.55228 19 7V4C19 3.44772 18.5523 3 18 3H11V8C11 8.55228 10.5523 9 10 9H5V20C5 20.5523 5.44772 21 6 21H8C8.55228 21 9 21.4477 9 22C9 22.5523 8.55228 23 8 23H6C4.34315 23 3 21.6569 3 20V8C3 7.73478 3.10536 7.48043 3.29289 7.29289L9.29289 1.29289ZM6.41421 7H9V4.41421L6.41421 7ZM19 18C19 17.4477 19.4477 17 20 17H21C21.5523 17 22 17.4477 22 18V22C22 22.5523 21.5523 23 21 23C20.4477 23 20 22.5523 20 22V19C19.4477 19 19 18.5523 19 18ZM13 20C13 19.4477 13.4477 19 14 19C14.5523 19 15 19.4477 15 20C15 20.5523 14.5523 21 14 21C13.4477 21 13 20.5523 13 20ZM14 17C12.3431 17 11 18.3431 11 20C11 21.6569 12.3431 23 14 23C15.6569 23 17 21.6569 17 20C17 18.3431 15.6569 17 14 17ZM20 12C19.4477 12 19 12.4477 19 13C19 13.5523 19.4477 14 20 14C20.5523 14 21 13.5523 21 13C21 12.4477 20.5523 12 20 12ZM17 13C17 11.3431 18.3431 10 20 10C21.6569 10 23 11.3431 23 13C23 14.6569 21.6569 16 20 16C18.3431 16 17 14.6569 17 13ZM13 10C12.4477 10 12 10.4477 12 11C12 11.5523 12.4477 12 13 12V15C13 15.5523 13.4477 16 14 16C14.5523 16 15 15.5523 15 15V11C15 10.4477 14.5523 10 14 10H13Z"
-                                fill="#f5deb3"></path>
-                        </g>
-                    </svg>
-                    <!-- <img src="https://img.icons8.com/ios-filled/100/null/binary-file.png" /> -->
-                </div>
-                <span>Binários</span>
-            </a>
-
-            <a href="./pages/litro/convL.html" target="_parent" class="text-dec-none link-icon text-grad-dark">
-                <div class="icon-circle gradient-simple">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M13 14H30C30 14 38 18.1481 38 27.7993C38 37.4504 30 42 30 42H13C13 42 6 35.9785 6 28C6 20.0215 13 14 13 14Z"
-                                stroke="#f5deb3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M38 28C25 25 19 34 6 28" stroke="#f5deb3" stroke-width="4" stroke-linecap="round"
-                                stroke-linejoin="round"></path>
-                            <path d="M31 14H40C40 14 44 18 44 30" stroke="#f5deb3" stroke-width="4"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                            <path d="M9 6L32 8.66667L31 14H13L9 6Z" fill="#588cd0" stroke="#f5deb3" stroke-width="4"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </div>
-                <span>Litro</span>
-            </a>
-        </section>
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer class="gradient-simple">
-        <span class="text-grad-light">Converter &amp; Learn</span>
-        <br>
-        <span class="text-grad-light">Converter &amp; Aprender</span>
-        <div>
-            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
-                <div class="flex-col-around text-grad-light">
-                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
-                    <span> @adrianomiguell26 </span>
-                </div>
-            </a>
-            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
-                <div class="flex-col-around text-grad-light">
-                    <i class="bi bi-github" style="font-size: 20pt;"></i>
-                    <span> AdrianoMiguell </span>
-                </div>
-            </a>
-        </div>
+      <span class="text-grad-light">Converter &amp; Learn</span>
+      <br />
+      <span class="text-grad-light">Converter &amp; Aprender</span>
+      <div>
+        <a
+          href="https://www.instagram.com/adrianomiguell26"
+          class="text-decoration-none"
+        >
+          <div class="flex-col-around text-grad-light">
+            <i class="bi bi-instagram" style="font-size: 20pt"></i>
+            <span> @adrianomiguell26 </span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/AdrianoMiguell"
+          class="text-decoration-none"
+        >
+          <div class="flex-col-around text-grad-light">
+            <i class="bi bi-github" style="font-size: 20pt"></i>
+            <span> AdrianoMiguell </span>
+          </div>
+        </a>
+      </div>
 
-        <div>
-            <span class="text-grad-light"> &copy; 2023 AdrianoMiguell </span>
-            <span class="text-grad-light"> Muito &#10084; obrigado! </span>
-        </div>
+      <div>
+        <span class="text-grad-light"> &copy; 2023 AdrianoMiguell </span>
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

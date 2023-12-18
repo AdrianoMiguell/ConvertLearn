@@ -1,0 +1,76 @@
+@media screen and (max-width: 768px) {
+  @media (max-width: 400px) {
+    .img {
+      width: 125px !important;
+      height: 125px !important;
+    }
+
+    .myText {
+      margin: 5px 0.25em !important;
+    }
+  }
+
+  .myText {
+    margin: 5px 0.5em !important;
+  }
+}
+
+#sobreNos div {
+  /* margin: 2em; */
+}
+
+.actor-img {
+  padding-top: 5px;
+  display: inline;
+  position: relative;
+}
+.actor-img img {
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px rgba(var(--cm), 0.75);
+  width: 250px;
+  height: auto;
+  filter: grayscale(0.2);
+  position: relative;
+}
+.actor-img::before,
+.actor-img::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.actor-img::after {
+  width: auto;
+  height: auto;
+  z-index: -1;
+  translate: 18px 18px;
+  background-color: rgba(var(--cm), 0.75);
+  border-radius: 15px;
+  /* background-color: rgba(var(--cb), .25); */
+}
+.actor-img::before {
+  width: 140%;
+  height: 125%;
+  background-size: cover;
+  background-position: center;
+  translate: -40px -20px;
+  z-index: -1;
+  border-radius: 15px;
+  background-image: url("../../img/pngwing.com.png");
+}
+
+p {
+  display: inline;
+}
+
+.myText {
+  margin: 5px 1.25em;
+  word-wrap: break-word;
+}
+
+.gradient-light {
+  box-shadow: none !important;
+}

@@ -1,185 +1,183 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-@import url('media.css');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+@import "./media.css";
+@import "./navbar.css";
+@import "./home.css";
 
 :root {
-    /* https://coolors.co/ef2d56-3b3561-ead94c */
-    /* Color Main, Secondary, Tertiary */
-    --cm: 59, 53, 97;
-    --cs: 239, 45, 86;
-    --ct: 234, 217, 76;
-    --cq: 245, 222, 179;
-    --cb: 37, 37, 34;
+  /* https://coolors.co/ef2d56-3b3561-ead94c */
+  /* Color Main, Secondary, Tertiary */
+  --cm: 29, 34, 64;
+  --cs: 242, 237, 162;
+  --ct: 242, 235, 196;
+  --cq: 242, 242, 242;
+  --cb: 13, 13, 13;
+}
 
-    color: #3b3561;
-    color: #ef2d56;
-    color: #ead94c;
-    color: #f5deb3;
-    color: #252522;
-    color: #556d83;
+#teste {
+  color: rgb(59, 53, 97);
+  color: rgb(239, 45, 86);
+  color: rgb(234, 217, 76);
+  color: rgb(245, 222, 179);
+  color: rgb(37, 37, 34);
+  color: #556d83;
+  color: #556d83;
+}
+#teste {
+  color: rgb(29, 34, 64);
+  color: #1d2240;
+  color: #f2eda2;
+  color: rgb(242, 237, 162);
+  color: rgb(242, 235, 196);
+  color: rgb(242, 242, 242);
+  color: rgb(13, 13, 13);
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    letter-spacing: .8pt;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.8pt;
 }
 
-h1, h2, h3{
-    margin: 1em 0 !important;
+h1,
+h2,
+h3 {
+  margin: 1em 0 !important;
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    width: 100%;
-    /* min-width: 90vw; */
-    user-select: none !important;
-    background-color: rgb(var(--cb));
-    min-height: 100vh;
-    font-family: 'Open Sans', Arial, sans-serif;
-    color: rgb(var(--cb));
-}
-
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 1em;
-    font-family: sans-serif;
-}
-
-.navOps {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-    margin: 0;
-}
-
-.navOps>a {
-    text-decoration: none;
-}
-
-.navOps-item {
-    display: block;
-    padding: .5em;
-    transition-duration: 500ms;
-}
-
-.navOps-item:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-    transition-duration: 500ms;
+  width: 100%;
+  /* min-width: 90vw; */
+  user-select: none !important;
+  min-height: 100vh;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 
 main {
-    width: 98vw;
-    margin: 0;
-    word-wrap: break-word;
-    min-height: 60vh;
+  width: 98vw;
+  margin: 0;
+  word-wrap: break-word;
+  min-height: 60vh;
 }
 
 section {
-    font-family: Arial, sans-serif;
-    display: grid;
-    gap: .5em;
-    text-align: justify;
+  font-family: Arial, sans-serif;
+  display: grid;
+  gap: 0.5em;
+  text-align: justify;
 }
 
-.hr {
-    border-top: 1px solid rgb(var(--cm));
-    opacity: .75;
-}
-
-#sesConvert {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1em;
-}
-
-#divConvert {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1em;
-}
-
-.divConvert-unid,
-.divConvert-opts {
-    display: flex;
-    line-height: 1.5em;
-    justify-content: space-between;
-    gap: 1em 2em;
-}
-
-.divConvert-unid {
-    align-items: center;
-}
-
-.divConvert-resp {
-    border-radius: 5px;
-    background-color: rgba(var(--cq), .2);
-    padding: .5em 1em;
-}
-
-.divConvert-opts>div {
-    display: grid;
-    gap: 1em;
-}
-
-.sesInfo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2em;
-}
-
-.sesInfo-list {
-    line-height: 1.5em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+hr {
+  border-top: 1px solid rgba(var(--cm), 0.75);
 }
 
 input,
 select {
-    background-color: rgb(var(--cq));
-    border-radius: 5px;
-    padding: 4px 8px;
+  background-color: rgb(var(--cq)) !important;
+  color: rgb(var(--cm)) !important;
+  border: 1.5px solid rgba(var(--cm), 0.5) !important;
+}
+
+#sesConvert {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5em 2em;
+}
+
+#divConvert {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1em;
+}
+
+.divConvert-unid,
+.divConvert-opts {
+  display: flex;
+  line-height: 1.5em;
+  justify-content: space-between;
+  gap: 1em 2em;
+}
+
+.divConvert-unid {
+  align-items: center;
+}
+
+.divConvert-resp {
+  border-radius: 5px;
+  background-color: rgba(var(--cq), 0.2);
+  padding: 0.5em 1em;
+}
+
+.divConvert-opts > div {
+  display: grid;
+  gap: 1em;
+}
+
+.sesInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+.sesInfo-list {
+  line-height: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+input,
+select {
+  background-color: rgb(var(--cq));
+  border-radius: 5px;
+  padding: 4px 8px;
 }
 
 select {
-    text-align: center;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    color: rgb(var(--cb));
+  text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: rgb(var(--cb));
 }
 
 .optCard {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 1em;
-    width: 15em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1em;
+  width: 15em;
 }
 
 footer {
-    bottom: 0;
-    left: 0;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 1em 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', sans-serif;
-    font-weight: 550;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 0;
+  text-align: center;
+  padding: 1em 0;
+  font-family: "Gill Sans", "Gill Sans MT", sans-serif;
+  font-weight: 550;
+  background-color: rgb(var(--cb));
+}
+footer * {
+  color: rgb(var(--ct));
 }
 
-footer>div {
-    padding: 1em;
-    display: flex;
-    justify-content: space-evenly;
+footer > div {
+  padding: 1em;
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -1,194 +1,205 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RSZENZ1DEY"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-RSZENZ1DEY"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-RSZENZ1DEY');
+      gtag("config", "G-RSZENZ1DEY");
     </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <meta name="copyright" content="© 2023 AdrianoMiguell" />
 
-    <title> ConvertLearn </title>
+    <title>ConvertLearn</title>
     <meta name="author" content="Adriano Miguel" />
-    <meta name="description"
-        content="Realize a conversão de unidades diversas e ainda saia com o calculo completo da conversão. Venha converter sem dificuldades.">
-    <meta name="robots" content="max-snippet:-1">
-    <meta name="keywords" content="converter, medidas, unidade, calcular">
+    <meta
+      name="description"
+      content="Realize a conversão de unidades diversas e ainda saia com o calculo completo da conversão. Venha converter sem dificuldades."
+    />
+    <meta name="robots" content="max-snippet:-1" />
+    <meta name="keywords" content="converter, medidas, unidade, calcular" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="./img/favicon_io/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon_io/android-chrome-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon_io/site.webmanifest" />
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8474068703843385"
+      crossorigin="anonymous"
+    ></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8474068703843385"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/css/styleG.css" />
+    <link rel="stylesheet" href="../src/css/classes.css" />
+    <link rel="stylesheet" href="../src/css/sobreNos.css" />
+  </head>
 
-    <link rel="stylesheet" href="../src/css/styleG.css">
-    <link rel="stylesheet" href="../src/css/classes.css">
-    <style>
-        @media screen and (max-width: 768px) {
-            @media (max-width: 400px) {
-                .img {
-                    width: 125px !important;
-                    height: 125px !important;
-                }
-
-                .myText {
-                    margin: 5px .25em !important;
-                }
-            }
-
-            .myText {
-                margin: 5px .5em !important;
-            }
-
-            #sobreNos div {
-                margin: 1em !important;
-                width: 90vw;
-                justify-content: center !important;
-                flex-wrap: wrap !important;
-            }
-        }
-
-        #sobreNos div {
-            margin: 2em;
-        }
-
-        .img {
-            border-radius: 20em;
-            box-shadow: 0 0 2px 1px rgb(var(--cb));
-            width: 175px;
-            height: 175px;
-            translate: -5px 0;
-            display: block;
-            position: relative;
-        }
-
-        p {
-            display: inline;
-        }
-
-        .myText {
-            margin: 5px 1.25em;
-            word-wrap: break-word;
-        }
-
-        .gradient-light {
-            box-shadow: none !important;
-        }
-    </style>
-</head>
-
-<body class="backg-light">
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg gradient-simple">
-            <div class="container-fluid d-flex w-100 justify-content-between m-1 mx-2">
-                <a href="../index.html" class="navbar-brand d-flex align-items-center gap-2">
-                    <img src="../img/logoCL-long.png" alt="logo do site 'Convert & Learn'" width="130px">
-                </a>
+      <nav class="navbar navbar-expand-lg">
+        <div
+          class="container-fluid d-flex w-100 justify-content-between m-1 mx-2"
+        >
+          <a
+            href="../../index.html"
+            class="navbar-brand d-flex align-items-center"
+          >
+            <img
+              src="../../img/logomarca-convert_learn.png"
+              alt="logo do site 'Convert & Learn'"
+            />
+            <span> ConvertLearn </span>
+          </a>
 
-                <button class="navbar-toggler btn gradient-light" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="my-2 mb-lg-0 navOps">
-                        <a href="./comprimento/convC.html#html#sesConvert">
-                            <li class="navOps-item text-light"> Comprimento </li>
-                        </a>
-                        <a href="./massa/convM.html#sesConvert">
-                            <li class="navOps-item text-light"> Massa </li>
-                        </a>
-                        <a href="./temperatura/convT.html#sesConvert">
-                            <li class="navOps-item text-light"> Temperatura </li>
-                        </a>
-                        <a href="./tempo/convTime.html#sesConvert">
-                            <li class="navOps-item text-light"> Tempo </li>
-                        </a>
-                        <a href="../index.html#others">
-                            <li class="navOps-item text-light"> Outros </li>
-                        </a>
-                        <a href="./sobreNos.html">
-                            <li class="navOps-item text-light"> Sobre nós </li>
-                        </a>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="my-2 mb-lg-0 navOps">
+              <a href="./comprimento/convC.html#html#sesConvert">
+                <li class="nav-items">Comprimento</li>
+              </a>
+              <a href="./massa/convM.html#sesConvert">
+                <li class="nav-items">Massa</li>
+              </a>
+              <a href="./temperatura/convT.html#sesConvert">
+                <li class="nav-items">Temperatura</li>
+              </a>
+              <a href="./tempo/convTime.html#sesConvert">
+                <li class="nav-items">Tempo</li>
+              </a>
+              <a href="../index.html#others">
+                <li class="nav-items">Outros</li>
+              </a>
+              <a href="./sobreNos.html">
+                <li class="nav-items">Sobre nós</li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <main class="p-0 py-4">
-        <section id="sobreNos">
-            <h1 class="text-dark text-center mt-4 mb-1">
-                Sobre nós
-            </h1>
+    <main class="container">
+      <section id="sobreNos">
+        <h1 class="text-dark text-center my-4">Sobre nós</h1>
 
-            <div class="d-flex justify-content-between align-items-center px-2 gap-5">
-                <img src="https://lh3.googleusercontent.com/sP4OxvZpPxpQzdqCoi-80Mnbpz2chZb0OOt2tsUZzHSsh4tl2RlJqTOtLP2LWKl26kFaBAVqbqBCQS2KssHVUOWJrTT5MU--RPr5Y2dYiFkxL73SdvE7WXnhcJrs16uI3uRibxLiCGGnQSeRE8bM54YlfYaP7nf0ofIFFtESfnvZCssCWC2uYQeCKIZC847kA_iNkhj0p-RKZJUmmJdA9n2MGFCsfc4z8gs952quVNS9m1p7yhtkRKK7syeqMEyzbuQA4BSBuxtb9Gi_C4I4VLAIdsUrOY5zz-Lm5Gi3n4JjGbswlyndBX_wjrMcZIdzVsdw2xrYNzAdtKdFV7Q8R6dvrAd22mv5ffxmk6H44U7IiA2Fq9rQtQ90VSQdc7pwYBmukD-Wu7wz1JsFir-M8y_71gbfcgPXxGslck_0qVlLpnW11_cdrTcIP0T6dCywchWphlqsOFoNlfYZXgtzyj677BJDLkVPkWJPwjYPho2LBolFc9CsvGStRJcIz6j5r0MSOShL7975SPcceV3xZvvtUAFPnTJHDl5SkEkVTVZ2OZt9F8TPRho56jGWFp7Q4mXf7xfe0ZfYl6EmG5i7S4chCOHPW1g_YmDBs4pgvNgyuc18C0tdP1fYdlnw_omE4Yi0oPHqTW6WylmBzBaNJ3dz-sE41pNFxa-BkAYZGAfXtaEQu7xe6L-mMKdNhCdX7M5sdudS9nE6f8jU92xPUl0nea1nGDypfbmwGSZ2Wn2amwLX-fRxRxuXGceI-RlvuG-leckZKKg8Al06sSTwt8nFoUfw5IdgMOMXmQ6tDAeUJhCQh_WvNE7oZ8Mgr5Isx15Ot6ixUoyLmi8TpOa6n9faAi_8EAxoSru8-p3Deos5Fe8a979KI5IZyUzfkIvjQGn6neoUEBlWKusTQXn0Sb6UGIq4eYskTuyFy-w-OpdAjqsPrZ__olyR5MpoaI4RN2UYwdTAXFyOcZFBJOY=w580-h580-s-no?authuser=0"
-                    alt="foto de Adriano Miguel, autor do site." class="img">
-                <p class="text-size">
-                    Olá, meu nome é Adriano Miguel. Tenho formação no curso técnico em informática, e dentro desse
-                    universo que é a informatica, amo a área da programação. Durante a minha
-                    passagem pelo ensino médio, senti a falta de sites que auxiliem os alunos a realizarem a conversão
-                    de valores de forma mais dinâmica, didatica e explicativa. <br> Com isso em mente, criamos esse site
-                    no intuito de auxiliar estudantes e publico em geral, que precisem realizar conversões de valores, mas
-                    que ficam em dúvida se converteram corretamente as unidades. Esse é o nosso objetivo. Por fim, te desejamos um
-                    bom proveito desse site. ❤️ </p>
-            </div>
+        <div
+          class="d-flex justify-content-around align-items-center gap-3 flex-wrap"
+        >
+          <p class="text-size" style="max-width: 60vw">
+            Olá, meu nome é Adriano Miguel. Tenho formação no curso técnico em
+            informática, e dentro desse universo que é a informatica, amo a área
+            da programação. Durante a minha passagem pelo ensino médio, senti a
+            falta de sites que auxiliem os alunos a realizarem a conversão de
+            valores de forma mais dinâmica, didatica e explicativa. <br />
+            Com isso em mente, criamos esse site no intuito de auxiliar
+            estudantes e publico em geral, que precisem realizar conversões de
+            valores, mas que ficam em dúvida se converteram corretamente as
+            unidades. Esse é o nosso objetivo. Por fim, te desejamos um bom
+            proveito desse site. ❤️
+          </p>
+          <div class="actor-img my-5">
+            <img
+              src="https://lh3.googleusercontent.com/pw/ABLVV87CT1gguC7IkTKvftFFlL_gGQ1Fd5o1YiErrX4YFsYjlYli0TpThNDWDztrGmeEVIhQltL55V3Zu5fpZix703HALCV1gkV-kTuTYY69EiLdU30ZqgJIYjiK8k8uL_M_s--cml8nknyx26K5gb_wiIJFt830khxJnp8BwQRL-SUAM2rXGj_qUwmWV1ZkJWu9_YJXisHE5J88My1t4SY43g33CZDiSwlPQ6TN9GhpVp2Un8IQu4V79gYfMtzEZOLgQyrLODpooPJVAAJzuiAu1L8b8YxtGLD30DrOc-Az4CZHjEJAznON_FvW7ehAuH8VOSzzKGTAcV192MfAxpvJtxKBEFjHq0h4ETaJOjPky59KUH3FT11R2bFvcHbroGtaWoDFy23xg_GUnnFT5UxcrRsYzAzBr9BPpE3QFh7e_RcuSs91DyY5FE32I299ZhZw8QJMPfKFDr36jM-O-a7cmHANf_V7ub3zk59MboUDyJYFl8MetmBcxxKs29vaShlG_zA-UPmtPDwnDvjdQOc91KaVSeBWECspF83mVKWQzqwMtNJu77_ZNo--4VG01Q2cPNWu2YzHrfPAEuXADy5EbNjKQW6geLEXyYIiRpZMwdMFTREmi3Bg3L9Yg2cUP9f5lMSnPjYUbPjTqjEeLDyHtGE6U_yWvX7Qj-g09z03uo1KTeWURTMmhv7Z3YTE0iQw3RAdoCB1qSe8Mociw0nWOrUAVVtMLzIeurM4YCewzxSvjzzCvhMegfl-QkMffPu8NfPoc6vDIz3esO0FYCswgDSb_NGg1_6hJ8WAOF2KqLFmnebigehLsvR-LemqkcQbuxuP_cXzoqmwyP2CsA7XiNKQnol-Ien62tqS42dsg5KyUOQlP7CBUOmjxGz2cu2zMCQ"
+              alt="foto de Adriano Miguel, autor do site."
+            />
+          </div>
+        </div>
+      </section>
 
-        </section>
-
-
-        <section style="margin: 3em 1em;">
-            <h2> Créditos de Imagens e icones </h2>
-            <div> As imagens de icones usadas neste site foram retiradas do site <a href="https://www.svgrepo.com/"
-                    target="_blank" class="text-dec-none"> <strong> SVG REPO </strong> </a>. </div>
-
-        </section>
+      <section>
+        <h2>Créditos de Imagens e icones</h2>
+        <div>
+          As imagens de icones usadas neste site foram retiradas do site
+          <a
+            href="https://www.svgrepo.com/"
+            target="_blank"
+            class="text-dec-none"
+          >
+            <strong> SVG REPO </strong> </a
+          >.
+        </div>
+      </section>
     </main>
 
     <footer class="gradient-simple">
-        <span class="text-grad-light">Converter &amp; Learn</span>
-        <br>
-        <span class="text-grad-light">Converter &amp; Aprender</span>
-        <div>
-            <a href="https://www.instagram.com/adrianomiguell26" class="text-dec-none" target="_blank">
-                <div class="flex-col-around text-grad-light">
-                    <i class="bi bi-instagram" style="font-size: 20pt;"></i>
-                    <span> @adrianomiguell26 </span>
-                </div>
-            </a>
-            <a href="https://github.com/AdrianoMiguell" class="text-dec-none" target="_blank">
-                <div class="flex-col-around text-grad-light">
-                    <i class="bi bi-github" style="font-size: 20pt;"></i>
-                    <span> AdrianoMiguell </span>
-                </div>
-            </a>
-        </div>
+      <span class="text-grad-light">Converter &amp; Learn</span>
+      <br />
+      <span class="text-grad-light">Converter &amp; Aprender</span>
+      <div>
+        <a
+          href="https://www.instagram.com/adrianomiguell26"
+          class="text-dec-none"
+          target="_blank"
+        >
+          <div class="flex-col-around text-grad-light">
+            <i class="bi bi-instagram" style="font-size: 20pt"></i>
+            <span> @adrianomiguell26 </span>
+          </div>
+        </a>
+        <a
+          href="https://github.com/AdrianoMiguell"
+          class="text-dec-none"
+          target="_blank"
+        >
+          <div class="flex-col-around text-grad-light">
+            <i class="bi bi-github" style="font-size: 20pt"></i>
+            <span> AdrianoMiguell </span>
+          </div>
+        </a>
+      </div>
 
-        <div>
-            <span class="text-grad-light"> &copy; 2023 AdrianoMiguell </span>
-            <span class="text-grad-light"> Muito &#10084; obrigado! </span>
-        </div>
+      <div>
+        <span class="text-grad-light"> &copy; 2023 AdrianoMiguell </span>
+        <span class="text-grad-light"> Muito &#10084; obrigado! </span>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>

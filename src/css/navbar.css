@@ -1,0 +1,40 @@
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 1em;
+  font-family: sans-serif;
+  background-color: rgb(var(--cb));
+}
+nav * {
+  color: rgb(var(--ct));
+}
+
+.navbar .navbar-brand img{
+  width: 60px;
+}
+
+.navOps {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0;
+}
+
+.navOps > a {
+  text-decoration: none;
+}
+
+.navOps-item {
+  display: block;
+  padding: 0.5em;
+  transition-duration: 500ms;
+}
+
+.navOps-item:hover {
+  background-color: rgba(var(--cs));
+  transition-duration: 500ms;
+}
